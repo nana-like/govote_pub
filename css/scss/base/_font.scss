@@ -2,35 +2,28 @@
 
 // **** Font
 
-// 나눔스퀘어
-$NanumSquareR: "NanumSquareR";
-$NanumSquareL: "NanumSquareL";
-$NanumSquareB: "NanumSquareB";
-$NanumSquareEB: "NanumSquareEB";
+// 노토산스
+$NotoSansR: "NotoSansR";
+$NotoSansL: "NotoSansL";
+$NotoSansB: "NotoSansB";
 
 @font-face {
-  font-family: "NanumSquare";
+  font-family: "NotoSans";
   font-weight: 500;
-  src: url(#{$path-font}#{$NanumSquareR}.eot);
-  src: url(#{$path-font}#{$NanumSquareR}.eot?#iefix) format("embedded-opentype"),
-    url(#{$path-font}#{$NanumSquareR}.woff) format("woff"),
-    url(#{$path-font}#{$NanumSquareR}.ttf) format("truetype");
+  src: url(#{$path-font}#{$NotoSansR}.woff2) format("woff2"),
+    url(#{$path-font}#{$NotoSansR}.woff) format("woff");
 }
 
 @font-face {
-  font-family: "NanumSquare";
-  font-weight: 600;
-  src: url(#{$path-font}#{$NanumSquareB}.eot);
-  src: url(#{$path-font}#{$NanumSquareB}.eot?#iefix) format("embedded-opentype"),
-    url(#{$path-font}#{$NanumSquareB}.woff) format("woff"),
-    url(#{$path-font}#{$NanumSquareB}.ttf) format("truetype");
+  font-family: "NotoSans";
+  font-weight: 300;
+  src: url(#{$path-font}#{$NotoSansL}.woff2) format("woff2"),
+    url(#{$path-font}#{$NotoSansL}.woff) format("woff");
 }
+
 @font-face {
-  font-family: "NanumSquare";
+  font-family: "NotoSans";
   font-weight: 700;
-  src: url(#{$path-font}#{$NanumSquareEB}.eot);
-  src: url(#{$path-font}#{$NanumSquareEB}.eot?#iefix)
-      format("embedded-opentype"),
-    url(#{$path-font}#{$NanumSquareEB}.woff) format("woff"),
-    url(#{$path-font}#{$NanumSquareEB}.ttf) format("truetype");
+  src: url(#{$path-font}#{$NotoSansB}.woff2) format("woff2"),
+    url(#{$path-font}#{$NotoSansB}.woff) format("woff");
 }

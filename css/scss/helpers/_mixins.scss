@@ -5,7 +5,7 @@
 
 // 폰트
 @mixin font-main($weight: 500) {
-  font-family: "NanumSquare", AppleGothic, sans-serif, Helvetica;
+  font-family: "NotoSans", AppleGothic, sans-serif, Helvetica;
   font-weight: $weight;
 }
 // @mixin font-sub($weight: 300) {
