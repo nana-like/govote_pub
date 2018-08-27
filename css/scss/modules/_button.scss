@@ -1,0 +1,71 @@
+@charset "utf-8";
+
+// **** Button style
+
+////////// Button //////////
+
+// 레이아웃 정의
+
+button {
+  font-size: 1.4rem;
+}
+
+.button-item {
+  position: relative;
+  @include flexbox;
+  @include flex-direction(column);
+
+  .button-title {
+    //각 버튼 위 타이틀 (ex. 새 지갑 만들기)
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+    font-weight: $fw-b;
+    color: $color-black;
+  }
+}
+
+// 스타일 정의
+
+.button-style01 {
+  // 양옆이 둥그런 파란색 버튼
+  width: 12rem;
+  height: 3.8rem;
+  // padding: 0 3.2rem;
+  color: #fff;
+  background-color: $color-blue;
+  border-radius: 1.9rem;
+
+  &.disable {
+    @include pointer-none;
+    @include select-none;
+    background-color: $color-disable;
+  }
+}
+
+.button-style02 {
+  // tyle01 과 동일하되, active 클래스가 붙지 않으면 회색
+  @extend .button-style01;
+  background-color: $color-blue;
+
+  &[readonly],
+  &:disabled {
+    background-color: #aaa;
+  }
+
+  &.active {
+    background-color: $color-blue;
+  }
+}
+
+.button-style03 {
+  // 링크처럼 생긴 버튼 (예: 회원가입)
+  font-size: 1.4rem;
+  color: #aaa;
+  text-decoration: underline;
+}
+
+// 사이즈 정의
+
+.size-full {
+  width: 100%;
+}

@@ -1,0 +1,263 @@
+@charset "utf-8";
+
+// **** Input style
+
+////////// Input //////////
+.input-item {
+  //각각의 input 묶음
+  position: relative;
+  @include flexbox;
+  @include flex-direction(column);
+  margin-bottom: 3rem;
+
+  &.disable {
+    @include select-none;
+    @include pointer-none;
+
+    .input-title,
+    .radio-label,
+    input {
+      color: $color-disable;
+    }
+
+    input {
+      @include placeholder {
+        -webkit-text-fill-color: $color-disable;
+      }
+    }
+  }
+
+  &.input-row {
+    @include flex-direction(row);
+    @include justify-content(space-between);
+  }
+
+  .input-title {
+    //각 인풋의 타이틀 (ex. 학부/학과)
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+    font-weight: $fw-b;
+    color: $color-black;
+  }
+
+  .input-item-error {
+    //인풋 아이템 내 에러 메시지
+    display: none;
+    margin-top: 0.4rem;
+    margin-left: 1rem;
+    // position: absolute;
+    // right: 0;
+    // bottom: -2rem;
+
+    &.active {
+      display: block;
+    }
+  }
+}
+
+.input-style01 {
+  height: 4rem;
+  padding: 0 1rem;
+  line-height: 4rem;
+  font-size: 1.4rem;
+  border-radius: 0.8rem;
+  background-color: $color-input;
+  color: $color-input-text;
+  font-weight: $fw-n;
+
+  @include placeholder {
+    color: $color-placeholder;
+    font-size: 1.4rem;
+  }
+}
+
+.input-style02 {
+  @extend .input-style01;
+
+  @include placeholder {
+    color: $color-placeholder2;
+  }
+}
+
+.input-hidden {
+  //숨김 처리
+  opacity: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4rem;
+  outline: 4px solid gold;
+}
+
+////////// Radio //////////
+
+.radio-wrap {
+  //라디오 묶음 (type 01)
+  @include flexbox;
+  @include align-items(center);
+
+  .radio-item {
+    @include flexbox;
+    @include align-items(center);
+    margin-left: 0.4rem;
+    flex-basis: 8rem;
+    flex-shrink: 0;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+
+  input[type="radio"] {
+    overflow: hidden;
+    position: absolute;
+    left: -999px;
+    opacity: 0;
+    width: 0px;
+    height: 0px;
+
+    //TODO: 삭제 예정
+    // @each $map, $value in $radio-button {
+    //   &.radio-#{$map} {
+    //     background-image: url(#{$path-image}common/button/radio.png);
+    //     background-position: map-get($value, normal);
+    //   }
+    // }
+
+    // @each $map, $value in $radio-button {
+    //   &.radio-#{$map}:checked {
+    //     background-position: map-get($value, active);
+    //   }
+    // }
+
+    &:checked:not(:disabled) + .radio-label {
+      background-color: #fff;
+      border: 2px solid $color-blue;
+    }
+  }
+
+  .radio-label {
+    width: 100%;
+    font-size: 1.2rem;
+    height: 4rem;
+    color: $color-black;
+    font-weight: $fw-n;
+    text-align: center;
+    line-height: 3.7rem;
+    border-radius: 0.8rem;
+    background-color: $color-input;
+    border: 2px solid transparent;
+    box-sizing: border-box;
+  }
+}
+
+.radio-wrap.radio-item-4 {
+  //라디오 아이템이 4개인 경우
+  @include flexbox;
+  @include align-items(center);
+
+  .radio-item {
+    flex-basis: 7.2rem;
+    // margin-left: 0.4rem;
+  }
+}
+
+////////// Select //////////
+.select-item {
+  position: relative;
+
+  .input-select-ui:valid {
+    -webkit-text-fill-color: $color-black !important;
+  }
+  .icon {
+    position: absolute;
+    top: 0.3rem;
+    right: 0.4rem;
+  }
+
+  &.active {
+    .input-select-ui {
+      border: 1px solid $color-blue;
+      box-sizing: border-box;
+    }
+  }
+}
+
+.select-hidden {
+  opacity: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4rem;
+  outline: 4px solid red;
+}
+
+.select-style01 {
+  .input-select-ui {
+    @extend .input-style01;
+    -webkit-text-fill-color: $color-navy;
+
+    @include placeholder {
+      -webkit-text-fill-color: $color-placeholder;
+    }
+  }
+  .icon {
+    right: 0.8rem;
+  }
+
+  //활성화 시, 화살표 아이콘 변경
+  &.active {
+    .icon-select01 {
+      background-image: icon(select-active, #a8b6c8);
+    }
+    .icon-select02 {
+      background-image: icon(select-active, #b1c0cf);
+    }
+  }
+}
+
+.select-style02 {
+  .input-select-ui {
+    @extend .input-style02;
+    -webkit-text-fill-color: $color-navy;
+
+    @include placeholder {
+      -webkit-text-fill-color: $color-placeholder2;
+    }
+  }
+
+  //활성화 시, 화살표 아이콘 변경
+  &.active {
+    .icon-select02 {
+      background-image: icon(select-active, #b1c0cf);
+    }
+  }
+}
+
+////////// Select - sorting  //////////
+.sorting-item {
+  position: relative;
+
+  .input-sorting-ui {
+    display: inline-block;
+    position: relative;
+    min-width: 60px; //TODO: 수정필요
+    font-size: 1.3rem; //TODO: 수정필요
+    padding-right: 2.5rem; //TODO: 수정필요
+  }
+
+  .icon {
+    position: absolute;
+    top: 0.1rem;
+    right: 0rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    background: salmon; //TODO: 수정필요
+
+    &.active {
+      background: gold; //TODO: 수정필요
+    }
+  }
+}

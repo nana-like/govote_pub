@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"
+    />
+    <meta name="description" content="File List | BC WebApp">
+    <meta name="author" content="NY KIM">
+
+    <title>File List | Go Vote WebApp</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/earlyaccess/notosanskr.css" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-size: 100%;
+            box-sizing: border-box;
+            font-family: 'Inconsolata', 'Noto Sans KR', monospace;
+        }
+
+        html {
+            font-size: 62.5%
+        }
+
+        body {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            background-color: #f0f0f0;
+        }
+
+        #wrap {
+            position: relative;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            padding: 20px;
+            min-width: 800px;
+        }
+
+        caption {
+            display: none;
+        }
+
+        table {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto 60px;
+            font-size: 1.5rem;
+            border-collapse: collapse;
+            background-color: #fff;
+            box-shadow: 0 50px 80px -50px rgba(50, 50, 50, 0.12), 0 50px 50px -30px rgba(20, 20, 20, 0.1);
+            color: #555;
+        }
+
+        th {
+            padding: 12px;
+            font-size: 1.6rem;
+            color: #fff;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            border: 0;
+            background-color: #fcbe32;
+        }
+
+        table.first th {
+            background-color: #ff7473;
+        }
+
+        td {
+            padding: 14px 20px;
+            font-size: 1.4rem;
+            font-weight: 600;
+            border-top: 1px solid #ededed;
+            background-color: #fff;
+            border: 1px solid #ededed;
+            border-right: 0;
+        }
+
+        tr>td:first-child {
+            font-weight: 500;
+            color: #000;
+            border-left: 0;
+            letter-spacing: -0.03em;
+        }
+
+        td[rowspan] {
+            /* font-size: 15px; */
+            letter-spacing: 1.5px;
+            text-align: center;
+        }
+
+        .link {
+            letter-spacing: 0.03em;
+            font-weight: 600;
+        }
+
+        a {
+            color: #333;
+        }
+
+        a:hover,
+        a:focus {
+            color: #ff7473;
+            outline: 0;
+        }
+
+        .first a:hover {
+            color: #ff7473;
+        }
+
+        .first a:hover {
+            color: #ff7473;
+        }
+
+        h1 {
+            display: none;
+        }
+
+        h2 {
+            margin: 30px 0;
+            text-align: center;
+            font-size: 2.8rem;
+            letter-spacing: -0.06rem;
+            color: #a6cebf;
+            font-weight: bold;
+        }
+
+        .horizon {
+            width: 80%;
+            height: 1px;
+            margin: 40px auto;
+            background-color: #aaa;
+        }
+
+        .update {
+            display: inline-block;
+            margin: 14px 0 30px 0;
+            padding: 14px;
+            text-align: left;
+            font-weight: bold;
+            font-size: 1.8rem;
+            border: 1px solid #aaa;
+        }
+
+        .borderTop {
+            border-top: 2px solid #e0e0e0;
+        }
+
+        .borderTop2 {
+            border-top: 2px solid #d3d3d3;
+        }
+
+
+        @media screen and (max-width: 800px) {
+            html {
+                font-size: 55%;
+            }
+            #wrap {
+                min-width: 320px;
+            }
+            thead>tr>th:first-child,
+            thead>tr>th:nth-child(4),
+            thead>tr>th:nth-child(5) {
+                display: none;
+            }
+            td[rowspan] {
+                display: none;
+            }
+            .desc,
+            .rmks {
+                display: none;
+            }
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div id="wrap">
+        <h1>nykim@nykim.net</h1>
+        <p class="update">[ Go vote WebApp / ] 2018-08-27</p>
+
+        <table>
+            <colgroup>
+                <col width="140px" />
+                <col width="180px" />
+                <col/>
+                <col/>
+            </colgroup>
+            <thead>
+
+                <tr>
+                    <th>폴더명</th>
+                    <th>파일명(LINK)</th>
+                    <th>화면 내용</th>
+                    <th>기획안 이름</th>
+                    <th>비고</th>
+                </tr>
+
+            </thead>
+            <tbody>
+
+                <tr>
+                    <td rowspan="5">
+                        <strong>Login</strong>
+                    </td>
+                    <td>
+                        <a class="link" href="html/login/login-01-01.html" target="_blank">login-01-01</a>
+                    </td>
+                    <td>로그인 화면</td>
+                    <td class="desc">Login - Form</td>
+                    <td class="rmks"></td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <a class="link" href="html/login/login-01-02.html" target="_blank">login-01-02</a>
+                    </td>
+                    <td></td>
+                    <td class="desc"></td>
+                    <td class="rmks"></td>
+                </tr>
+
+                <tr>
+                    <td class="borderTop">
+                        <a class="link" href="html/login/login-02-01.html" target="_blank">login-02-01</a>
+                    </td>
+                    <td class="borderTop">사용자 정보 입력 - 학생</td>
+                    <td class="borderTop desc">Login - User Information Form – Students</td>
+                    <td class="borderTop rmks"></td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <a class="link" href="html/login/login-02-02.html" target="_blank">login-02-02</a>
+                    </td>
+                    <td>사용자 정보 입력 - 교직원</td>
+                    <td class="desc">Login - User Information Form – Employees</td>
+                    <td class="rmks"></td>
+                </tr>
+
+                <tr>
+                    <td class="borderTop">
+                        <a class="link" href="html/login/login-03-01.html" target="_blank">login-03-01</a>
+                    </td>
+                    <td class="borderTop">지갑 설정</td>
+                    <td class="borderTop desc">Login - Wallet Setting - Layout</td>
+                    <td class="borderTop rmks"></td>
+                </tr>
+
+                <tr>
+                    <td class="borderTop2" rowspan="4">
+                        <strong>Home</strong>
+                    </td>
+                    <td class="borderTop2">
+                        <a class="link" href="html/home/home-01-01.html" target="_blank">home-01-01</a>
+                    </td>
+                    <td class="borderTop2">로그인 화면</td>
+                    <td class="borderTop2 desc">Home Screen - Postech - My DApp - Layout</td>
+                    <td class="borderTop2 rmks"></td>
+                </tr>
+
+            </tbody>
+        </table>
+
+
+    </div>
+</body>

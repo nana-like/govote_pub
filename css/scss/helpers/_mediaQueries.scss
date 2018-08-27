@@ -1,0 +1,15 @@
+@charset "utf-8";
+
+// Break Point
+$laptop-md-width: 1480px;
+
+// ----------------------- * -----------------------
+
+// Laptop (MD)
+@mixin res__Laptop {
+  @media screen and (max-width: #{$laptop-md-width}) {
+    @content;
+  }
+}
+
+// ----------------------- * -----------------------

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <title>DApp list &middot; BLOCKCHAIN CAMPUS</title>
+
+  <link type="text/css" rel="stylesheet" href="../../css/style.css" />
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi"
+  />
+  <meta name="format-detection" content="telephone=no, address=no, email=no" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+</head>
+
+<body>
+  <!-- 홈 화면 -->
+  <div id="wrapper" class="home-dappList">
+
+    <div class="page-body">
+
+      <div class="contents">
+
+        <div class="dashboard">
+          <div class="image-container overlay-black">
+            <img src="../../images/thumb/test.png" alt="thumbnail" />
+          </div>
+          <div class="dashboard-content">
+            <p class="dashboard-content-title">Go Vote</p>
+            <p class="dashboard-content-description">블록체인 기반 투표 시스템</p>
+          </div>
+        </div> <!-- //end .dashboard -->
+
+
+        <div class="dapp-list">
+          <div class="dapp-list-top">
+            <p class="title">DApp list</p>
+            <div class="sorting-container">
+              <div class="sorting-item">
+                <div class="input-sorting-ui">
+                  <p>최신순</p>
+                  <i class="icon icon-sorting01 active"></i></div>
+                <!--
+                  [전달사항]
+                  셀렉트콤보가 보여지면/닫히면, icon에게 active 클래스를 추가/제거해 주세요.
+                -->
+              </div>
+              <select id="sel-sorting-dapp" class="select-hidden">
+                <option value="">최신순</option>
+                <option value="">인기순</option>
+              </select>
+              <!--
+                [전달사항]
+                이 셀렉트박스는 input-sorting-ui 위에 opacity:0으로 숨겨져 있습니다. 미사용 시 지워주세요.
+              -->
+            </div> <!-- //end of .sorting-container -->
+          </div> <!-- //end of .dapp-list-top-->
+
+          <div class="list-view">
+            <table>
+              <tr>
+                <td class="list-view-item">
+                  <div class="order">1</div>
+                  <div class="thumbnail image-container"><img src="" alt=""></div>
+                  <div class="content">
+                    <div class="name">앱 이름</div>
+                    <div class="description">문구문구문구</div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="list-view-item">
+                  <div class="order">2</div>
+                  <div class="thumbnail image-container"><img src="" alt=""></div>
+                  <div class="content">
+                    <div class="name">앱 이름22</div>
+                    <div class="description">문구문구문구문구문구문구문구문구문구문구문구문구문구문구문구문구문구문구문구문구문구</div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="list-view-item">
+                  <div class="order">3</div>
+                  <div class="thumbnail image-container"><img src="" alt=""></div>
+                  <div class="content">
+                    <div class="name">앱 이름333</div>
+                    <div class="description">문구문구문구문구문구문구문구문구문구</div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="list-view-item">
+                  <div class="order">100</div>
+                  <div class="thumbnail image-container"><img src="" alt=""></div>
+                  <div class="content">
+                    <div class="name">이름이름이름이름이름이름이름이름이름이름이름이름이름이름이름이름이름이름</div>
+                    <div class="description">소개문</div>
+                  </div>
+                </td>
+              </tr>
+              </tr>
+              <tr>
+                <td class="list-view-item">
+                  <div class="thumbnail image-container"><img src="" alt=""></div>
+                  <div class="content">
+                    <div class="name">앱 이름</div>
+                    <div class="description">간단한 설명문</div>
+                  </div>
+                  <div class="star">⭐</div>
+                </td>
+              </tr>
+            </table>
+            <!--
+              [전달사항]
+              클래스명만 유지하면 테이블 마크업이 아니여도 무관합니다.
+            -->
+          </div>
+
+        </div> <!-- //end of .dapp-list -->
+
+
+        <div class="input-item">
+          <p class="input-title">투표 시작 일시</p>
+          <div class="select-item select-style02">
+            <input type="text" placeholder="2018년 5월 22일(화) 10:00" class="input-select-ui" readonly="readonly" disabled="disabled" value=""
+            />
+          </div>
+          <input type="datetime-local" id="sel-voteDate" class="input-hidden" />
+          <!--
+            [전달사항]
+            이 input[type="datetime-local"]은 input-select-ui 위에 opacity:0으로 숨겨져 있습니다. 
+          -->
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</body>

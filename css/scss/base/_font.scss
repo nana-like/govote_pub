@@ -1,0 +1,36 @@
+@charset "utf-8";
+
+// **** Font
+
+// 나눔스퀘어
+$NanumSquareR: "NanumSquareR";
+$NanumSquareL: "NanumSquareL";
+$NanumSquareB: "NanumSquareB";
+$NanumSquareEB: "NanumSquareEB";
+
+@font-face {
+  font-family: "NanumSquare";
+  font-weight: 500;
+  src: url(#{$path-font}#{$NanumSquareR}.eot);
+  src: url(#{$path-font}#{$NanumSquareR}.eot?#iefix) format("embedded-opentype"),
+    url(#{$path-font}#{$NanumSquareR}.woff) format("woff"),
+    url(#{$path-font}#{$NanumSquareR}.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "NanumSquare";
+  font-weight: 600;
+  src: url(#{$path-font}#{$NanumSquareB}.eot);
+  src: url(#{$path-font}#{$NanumSquareB}.eot?#iefix) format("embedded-opentype"),
+    url(#{$path-font}#{$NanumSquareB}.woff) format("woff"),
+    url(#{$path-font}#{$NanumSquareB}.ttf) format("truetype");
+}
+@font-face {
+  font-family: "NanumSquare";
+  font-weight: 700;
+  src: url(#{$path-font}#{$NanumSquareEB}.eot);
+  src: url(#{$path-font}#{$NanumSquareEB}.eot?#iefix)
+      format("embedded-opentype"),
+    url(#{$path-font}#{$NanumSquareEB}.woff) format("woff"),
+    url(#{$path-font}#{$NanumSquareEB}.ttf) format("truetype");
+}
