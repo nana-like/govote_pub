@@ -1,0 +1,37 @@
+@charset "utf-8";
+
+// **** search box
+
+.search-container {
+  // outline: 2px dotted red;
+
+  .search-box {
+    width: 100%;
+    height: 4.4rem;
+    background-color: #fff;
+    padding: 0.7rem 1.6rem;
+  }
+}
+
+.search-box-style01 {
+  //메인 화면내 search box
+  position: relative;
+  display: block;
+  height: 4.4rem;
+  font-size: 1.6rem;
+  line-height: 3rem;
+  color: $color-placeholder;
+  // @include ellipsis;
+
+  &:before {
+    display: block;
+    position: absolute;
+    top: -3rem;
+    right: 0.5rem;
+    content: "";
+    width: 5.8rem;
+    height: 3.4rem;
+    @include bgi("deco-searchbox-1");
+    background-size: 100%;
+  }
+}

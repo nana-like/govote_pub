@@ -38,14 +38,10 @@ _Last Modified: 2018-08-27_
 
 - 전체를 #wrapper 라는 div 로 감싸고 있습니다.
 - #wrapper 는 페이지 역할에 따라 고유의 클래스(예: .login)를 갖습니다.
-  - .login: 로그인 페이지
-  - .user-infomration: 사용자 정보 입력
-  - .wallet-setting: 지갑 설정
-    \_ .home-dappList: 홈 화면(DApp list)
+  - .myPolls: 나의 투표함 페이지
   - _(작성중...)_
-- 대부분의 페이지 구조는 .page-header 와 .page-body 로 이루어집니다.
-- .page-header 에는 해당 페이지의 타이틀이나 네비게이션 등이 들어갑니다.
-- .page-body 에는 콘텐츠가 들어갑니다.
+- 대부분의 페이지 구조는 .page-top 과 .page-body 로 이루어집니다.
+  - .page-top: 상단 영역. 타이틀이나, 뒤로가기 버튼 또는 검색 박스 등이 위치합니다.
 
 ---
 

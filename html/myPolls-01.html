@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <title>go vote</title>
+
+  <link type="text/css" rel="stylesheet" href="../css/style.css" />
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi"
+  />
+  <meta name="format-detection" content="telephone=no, address=no, email=no" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+</head>
+
+<body>
+  <!-- 내 투표함 화면 -->
+  <div id="wrapper" class="myPolls myPolls-null">
+    <!-- myPolls-null 클래스 쓸 건지?? -->
+
+    <div class="page-top">
+
+      <div class="page-header">
+        <div class="page-header-left">
+          <i class="icon icon-back"></i>
+        </div>
+        <h1 class="page-title logo">
+          <img src="../images/logo.png" alt="logo" />
+        </h1>
+      </div>
+
+      <div class="search-container">
+        <a class="search-box search-box-style01">투표를 검색해보세요!</a>
+      </div>
+
+      <div class="tabmenu">
+        <div class="tabmenu-item active">나의 투표함</div>
+        <!--
+          [전달사항]
+          활성화된 메뉴에 active 클래스를 토글해주세요.
+        -->
+        <div class="tabmenu-item">생성한 투표</div>
+        <div class="tabmenu-item">전체 투표함</div>
+      </div>
+
+    </div>
+
+    <div class="page-body">
+      <div class="no-polls">
+        <p class="no-polls-text">
+          생성된 투표가 없습니다. <br/> 아래 버튼을 눌러 <br/> 새로운 투표를 생성해보세요!
+        </p>
+      </div>
+    </div>
+
+
+  </div>
+</body>

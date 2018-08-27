@@ -3,18 +3,15 @@
 .icon {
   display: inline-block;
   font-size: 0;
-  width: 3.4rem;
-  height: 3.4rem;
+  width: 3.6rem;
+  height: 3.6rem;
   margin: 0 auto;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }
 
-.icon-select01 {
-  background-image: icon(select, #a8b6c8);
+.icon-back {
+  background-image: icon(back, #000);
 }
 
-.icon-select02 {
-  background-image: icon(select, #b1c0cf);
-}

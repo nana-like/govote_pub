@@ -1,0 +1,44 @@
+@charset "utf-8";
+
+// **** Tab Menu
+
+.tabmenu {
+  @include flexbox;
+  @include justify-content(space-between);
+  @include align-items(center);
+  background-color: #fff;
+  height: 4.8rem;
+  border-bottom: 1px solid $color-lightgray;
+
+  .tabmenu-item {
+    position: relative;
+    flex-basis: 12rem;
+    font-size: 1.4rem;
+    text-align: center;
+    height: 100%;
+    line-height: 4.8rem;
+    color: $color-black;
+    flex-grow: 1;
+    color: $color-placeholder;
+
+    &.active {
+      color: #000;
+    }
+
+    &:before {
+      position: absolute;
+      display: block;
+      width: 0.2rem;
+      height: 2.5rem;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      content: "";
+      background-color: $color-lightgray2;
+    }
+
+    &:first-child:before {
+      display: none;
+    }
+  } //end of .tabmenu-item
+}
