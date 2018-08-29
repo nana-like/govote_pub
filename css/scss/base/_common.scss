@@ -50,7 +50,7 @@ $ly-header-height: 4.4rem; //페이지 헤더 높이
     @include align-items(center);
     position: absolute;
     top: 50%;
-    left: 0;
+    left: 1em;
     transform: translateY(-50%);
   }
   .page-header-right {
@@ -59,7 +59,7 @@ $ly-header-height: 4.4rem; //페이지 헤더 높이
     @include align-items(center);
     position: absolute;
     top: 50%;
-    right: 0;
+    right: 1em;
     transform: translateY(-50%);
   }
 

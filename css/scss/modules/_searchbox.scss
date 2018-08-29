@@ -3,7 +3,14 @@
 // **** search box
 
 .search-container {
+  position: relative;
   // outline: 2px dotted red;
+
+  .pollSearch & {
+    margin-top: 1rem;
+    padding: 0 1rem 1rem;
+    border-bottom: 1px solid $color-lightgray2;
+  }
 
   .search-area {
     width: 100%;
@@ -12,6 +19,31 @@
     padding: 0.7rem 1.6rem;
     color: $color-placeholder;
     @include tap-highlight;
+  }
+
+  .button-search-delete {
+    display: block;
+    position: absolute;
+    top: 1.1rem;
+    right: 2.1rem;
+    width: 2.4rem;
+    height: 2.4rem;
+    outline: 2px solid red;
+
+    &.active {
+      display: block;
+    }
+  }
+
+  .deco-search {
+    position: absolute;
+    top: 1.2rem;
+    left: 2rem;
+
+    .icon-search {
+      width: 2rem;
+      height: 2rem;
+    }
   }
 }
 
@@ -35,5 +67,20 @@
     height: 3.4rem;
     @include bgi("deco-searchbox-1");
     background-size: 100%;
+  }
+}
+
+.search-box-style02 {
+  width: 100%;
+  height: 4.4rem;
+  font-size: 1.6rem;
+  padding-left: 4.2rem;
+  padding-right: 2.1rem;
+  color: $color-black;
+  background-color: $color-noPolls-bg;
+
+  @include placeholder {
+    font-size: 1.6rem;
+    color: $color-placeholder;
   }
 }
