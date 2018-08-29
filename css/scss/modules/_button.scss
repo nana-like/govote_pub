@@ -2,6 +2,22 @@
 
 // **** Button style
 
-.button-style-back {
-  outline: 4px solid red;
+.fab {
+  z-index: $z-fab;
+  position: fixed;
+  right: 0.7rem;
+  bottom: 0.7rem;
+  width: 8rem;
+  height: 8rem;
+  background-size: 100%;
+
+  &.fab-style01 {
+    //기본
+    @include bgi("icon-fab");
+  }
+
+  &.fab-style02 {
+    //빛나는 효과
+    @include bgi("icon-fab-effect");
+  }
 }

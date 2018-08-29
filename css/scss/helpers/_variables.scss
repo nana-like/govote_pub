@@ -13,11 +13,15 @@ $color-placeholder: #9c9c9c;
 $color-lightgray: #ededed;
 $color-lightgray2: #e7e7e7;
 $color-noPolls-bg: #f4f4f4;
+$color-filter-border: #d2d2d2;
+$color-gray: #6e6e6e;
+$color-gray2: #c4c4c4;
 
 // -------------------------
 // [ 2. z-index ]
 // -------------------------
-$z-page-header: 100;
+$z-page-header: 100; //상단 헤더
+$z-fab: 200; //fab 버튼
 
 // -------------------------
 // [ 3. path ]
@@ -28,10 +32,15 @@ $path-font: "../fonts/";
 // -------------------------
 // [ 4. font-weight ]
 // -------------------------
-$fw-n: normal;
-$fw-b: bold;
-$fw-eb: bolder;
+$fw-n: 500;
+$fw-b: 700;
 
 // -------------------------
 // [ 5. style ]
 // -------------------------
+
+// -------------------------
+// [ 6. common layout ]
+// -------------------------
+$ly-mypolls-header-height: 16.8rem;
+// $ly-mypolls-header-height: 21rem;

@@ -15,3 +15,13 @@
   background-image: icon(back, #000);
 }
 
+.icon-filter {
+  background-image: icon(filter-down, #000);
+
+  &.active {
+  }
+}
+
+.icon-person {
+  background-image: icon(person, #bcbcbc);
+}

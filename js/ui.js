@@ -13,7 +13,11 @@ $(function() {
 
     $selectBox.on("mousedown", function(event) {
       var selectData = $(this).data("ui-id");
-      var selectId = selectData.split("-").slice(1).join("-").toString();
+      var selectId = selectData
+        .split("-")
+        .slice(1)
+        .join("-")
+        .toString();
       var input = $("input").data("ui-id");
       $("input[data-ui-id='input-" + selectId + "']").focus();
 
@@ -66,8 +70,18 @@ $(function() {
     });
   };
 
+  var touchEvent = function() {
+    $(".fab").on("click", function() {
+      alert("fab 터치");
+    });
+    $(".search-area").on("click", function() {
+      alert("search area 터치");
+    });
+  };
+
   $(window).on("load", function() {
     selectboxEvent();
     selectItemClickEvent();
+    touchEvent();
   });
 });

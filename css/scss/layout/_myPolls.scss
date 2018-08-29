@@ -5,13 +5,23 @@
 // - - - - - - - - - - - - - - -
 // [ .myPolls ]
 // - - - - - - - - - - - - - - -
+html {
+  overflow: hidden;
+}
+.body-myPolls {
+  overflow: hidden;
+  background-color: $color-noPolls-bg;
+}
 
 .myPolls {
   //[*] 내 투표함 페이지
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 
   &.myPolls-null {
-    width: 100%;
-    height: 100%;
+    // width: 100%;
+    // height: 100%;
     // height: 100vh;
     // overflow-y: hidden;
   }
@@ -20,6 +30,30 @@
     // height: 12rem;
     background-color: $color-yellow;
     box-sizing: border-box;
+    & + .page-body {
+      position: absolute;
+      // height: 100%;
+      padding-top: $ly-mypolls-header-height;
+      //
+      // top: 16.8rem;
+      // left: 0;
+      // width: 100%;
+      // height: auto;
+    }
+  }
+
+  .page-body {
+    // height: calc(100vh - 16.8rem);
+    overflow: hidden;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    height: 100%;
+    // position: fixed !important; //이렇게 해두면 바디스크롤 방지는 가능 //단 버벅임ㅠㅠ
+
+    -webkit-overflow-scrolling: touch;
+    // top: 0;
+    // left: 0;
+    // outline: 4px solid red;
   }
 
   .page-header,
@@ -38,15 +72,47 @@
     @include align-items(center);
     width: 100%;
     height: 100%;
-    height: calc(100vh - 16.8rem);
-    min-height: 360px;
+    height: calc(100vh - $ly-mypolls-header-height);
+    // min-height: 36rem;
     background-color: $color-noPolls-bg;
 
     .no-polls-text {
-      margin-top: -30vh;
+      position: absolute;
+      top: $ly-mypolls-header-height;
+      margin-top: 13.7%;
       font-size: 1.7rem;
       text-align: center;
       line-height: 1.76;
+    }
+  }
+
+  .poll-list-container {
+    // height: calc(100vh - #{$ly-mypolls-header-height});
+    height: 100%;
+    overflow-y: auto;
+  }
+}
+
+// - - - - - - - - - - - - - - -
+// [ .pollSearch ]
+// - - - - - - - - - - - - - - -
+
+.pollSearch {
+  .page-top {
+    height: 11rem;
+    background-color: pink;
+  }
+  .page-body {
+    // height: calc(100vh - 16.8rem);
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    padding-top: 11rem;
+    position: fixed !important; //이렇게 해두면 바디스크롤 방지는 가능
+
+    .poll-list-container {
+      height: 100%;
+      overflow-y: auto;
     }
   }
 }

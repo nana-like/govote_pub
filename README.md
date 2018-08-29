@@ -43,15 +43,20 @@ _Last Modified: 2018-08-27_
 - 대부분의 페이지 구조는 .page-top 과 .page-body 로 이루어집니다.
   - .page-top: 상단 영역. 타이틀이나, 뒤로가기 버튼 또는 검색 박스 등이 위치합니다.
 
+1. myPolls
+
+- poll-list-item 은 투표 종류에 따라 다음의 추가적인 클래스를 갖습니다.
+  - poll-upcoming: 참여 가능하지만 아직 시작하지 않은 투표
+  - poll-inactive: 참여 불가능한 투표
+  - poll-active: 참여 가능한 투표
+  - poll-complete: 참여 완료한 투표
+  - poll-over: 종료한 투표
+
 ---
 
 ## Style Name
 
 ### prefix class name
-
-- input-: 인풋과 관련된 요소
-- select-: 셀렉트 박스와 관련된 요소
-- error-: 에러와 관련된 요소
 
 ### toggle class name
 
@@ -63,10 +68,9 @@ _Last Modified: 2018-08-27_
 
 ### 1.fonts
 
-- 기본 폰트는 '나눔스퀘어체'를 사용하며, /\_font.scss 에서 정의합니다.
-  - normal(500)
-  - bold(600)
-  - bolder(800)
+- 기본 폰트는 '본고딕'을 사용하며, /\_font.scss 에서 정의합니다.
+  - normal
+  - bold
 
 ### 2.variables
 

@@ -5,11 +5,13 @@
 .search-container {
   // outline: 2px dotted red;
 
-  .search-box {
+  .search-area {
     width: 100%;
     height: 4.4rem;
     background-color: #fff;
     padding: 0.7rem 1.6rem;
+    color: $color-placeholder;
+    @include tap-highlight;
   }
 }
 

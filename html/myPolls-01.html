@@ -15,16 +15,15 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 </head>
 
-<body>
+<body class="body-myPolls">
   <!-- 내 투표함 화면 -->
-  <div id="wrapper" class="myPolls myPolls-null">
-    <!-- myPolls-null 클래스 쓸 건지?? -->
+  <div id="wrapper" class="myPolls">
 
     <div class="page-top">
 
       <div class="page-header">
         <div class="page-header-left">
-          <i class="icon icon-back"></i>
+          <button class="icon-container"><i class="icon icon-back"></i></button>
         </div>
         <h1 class="page-title logo">
           <img src="../images/logo.png" alt="logo" />
@@ -32,17 +31,18 @@
       </div>
 
       <div class="search-container">
-        <a class="search-box search-box-style01">투표를 검색해보세요!</a>
+        <a href="#" class="search-area search-box-style01">투표를 검색해보세요!</a>
       </div>
 
       <div class="tabmenu">
-        <div class="tabmenu-item active">나의 투표함</div>
+        <a href="#" class="tabmenu-item active">
+          나의 투표함</a>
         <!--
           [전달사항]
           활성화된 메뉴에 active 클래스를 토글해주세요.
         -->
-        <div class="tabmenu-item">생성한 투표</div>
-        <div class="tabmenu-item">전체 투표함</div>
+        <a href="#" class="tabmenu-item">생성한 투표</a>
+        <a href="#" class="tabmenu-item">전체 투표함</a>
       </div>
 
     </div>
@@ -55,6 +55,11 @@
       </div>
     </div>
 
+    <button class="fab fab-style02"></button>
+    <!--
+      [전달사항]
+      플로팅 버튼이며 불필요시 삭제해주세요.
+    -->
 
   </div>
 </body>
