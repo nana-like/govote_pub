@@ -5,6 +5,21 @@
 .pollSearch {
   height: 100%;
 
+  &.search-null .background-search {
+    //검색 결과가 없을 때 백그라운드 이미지 변경
+    @include bgi("deco-searchback-2");
+  }
+
+  &.search-result {
+    .background-search {
+      //검색 결과가 있을 때 백그라운드 이미지 숨김 처리
+      display: none;
+    }
+    .page-body {
+      background: $color-noPolls-bg;
+    }
+  }
+
   .page-top {
     height: 11rem;
     background-color: #fff;
@@ -27,19 +42,21 @@
     }
 
     .search-description {
+      //검색 결과입니다 문구
       font-size: 1.2rem;
-      margin: 1rem 0 1rem 1.2rem;
+      margin: 1.4rem 0 1.6rem 1.2rem;
     }
+  }
 
-    .background-search {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      margin-top: 22%;
-      width: 6.8rem;
-      height: 10rem;
-      background: pink;
-      transform: translate(-50%, -50%);
-    }
+  .background-search {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: 22%;
+    width: 6.8rem;
+    height: 10rem;
+    @include bgi("deco-searchback-1");
+    transform: translate(-50%, -50%);
+    background-size: 100%;
   }
 }

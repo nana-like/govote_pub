@@ -17,7 +17,15 @@
 
 <body class="body-pollSearch">
   <!-- 투표 검색 (처음 진입 시) -->
+
   <div id="wrapper" class="pollSearch">
+    <!--
+        [전달사항]
+        .pollSearch에 경우에 따라 다음의 클래스를 추가/제거해 주세요.
+        - (추가 클래스 없음): 기본 (*현재)
+        - search-null: 검색 결과가 없을 때
+        - search-result: 검색 결과가 있을 때
+      -->
 
 
     <div class="page-top">
@@ -35,27 +43,24 @@
         <div class="icon-container deco-search">
           <i class="icon icon-search"></i>
         </div>
-        <input type="text" placeholder="투표를 검색해보세요!" class="search-box-style02" />
-        <button class="button-search-delete active"><i class="icon icon-search-delete"></i></button>
+        <input type="text" placeholder="투표를 검색해보세요!" value="" class="search-box-style02" />
+        <button class="button-search-delete"><i class="icon icon-search-delete"></i></button>
         <!--
           [전달사항]
           사용자가 검색을 시작하면 .button-search-delete에 active 클래스를 추가해 주세요.
+          폼에 값이 없으면 active 클래스를 제거해주세요.
         -->
       </div>
 
     </div>
     <div class="page-body">
       <div class="poll-list-container">
-        <p class="search-description">‘학생회장 선거’ 에 대한 검색 결과가 없습니다.</p>
-        <div class="background-search search-wait">
-          <!--
-            [전달사항]
-            .background-search에 경우에 따라 다음의 클래스를 추가/제거해 주세요.
-            - search-wait: 기본
-            - search-null: 검색 결과가 없을 때
-            - display-none: 검색 결과가 있을 때
-          -->
+
+        <p class="search-description"></p>
+        <div class="background-search">
         </div>
+
+
       </div>
 
     </div>

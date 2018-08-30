@@ -1,0 +1,200 @@
+@charset "utf-8";
+
+// **** create items
+
+.create-process {
+  //상단의 단계
+  @include flexbox;
+  @include justify-content(center);
+  height: 4.8rem;
+  padding: 0 1.8rem;
+  background-color: $color-darkorange;
+  counter-reset: number; //카운터 리셋
+
+  .process-level {
+    @include flexbox;
+    @include align-items(center);
+    height: 100%;
+
+    .text {
+      display: none;
+    }
+
+    &:before {
+      //숫자
+      z-index: 1;
+      position: relative;
+      display: inline-block;
+      width: 2rem;
+      height: 2rem;
+      line-height: 1.7rem;
+      margin-left: 1.5vw;
+      border-radius: 50%;
+      text-align: center;
+      font-size: 1.4rem;
+      color: $color-brown2;
+      background-color: $color-lightorange;
+      border: 1px dotted $color-brown2;
+      box-sizing: border-box;
+      //---
+      content: counter(number);
+      counter-increment: number;
+    }
+  }
+
+  .process-level.active {
+    min-width: 19.4rem;
+    position: relative;
+    background-color: $color-lightorange;
+    //활성화시
+
+    .text {
+      display: inline-block;
+      color: #fff;
+      font-size: 1.4rem;
+      font-weight: $fw-b;
+
+      &:before,
+      &:after {
+        position: absolute;
+        top: 0;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        content: "";
+      }
+
+      &:before {
+        //삼각형 앞
+        left: 0%;
+        border-width: 2.4rem 0 2.4rem 2.4rem;
+        border-color: transparent transparent transparent $color-darkorange;
+      }
+
+      &:after {
+        //삼각형 뒤
+        left: 100%;
+        border-width: 2.4rem 0 2.4rem 2.4rem;
+        border-color: transparent transparent transparent $color-lightorange;
+      }
+    }
+
+    &:before {
+      //숫자
+      // margin-left: 4.3rem;
+      margin-right: 0.8rem;
+      background-color: #fff;
+      border-color: #fff;
+    }
+
+    // &:after {
+    //   //여백
+    //   position: relative;
+    //   display: inline-block;
+    //   width: 60vw;
+    //   outline: 4px solid red;
+    //   content: "";
+    // }
+  }
+
+  //첫 번째 항목이 활성화 상태일 때
+  .process-level:first-child.active {
+    width: 60%;
+    margin-right: 10%;
+
+    .text:before {
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background-color: $color-lightorange;
+    }
+  }
+
+  //두 번째 항목이 활성화 상태일 때
+  .process-level:nth-child(2).active {
+    width: 60%;
+    margin-left: 6%;
+    margin-right: 6%;
+
+    &:before {
+      margin-left: 15%;
+    }
+  }
+}
+
+.create-item {
+  outline: 1px dotted red;
+  background-color: #fff;
+  margin-bottom: 1rem;
+
+  &:first-child {
+    margin-top: 1rem;
+  }
+
+  li {
+    @include flexbox;
+    @include align-items(center);
+    @include justify-content(space-between);
+    padding: 0 2.1rem;
+    min-height: 5rem;
+    box-sizing: border-box;
+    border-top: 1px solid $color-lightgray2;
+
+    &:first-child {
+      border-top: none;
+    }
+  }
+
+  .create-title {
+    @include flex-grow(1);
+    font-size: 1.6rem;
+
+    & + .button-image-attach {
+      @include flex-grow(0);
+      width: 3.6rem;
+      height: 3.6rem;
+
+      .icon-image-attach {
+        width: 3.6rem;
+        height: 3.6rem;
+        background-position: 100% 50%;
+        background-size: 2.8rem 2.8rem;
+      }
+    }
+  }
+
+  .create-input {
+    display: block;
+    width: 100%;
+    min-height: 5rem;
+    font-size: 1.6rem;
+    color: $color-gray;
+    box-sizing: border-box;
+
+    @include placeholder {
+      color: $color-create-placeholder;
+    }
+  }
+
+  .create-description {
+    @extend .create-input;
+    position: relative;
+    overflow: hidden;
+    resize: none;
+    min-height: 5rem;
+    // padding: 1.2rem 0 0.6rem;
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
+    line-height: 1.88;
+
+    &[contenteditable="true"]:empty:before {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      display: block;
+      content: attr(data-placeholder);
+      color: $color-create-placeholder;
+      transform: translateY(-50%);
+    }
+  }
+}

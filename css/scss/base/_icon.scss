@@ -12,10 +12,19 @@
 }
 
 .icon-back {
+  //상단 뒤로가기 버튼
   background-image: icon(back, #000);
 }
 
+.icon-close {
+  //닫기 버튼
+  width: 3rem;
+  height: 3rem;
+  background-image: icon(close, #000);
+}
+
 .icon-filter {
+  //필터 오른편 화살표
   background-image: icon(filter-down, #000);
 
   &.active {
@@ -23,9 +32,21 @@
 }
 
 .icon-person {
+  //투표 생성자 옆 사람 모양 아이콘
   background-image: icon(person, #bcbcbc);
 }
 
 .icon-search {
-  background-image: icon(search, #9C9C9C);
+  //검색 박스 내 왼편 검색 아이콘
+  background-image: icon(search, #9c9c9c);
+}
+
+.icon-search-delete {
+  //검색 박스 내 오른편 삭제 아이콘
+  background-image: icon(search-delete, #6e6e6e);
+}
+
+.icon-image-attach {
+  //투표 생성 시 이미지 등록 버튼
+  background-image: icon(image-attach, #000);
 }

@@ -5,9 +5,7 @@
 // - - - - - - - - - - - - - - -
 // [ .myPolls ]
 // - - - - - - - - - - - - - - -
-html {
-  overflow: hidden;
-}
+
 .body-myPolls {
   overflow: hidden;
   background-color: $color-noPolls-bg;
@@ -18,13 +16,6 @@ html {
   width: 100%;
   height: 100%;
   overflow: hidden;
-
-  &.myPolls-null {
-    // width: 100%;
-    // height: 100%;
-    // height: 100vh;
-    // overflow-y: hidden;
-  }
 
   .page-top {
     // height: 12rem;

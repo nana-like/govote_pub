@@ -5,13 +5,9 @@
 .poll-list {
   .poll-list-item {
     //각 투표 아이템
-    margin-top: 0.4rem;
+    margin-bottom: 0.4rem;
     border: 1px solid $color-lightgray2;
     background-color: #fff;
-
-    &:first-child {
-      margin-top: 0;
-    }
   }
 
   .poll-title {
