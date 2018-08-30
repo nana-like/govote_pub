@@ -52,7 +52,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    margin-top: 22%;
+    // margin-top: 22%; //중앙으로 변경
     width: 6.8rem;
     height: 10rem;
     @include bgi("deco-searchback-1");

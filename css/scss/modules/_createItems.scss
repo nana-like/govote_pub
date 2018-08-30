@@ -3,21 +3,50 @@
 // **** create items
 
 .create-process {
-  //상단의 단계
+  //[*] 기본적인 컨테이너 스타일 선언
   @include flexbox;
   @include justify-content(center);
   height: 4.8rem;
   padding: 0 1.8rem;
-  background-color: $color-darkorange;
+  background-color: $color-orange;
   counter-reset: number; //카운터 리셋
 
   .process-level {
+    position: relative;
+    //[*] 기본적인 레벨 스타일 선언
     @include flexbox;
     @include align-items(center);
     height: 100%;
 
     .text {
+      //텍스트
+
+      color: #fff;
+      font-size: 1.4rem;
+      font-weight: $fw-b;
       display: none;
+
+      &:after {
+        //삼각형 뒤쪽 모양 정의
+        display: none;
+        position: absolute;
+        top: 0;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        content: "";
+      }
+    }
+
+    &:after {
+      //삼각형 앞쪽 모양 정의
+      display: none;
+      position: absolute;
+      top: 0;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      content: "";
     }
 
     &:before {
@@ -40,84 +69,108 @@
       content: counter(number);
       counter-increment: number;
     }
-  }
+  } //end of .process-level (기본)
 
-  .process-level.active {
-    min-width: 19.4rem;
-    position: relative;
-    background-color: $color-lightorange;
-    //활성화시
+  // ----
+}
 
-    .text {
-      display: inline-block;
-      color: #fff;
-      font-size: 1.4rem;
-      font-weight: $fw-b;
+// 공통 스타일링 적용
+@for $i from 1 through 4 {
+  .create-process.active-#{$i} {
+    //n번째 요소가 활성화 상태라면
 
-      &:before,
-      &:after {
-        position: absolute;
-        top: 0;
-        width: 0;
-        height: 0;
-        border-style: solid;
-        content: "";
+    .process-level:nth-child(#{$i}) {
+      //n번째 요소에게 스타일 적용
+      margin-right: 2.6rem;
+      padding-left: 4rem;
+      min-width: 19.4rem;
+      width: 70%;
+      position: relative;
+      background-color: $color-lightorange;
+
+      .text {
+        //텍스트 보임
+        display: block;
+
+        &:after {
+          //뒤쪽 화살표 모양 스타일
+          display: block;
+          left: 100%;
+          border-width: 2.4rem 0 2.4rem 2.4rem;
+          border-color: transparent transparent transparent $color-lightorange;
+        }
       }
 
       &:before {
-        //삼각형 앞
-        left: 0%;
-        border-width: 2.4rem 0 2.4rem 2.4rem;
-        border-color: transparent transparent transparent $color-darkorange;
+        //숫자 활성화
+        // margin-left: 4.3rem;
+        margin-right: 0.8rem;
+        background-color: #fff;
+        border-color: #fff;
       }
+    }
+
+    .process-level:nth-child(#{($i) - 1}) {
+      //그 n-1번째에게도 화살표 추가
 
       &:after {
-        //삼각형 뒤
+        //삼각형 앞
+        z-index: 1;
+        display: block;
         left: 100%;
         border-width: 2.4rem 0 2.4rem 2.4rem;
-        border-color: transparent transparent transparent $color-lightorange;
+        border-color: transparent transparent transparent $color-orange;
       }
     }
-
-    &:before {
-      //숫자
-      // margin-left: 4.3rem;
-      margin-right: 0.8rem;
-      background-color: #fff;
-      border-color: #fff;
-    }
-
-    // &:after {
-    //   //여백
-    //   position: relative;
-    //   display: inline-block;
-    //   width: 60vw;
-    //   outline: 4px solid red;
-    //   content: "";
-    // }
   }
+} //for문 종료
 
-  //첫 번째 항목이 활성화 상태일 때
-  .process-level:first-child.active {
-    width: 60%;
-    margin-right: 10%;
+//예외 상황 정의
+.create-process.active-1 {
+  .process-level:nth-child(1) {
+    margin-left: 0;
+    padding-left: 0;
+    margin-right: 3rem;
 
     .text:before {
+      position: absolute;
+      top: 0;
       left: -100%;
       width: 100%;
       height: 100%;
       background-color: $color-lightorange;
+      content: "";
     }
   }
-
-  //두 번째 항목이 활성화 상태일 때
-  .process-level:nth-child(2).active {
-    width: 60%;
-    margin-left: 6%;
-    margin-right: 6%;
-
-    &:before {
-      margin-left: 15%;
+}
+//예외 상황 정의
+.create-process.active-4 {
+  .process-level:nth-child(3) {
+    &:after {
+      // display: none;
+      // width: 100%;
+      height: 100%;
+      background-color: $color-orange;
+    }
+  }
+  .process-level:nth-child(4) {
+    margin-right: 0;
+    margin-left: 4rem;
+    padding-left: 0;
+    .text:before {
+      position: absolute;
+      top: 0;
+      left: 100%;
+      width: 100%;
+      height: 100%;
+      background-color: $color-lightorange;
+      content: "";
+    }
+    .text:after {
+      z-index: 1;
+      left: -2.4rem;
+      border-width: 2.4rem 2.4rem 2.4rem 0;
+      border-color: transparent $color-lightorange transparent transparent;
     }
   }
 }
@@ -142,6 +195,11 @@
 
     &:first-child {
       border-top: none;
+    }
+
+    & > a {
+      width: 100%;
+      height: 100%;
     }
   }
 
@@ -195,6 +253,244 @@
       content: attr(data-placeholder);
       color: $color-create-placeholder;
       transform: translateY(-50%);
+    }
+  }
+
+  .create-date-container {
+    @include flexbox;
+    @include justify-content(space-between);
+    @include align-items(center);
+    width: 100%;
+    color: $color-black;
+    font-size: 1.4rem;
+
+    .create-date {
+      @include flex-grow(1);
+      @include flexbox;
+      @include align-items(center);
+      @include justify-content(flex-start);
+    }
+
+    .icon-clock {
+      @include flex-grow(0);
+      width: 1.6rem;
+      height: 1.6rem;
+      margin: 0 0.4rem 0 0.8rem;
+    }
+
+    .icon-arrow-right {
+      width: 1.4rem;
+      height: 1.4rem;
+    }
+  } //end of .create-date-container
+
+  .create-radio-container {
+    @include flexbox;
+    @include align-items(center);
+
+    .radio {
+      margin-left: 2.8rem;
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+
+    .create-radio {
+      &:checked,
+      &:not(:checked) {
+        //기본 라디오 ui 숨기기
+        position: absolute;
+        left: -9999px;
+      }
+
+      &:checked + label,
+      &:not(:checked) + label {
+        //라벨 스타일링
+        display: inline-block;
+        position: relative;
+        padding-left: 2.9rem;
+        font-size: 1.4rem;
+        color: $color-black;
+        cursor: pointer;
+      }
+
+      &:checked + label:before,
+      &:not(:checked) + label:before {
+        //동그라미 바탕
+        position: absolute;
+        left: 0;
+        top: 50%;
+        width: 2rem;
+        height: 2rem;
+        border: 1px solid $color-create-placeholder;
+        background: $color-lightgray2;
+        border-radius: 50%;
+        transform: translateY(-50%);
+        content: "";
+      }
+
+      &:checked + label:after,
+      &:not(:checked) + label:after {
+        //체크됐을 때 동그라미
+        width: 0.8rem;
+        height: 0.8rem;
+        background: #373631;
+        position: absolute;
+        top: 0.65rem;
+        left: 0.6rem;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        // -webkit-transition: all 0.2s ease;
+        // transition: all 0.2s ease;
+        content: "";
+      }
+      &:not(:checked) + label:after {
+        opacity: 0;
+        -webkit-transform: scale(0);
+        transform: scale(0);
+      }
+      &:checked + label:after {
+        opacity: 1;
+        -webkit-transform: scale(1);
+        transform: scale(1);
+      }
+    }
+  } //end of .create-radio-container
+
+  .create-toggle {
+    width: 100%;
+    height: 100%;
+    @include flexbox;
+    @include justify-content(space-between);
+    @include align-items(center);
+    // background: crimson;
+
+    .toggle-title {
+      font-size: 1.6rem;
+    }
+
+    .toggle-switch {
+      // outline: 4px solid blue;
+      position: relative;
+      @include flexbox;
+      @include align-items(center);
+      width: 4.5rem;
+      height: 3.2rem;
+
+      .switch-body {
+        // position: absolute;
+        width: 4.6rem;
+        height: 2.4rem;
+        @include bgi("icon-switch-back-off");
+        background-size: 100%;
+        transition: all 0.5s;
+        -webkit-transform-style: preserve-3d;
+      }
+      .switch-head {
+        position: absolute;
+        top: 0.4rem;
+        left: 0;
+        width: 2.4rem;
+        height: 2.4rem;
+        @include bgi("icon-switch-face-off");
+        background-size: 100%;
+        transition: all 0.5s;
+        -webkit-transform-style: preserve-3d;
+      }
+
+      .toggle-body {
+        &:before {
+          position: absolute;
+          top: 0;
+          left: 0;
+          display: block;
+          width: 4.6rem;
+          height: 2.4rem;
+          @include bgi("icon-switch-back-off");
+          background-size: 100%;
+          // transition: all 0.5s;
+          content: "";
+        }
+        &:after {
+          opacity: 0;
+          position: absolute;
+          top: 0;
+          left: 0;
+          display: block;
+          width: 4.6rem;
+          height: 2.4rem;
+          @include bgi("icon-switch-back-on");
+          background-size: 100%;
+          // transition: all 0.5s;
+          content: "";
+        }
+      }
+
+      .toggle-head {
+        &:before {
+          position: absolute;
+          top: 0rem;
+          left: -0.2rem;
+          width: 2.4rem;
+          height: 2.5rem;
+          display: block;
+          @include bgi("icon-switch-face-off");
+          background-size: 100%;
+          transition: transform 0.5s;
+          transform: translateX(0);
+          content: "";
+        }
+        &:after {
+          opacity: 0;
+          position: absolute;
+          top: 0rem;
+          left: -0.2rem;
+          width: 2.4rem;
+          height: 2.5rem;
+          display: block;
+          @include bgi("icon-switch-face-on");
+          background-size: 100%;
+          transition: transform 0.5s;
+          transform: translateX(0);
+          content: "";
+        }
+      }
+    }
+
+    .toggle-switch.active,
+    .test:checked + .toggle-switch {
+      .switch-body {
+        @include bgi("icon-switch-back-on");
+        transition: transform 0.5s;
+      }
+      .switch-head {
+        left: 100%;
+        margin-left: -2.4rem;
+        @include bgi("icon-switch-face-on");
+        transition: transform 0.5s;
+      }
+
+      .toggle-body {
+        &:before {
+          opacity: 0;
+        }
+        &:after {
+          opacity: 1;
+        }
+      }
+
+      .toggle-head {
+        &:before {
+          opacity: 0;
+          transform: translateX(2.4rem);
+          transition: transform 0.5s;
+        }
+        &:after {
+          opacity: 1;
+          transform: translateX(2.4rem);
+          transition: transform 0.5s;
+        }
+      }
     }
   }
 }

@@ -21,9 +21,10 @@
       back:
       '<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36"><path fill="#{$color}" d="M12.929 18.225l7.887 7.887a1.154 1.154 0 1 1-1.632 1.632l-8.159-8.159a1.152 1.152 0 0 1-.225-.318 1.154 1.154 0 0 1-.318-1.857l8.702-8.703a1.154 1.154 0 0 1 1.632 1.631l-7.887 7.887z" fill-rule="evenodd"/></svg>',
     // ----
-    // 닫기 버튼
-    // ----
-    close: '<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36"><path fill-rule="evenodd" d="M17.694 16.45l7.319-7.32a1.35 1.35 0 0 1 1.909 1.91l-7.319 7.318 6.97 6.97a1.35 1.35 0 0 1-1.909 1.91l-6.97-6.97-6.682 6.682a1.35 1.35 0 0 1-1.91-1.91l6.683-6.682-7.03-7.03a1.35 1.35 0 0 1 1.909-1.91l7.03 7.031z"/></svg>',
+      // 닫기 버튼
+      // ----
+      close:
+      '<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36"><path fill-rule="evenodd" d="M17.694 16.45l7.319-7.32a1.35 1.35 0 0 1 1.909 1.91l-7.319 7.318 6.97 6.97a1.35 1.35 0 0 1-1.909 1.91l-6.97-6.97-6.682 6.682a1.35 1.35 0 0 1-1.91-1.91l6.683-6.682-7.03-7.03a1.35 1.35 0 0 1 1.909-1.91l7.03 7.031z"/></svg>',
     // ----
       // 필터 셀렉트박스 오른편 화살표 아이콘
       // ----
@@ -53,7 +54,28 @@
       // 이미지 첨부 아이콘
       //----
       image-attach:
-      '<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28"><g fill="none" fill-rule="evenodd" stroke="#373631" transform="translate(0 4)"><path fill="#FFF" d="M.5.5h27v19H.5z"/><path fill="#FCDC05" d="M24.5 19.5h-21v-5a7 7 0 0 1 14-.078l.008.755.692-.303A4.5 4.5 0 0 1 24.5 19v.5z"/><circle cx="21.5" cy="6.5" r="2.5" fill="#F4F4F4"/></g></svg>'
+      '<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28"><g fill="none" fill-rule="evenodd" stroke="#373631" transform="translate(0 4)"><path fill="#FFF" d="M.5.5h27v19H.5z"/><path fill="#FCDC05" d="M24.5 19.5h-21v-5a7 7 0 0 1 14-.078l.008.755.692-.303A4.5 4.5 0 0 1 24.5 19v.5z"/><circle cx="21.5" cy="6.5" r="2.5" fill="#F4F4F4"/></g></svg>',
+    //----
+      // 시계 아이콘
+      //----
+      clock:
+      '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"> <g fill="none" fill-rule="evenodd" stroke="#{$color}"><circle cx="8" cy="8" r="8" fill="#FFF"/><rect width="1" height="4" x="9.5" y="7.5" fill="#FCDC05" rx=".5" transform="rotate(90 9.5 9.5)"/><rect width="1" height="5" x="7.5" y="4.5" fill="#FCDC05" rx=".5"/></g></svg>',
+      //----
+      // 화살표 오른쪽
+      // ----
+      arrow-right: '<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"><path fill="#{$color}" fill-rule="evenodd" d="M11.95 7.158l-5.521 5.52a.808.808 0 1 0 1.142 1.143l5.711-5.711a.806.806 0 0 0 .158-.223.806.806 0 0 0 .223-1.3L7.571.495A.808.808 0 1 0 6.43 1.637l5.52 5.52z"/></svg>',
+      //---
+      // 토글 on 바디
+      //---
+      toggle-on-body: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 28"><path d="M11 3.5C5.2 3.5.5 8.2.5 14S5.2 24.5 11 24.5h21c5.8 0 10.5-4.7 10.5-10.5S37.8 3.5 32 3.5H11z" fill="#f4f4f4" stroke="#373631"/></svg>',
+      //---
+      // 토글 off 바디
+      //---
+      toggle-off-body: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 28"><path d="M36 3.5c5.8 0 10.5 4.7 10.5 10.5S41.8 24.5 36 24.5H15C9.2 24.5 4.5 19.8 4.5 14S9.2 3.5 15 3.5h21z" fill="#a8a8a8" stroke="#373631"/></svg>',
+      //----
+      // 토글 on 얼굴
+      //----
+      toggle-on-head: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 28"><g transform="translate(22 2)"><circle cx="12" cy="12" r="12" fill="#fff" stroke="#373631"/><ellipse cx="9.4" cy="7.7" rx="1.4" ry="1.7"/><ellipse cx="16.5" cy="7.7" rx="1.4" ry="1.7"/><path d="M8.1 12.7h9.8v.6c0 2.4-2.2 4.4-5 4.4-2.7 0-5-2-5-4.4.1-.2.1-.4.2-.6z" fill="#fcdc05" stroke="#34332e"/></g></svg>',
   );
   $icon: _buildIcon(map-get($icons, $icon-name));
   @return url("data:image/svg+xml;utf8,#{$icon}");
