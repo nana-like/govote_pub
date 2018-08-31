@@ -41,9 +41,14 @@
   background-image: icon(search, #9c9c9c);
 }
 
-.icon-search-delete {
-  //검색 박스 내 오른편 삭제 아이콘
-  background-image: icon(search-delete, #6e6e6e);
+.icon-delete {
+  //삭제 아이콘
+  background-image: icon(delete, #6e6e6e);
+}
+
+.icon-delete-disable {
+  //삭제 아이코 비활성화
+  background-image: icon(delete, #d3d3d3);
 }
 
 .icon-image-attach {
@@ -56,4 +61,10 @@
 }
 .icon-arrow-right {
   background-image: icon(arrow-right, #000);
+}
+
+.icon-plus {
+  width: 2.7rem;
+  height: 2.7rem;
+  background-image: icon(plus, #373631);
 }

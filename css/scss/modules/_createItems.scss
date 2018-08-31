@@ -11,6 +11,20 @@
   background-color: $color-orange;
   counter-reset: number; //카운터 리셋
 
+  &:before {
+    //우측 상단의 보팅몬스터
+    display: block;
+    z-index: 1;
+    position: absolute;
+    top: -3.6rem;
+    right: 1.3rem;
+    width: 5.7rem;
+    height: 5.4rem;
+    @include bgi("deco-process-1");
+    background-size: 100%;
+    content: "";
+  }
+
   .process-level {
     position: relative;
     //[*] 기본적인 레벨 스타일 선언
@@ -176,7 +190,6 @@
 }
 
 .create-item {
-  outline: 1px dotted red;
   background-color: #fff;
   margin-bottom: 1rem;
 
@@ -189,6 +202,7 @@
     @include align-items(center);
     @include justify-content(space-between);
     padding: 0 2.1rem;
+    // padding: 0 1rem;
     min-height: 5rem;
     box-sizing: border-box;
     border-top: 1px solid $color-lightgray2;
@@ -201,13 +215,14 @@
       width: 100%;
       height: 100%;
     }
-  }
 
-  .create-title {
-    @include flex-grow(1);
-    font-size: 1.6rem;
+    &.ly-padding-sm {
+      //create-item 의 li 중 padding값이 예외인 요소에게 주는 클래스
+      padding: 0 1rem;
+      @include flex-direction(column);
+    }
 
-    & + .button-image-attach {
+    .button-image-attach {
       @include flex-grow(0);
       width: 3.6rem;
       height: 3.6rem;
@@ -219,6 +234,11 @@
         background-size: 2.8rem 2.8rem;
       }
     }
+  }
+
+  .create-title {
+    @include flex-grow(1);
+    font-size: 1.6rem;
   }
 
   .create-input {
@@ -235,6 +255,7 @@
   }
 
   .create-description {
+    width: 100%;
     @extend .create-input;
     position: relative;
     overflow: hidden;
@@ -243,6 +264,8 @@
     // padding: 1.2rem 0 0.6rem;
     padding-top: 1.2rem;
     padding-bottom: 1.2rem;
+    padding-left: 1.1rem;
+    padding-right: 1.1rem;
     line-height: 1.88;
 
     &[contenteditable="true"]:empty:before {
@@ -253,6 +276,34 @@
       content: attr(data-placeholder);
       color: $color-create-placeholder;
       transform: translateY(-50%);
+    }
+  }
+
+  .create-description-image {
+    //업로드한 이미지 규정
+    position: relative;
+    margin-top: 3.4rem;
+    margin-bottom: 1rem;
+    width: 100%;
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .button-image-delete {
+      position: absolute;
+      top: -1.2rem;
+      right: 0.5rem;
+      width: 3rem;
+      height: 3rem;
+    }
+
+    .icon-delete {
+      width: 3rem;
+      height: 3rem;
+      background-size: 2.4rem 2.4rem;
     }
   }
 
@@ -269,6 +320,29 @@
       @include flexbox;
       @include align-items(center);
       @include justify-content(flex-start);
+    }
+
+    .create-date-placeholder {
+      color: $color-create-placeholder;
+    }
+
+    .button-date-delete {
+      width: 3rem;
+      height: 3rem;
+
+      .icon-delete {
+        width: 3rem;
+        height: 3rem;
+        background-size: 2.4rem 2.4rem;
+        background-position: 50%;
+      }
+
+      &:disabled,
+      &.disable {
+        .icon-delete {
+          background-image: icon(delete, #d3d3d3);
+        }
+      }
     }
 
     .icon-clock {
@@ -300,7 +374,7 @@
       &:not(:checked) {
         //기본 라디오 ui 숨기기
         position: absolute;
-        left: -9999px;
+        left: -9999rem;
       }
 
       &:checked + label,
@@ -368,108 +442,84 @@
     .toggle-title {
       font-size: 1.6rem;
     }
+  } //----end of .crete-toggle
 
-    .toggle-switch {
-      // outline: 4px solid blue;
+  .toggle-checkbox {
+    &:checked,
+    &:not(:checked) {
+      //기본 체크박스 ui 숨기기
+      position: absolute;
+      left: -9999rem;
+    }
+
+    & + .toggle-switch {
       position: relative;
       @include flexbox;
       @include align-items(center);
+      @include justify-content(center);
       width: 4.5rem;
-      height: 3.2rem;
+      height: 3.5rem;
+      // outline: 4px solid navy;
 
-      .switch-body {
-        // position: absolute;
+      .toggle-body {
+        //토글 바디
+        position: relative;
         width: 4.6rem;
         height: 2.4rem;
-        @include bgi("icon-switch-back-off");
-        background-size: 100%;
-        transition: all 0.5s;
-        -webkit-transform-style: preserve-3d;
-      }
-      .switch-head {
-        position: absolute;
-        top: 0.4rem;
-        left: 0;
-        width: 2.4rem;
-        height: 2.4rem;
-        @include bgi("icon-switch-face-off");
-        background-size: 100%;
-        transition: all 0.5s;
-        -webkit-transform-style: preserve-3d;
-      }
 
-      .toggle-body {
-        &:before {
+        &:before,
+        &:after {
           position: absolute;
           top: 0;
           left: 0;
           display: block;
           width: 4.6rem;
           height: 2.4rem;
+          background-size: 100%;
+          content: "";
+        }
+        &:before {
+          //off일 때
           @include bgi("icon-switch-back-off");
-          background-size: 100%;
-          // transition: all 0.5s;
-          content: "";
         }
         &:after {
-          opacity: 0;
-          position: absolute;
-          top: 0;
-          left: 0;
-          display: block;
-          width: 4.6rem;
-          height: 2.4rem;
+          //on일 때
+          opacity: 0; //기본 숨김
           @include bgi("icon-switch-back-on");
-          background-size: 100%;
-          // transition: all 0.5s;
-          content: "";
         }
-      }
+      } //----end of .toggle-body
 
       .toggle-head {
-        &:before {
+        position: absolute;
+        width: 4.6rem;
+        height: 2.4rem;
+
+        &:before,
+        &:after {
           position: absolute;
           top: 0rem;
           left: -0.2rem;
           width: 2.4rem;
           height: 2.5rem;
           display: block;
-          @include bgi("icon-switch-face-off");
           background-size: 100%;
           transition: transform 0.5s;
           transform: translateX(0);
           content: "";
+        }
+        &:before {
+          //off일 때
+          @include bgi("icon-switch-face-off");
         }
         &:after {
-          opacity: 0;
-          position: absolute;
-          top: 0rem;
-          left: -0.2rem;
-          width: 2.4rem;
-          height: 2.5rem;
-          display: block;
+          //on일 때
+          opacity: 0; //기본 숨김
           @include bgi("icon-switch-face-on");
-          background-size: 100%;
-          transition: transform 0.5s;
-          transform: translateX(0);
-          content: "";
         }
-      }
-    }
+      } //----end of .toggle-head
+    } //----end of .toggle-switch (normal)
 
-    .toggle-switch.active,
-    .test:checked + .toggle-switch {
-      .switch-body {
-        @include bgi("icon-switch-back-on");
-        transition: transform 0.5s;
-      }
-      .switch-head {
-        left: 100%;
-        margin-left: -2.4rem;
-        @include bgi("icon-switch-face-on");
-        transition: transform 0.5s;
-      }
-
+    &:checked + .toggle-switch {
       .toggle-body {
         &:before {
           opacity: 0;
@@ -477,7 +527,7 @@
         &:after {
           opacity: 1;
         }
-      }
+      } //end of .toggle-body
 
       .toggle-head {
         &:before {
@@ -490,7 +540,32 @@
           transform: translateX(2.4rem);
           transition: transform 0.5s;
         }
-      }
-    }
+      } //end of .toggle-head
+    } //end of .toggle-switch
+  } //----end of .toggle-checkbox
+}
+
+.create-buttons-container {
+  @include flexbox;
+  @include align-items(center);
+  @include justify-content(center);
+  width: 100%;
+  height: 5rem;
+  // margin-top: 2rem;
+
+  [class^="button-"] {
+    @include flex-grow(1);
+    @include flex-basis(50%);
+    height: 100%;
+    font-size: 1.6rem;
+    text-align: center;
+  }
+
+  .button-prev {
+    background-color: $color-lightgray2;
+  }
+
+  .button-next {
+    background-color: $color-yellow;
   }
 }

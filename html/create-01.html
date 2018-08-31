@@ -30,16 +30,17 @@
         </h1>
       </div>
 
-      <div class="create-process active-4">
+      <div class="create-process active-1">
         <!--
-            [전달사항]
-            활성화된 순서에 따라 create-process에
-            active-1, active-2, active-3, active-4
-            클래스를 추가해주세요.
-
-          -->
-        <div class="process-level "><span class="text">투표 정보 입력</span></div>
-        <div class="process-level ">
+          [전달사항]
+          활성화된 순서에 따라 create-process에
+          active-1, active-2, active-3, active-4
+          클래스를 추가해주세요.
+        -->
+        <div class="process-level">
+          <span class="text">투표 정보 입력</span>
+        </div>
+        <div class="process-level">
           <span class="text">투표 항목 입력</span>
         </div>
         <div class="process-level">
@@ -56,8 +57,7 @@
     <div class="page-body">
 
       <div class="create-item-container">
-
-        <form action="">
+        <form>
           <ul class="create-item">
             <li>
               <p class="create-title">투표제목</p>
@@ -72,25 +72,33 @@
               <p class="create-title">투표정보 / 이미지 등록</p>
               <button class="button-image-attach"><i class="icon icon-image-attach"></i></button>
             </li>
-            <li>
+            <li class="ly-padding-sm">
+              <div contentEditable="true" class="create-description" data-placeholder="투표 정보를 입력하거나 이미지를 등록하세요." id="editable-area" tabIndex="0">
+                <div>제 21대 총학생회장 선거를 실시합니다. <br>많은 참여 부탁드립니다.</div>
+                <div></div>
+              </div>
+              <div class="create-description-image">
+                <img src="../images/thumbnail-test.png" alt="image" />
+                <button class="button-image-delete"><i class="icon icon-delete"></i></button>
+              </div>
 
+              <script>
+                /*
+                  [전달사항]
+                  #editable-area의 값이 비어져있는지를 파악해서 data-placeholder를 보여주기 위함입니다.
+                */
+                var target = document.querySelector('#editable-area');
+                var observer = new MutationObserver(function (mutations) {
+                  mutations.forEach(function (mutation) {
+                    if (target.textContent == '') {
+                      target.innerHTML = '';
+                    }
+                  });
+                });
+                var config = { attributes: true, childList: true, characterData: true };
+                observer.observe(target, config);
 
-              <!-- <textarea type="text" placeholder="투표 정보를 입력하거나 이미지를 등록하세요." class="create-description" id="textarea-autosize" onkeyup="auto_grow(this)"></textarea> -->
-
-
-              <!-- <textarea id="auto-textarea" class="create-textarea" onkeyup="resizeTextarea('auto-textarea')" data-resizable="true" placeholder="투표 정보를 입력하거나 이미지를 등록하세요."></textarea> -->
-
-              <hr>
-              <div contentEditable="true" class="create-description" data-placeholder="투표 정보를 입력하거나 이미지를 등록하세요." id="editable-area" tabIndex="0"></div>
-
-
-
-              <!-- <p class="editable-placeholder">투표 정보를 입력하거나 이미지를 등록하세요.</p> -->
-              <!--
-            [전달사항]
-            data-autoresize 속성의 textarea는 높이값을 
-          -->
-
+              </script>
             </li>
           </ul>
 
@@ -113,7 +121,7 @@
             <li>
               <div class="create-radio-container">
                 <div class="radio">
-                  <input type="radio" id="endCondition-date" name="endCondition" class="create-radio" />
+                  <input type="radio" id="endCondition-date" name="endCondition" class="create-radio" checked/>
                   <label for="endCondition-date">일시</label>
                 </div>
                 <div class="radio">
@@ -134,174 +142,64 @@
             <li>
               <div class="create-toggle">
                 <p class="toggle-title">앱 알림</p>
-                <input type="checkbox" class="test" />테스트!
-                <div class="toggle-switch">
-                  <!-- <div class="switch-body"></div>
-                  <div class="switch-head"></div> -->
+
+                <input id="option-noti-app" type="checkbox" class="toggle-checkbox" />
+                <label for="option-noti-app" class="toggle-switch">
                   <div class="toggle-body"></div>
                   <div class="toggle-head"></div>
-
-                </div>
+                </label>
               </div>
             </li>
-          </ul>
+            <li>
+              <div class="create-toggle">
+                <p class="toggle-title">이메일 알림</p>
 
-          <ul class="create-item">
-            <li>
-              <p class="create-title">투표 종료 기준</p>
+                <input id="option-noti-email" type="checkbox" class="toggle-checkbox" />
+                <label for="option-noti-email" class="toggle-switch">
+                  <div class="toggle-body"></div>
+                  <div class="toggle-head"></div>
+                </label>
+              </div>
             </li>
             <li>
-              <input type="radio" />
-              <label for="">일시</label>
-              <input type="radio" />
-              <label for="">사람 수</label>
-            </li>
-            <li>
-              <div>2018년 9월 4일 화요일 <i class="icon icon-clock"></i>오후 3:30 <i class="icon icon-arrow-right"></i></div>
-            </li>
-          </ul>
+              <div class="create-toggle">
+                <p class="toggle-title">기권 가능 여부</p>
 
-          <ul class="create-item">
-            <li>
-              <p class="create-title">투표 종료 기준</p>
+                <input id="option-able-blank" type="checkbox" class="toggle-checkbox" checked/>
+                <label for="option-able-blank" class="toggle-switch">
+                  <div class="toggle-body"></div>
+                  <div class="toggle-head"></div>
+                </label>
+              </div>
+              <!--
+                [전달사항]
+                checkbox가 checked 된 상태일 때 활성화된 ui로 바뀝니다. 
+              -->
             </li>
             <li>
-              <input type="radio" />
-              <label for="">일시</label>
-              <input type="radio" />
-              <label for="">사람 수</label>
-            </li>
-            <li>
-              <div>2018년 9월 4일 화요일 <i class="icon icon-clock"></i>오후 3:30 <i class="icon icon-arrow-right"></i></div>
-            </li>
-          </ul>
+              <div class="create-toggle">
+                <p class="toggle-title">무기명 투표</p>
 
-          <ul class="create-item">
-            <li>
-              <p class="create-title">투표 종료 기준</p>
-            </li>
-            <li>
-              <input type="radio" />
-              <label for="">일시</label>
-              <input type="radio" />
-              <label for="">사람 수</label>
-            </li>
-            <li>
-              <div>2018년 9월 4일 화요일 <i class="icon icon-clock"></i>오후 3:30 <i class="icon icon-arrow-right"></i></div>
+                <input id="option-able-secret" type="checkbox" class="toggle-checkbox" checked/>
+                <label for="option-able-secret" class="toggle-switch">
+                  <div class="toggle-body"></div>
+                  <div class="toggle-head"></div>
+                </label>
+              </div>
+              <!--
+                [전달사항]
+                checkbox가 checked 된 상태일 때 활성화된 ui로 바뀝니다. 
+              -->
             </li>
           </ul>
 
-          <ul class="create-item">
-            <li>
-              <p class="create-title">투표 종료 기준</p>
-            </li>
-            <li>
-              <input type="radio" />
-              <label for="">일시</label>
-              <input type="radio" />
-              <label for="">사람 수</label>
-            </li>
-            <li>
-              <div>2018년 9월 4일 화요일 <i class="icon icon-clock"></i>오후 3:30 <i class="icon icon-arrow-right"></i></div>
-            </li>
-          </ul>
-
-          <ul class="create-item">
-            <li>
-              <p class="create-title">투표 종료 기준</p>
-            </li>
-            <li>
-              <input type="radio" />
-              <label for="">일시</label>
-              <input type="radio" />
-              <label for="">사람 수</label>
-            </li>
-            <li>
-              <div>2018년 9월 4일 화요일 <i class="icon icon-clock"></i>오후 3:30 <i class="icon icon-arrow-right"></i></div>
-            </li>
-          </ul>
+          <div class="create-buttons-container">
+            <button class="button-next">다음</button>
+          </div>
         </form>
       </div>
-      <!--
-          [전달사항]????//TODO:이건 굳이 전달안해도 될듯?
-          .create-item 아래에는 다음의 요소들이 올 수 있습니다.
-            1) .create-title : 제목 요소
-            2) .create-input : 인풋 필드 텍스트 요소
-            3) .create-date : 날짜 선택 요소
-            4) .create-radio : 라디오 요소
-            5) .create-toggle : on/off 라디오 요소
-        -->
+
     </div>
-
-    <!-- <script>
-
-
-      var observe;
-      if (window.attachEvent) {
-        observe = function (element, event, handler) {
-          element.attachEvent('on' + event, handler);
-        };
-      }
-      else {
-        observe = function (element, event, handler) {
-          element.addEventListener(event, handler, false);
-        };
-      }
-      function init() {
-        var text = document.getElementById('textarea-autosize');
-        function resize() {
-          text.style.height = 'auto';
-          text.style.height = text.scrollHeight + 'px';
-        }
-        /* 0-timeout to get the already changed text */
-        function delayedResize() {
-          window.setTimeout(resize, 0);
-        }
-        observe(text, 'change', resize);
-        observe(text, 'cut', delayedResize);
-        observe(text, 'paste', delayedResize);
-        observe(text, 'drop', delayedResize);
-        observe(text, 'keydown', delayedResize);
-
-        text.focus();
-        text.select();
-        resize();
-      }
-
-      init();
-
-    </script> -->
-
-    <script>
-
-      // var test = function (element) {
-      //   console.log('aa')
-      //   console.log(element.innerHTML)
-      //   var a = element.innerHTML.length;
-      //   console.log(a);
-
-      //   if (a <= 0) {
-      //     console.log("!");
-      //     element.classList.add('asdf')
-      //     alert("!")
-      //   } else {
-      //     element.classList.remove('asdf')
-      //   }
-      // }
-
-      var target = document.querySelector('#editable-area');
-      var observer = new MutationObserver(function (mutations) {
-        mutations.forEach(function (mutation) {
-          if (target.textContent == '') {
-            target.innerHTML = '';
-          }
-        });
-      });
-      var config = { attributes: true, childList: true, characterData: true };
-      observer.observe(target, config);
-
-
-    </script>
 
 
   </div>
