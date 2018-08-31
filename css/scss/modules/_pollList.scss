@@ -107,12 +107,34 @@
     }
   }
 
+  .poll-inactive {
+    .poll-icon {
+      background-image: icon(vm-dark, "#000");
+    }
+  }
+
+  .poll-upcoming {
+    .poll-icon {
+      background-image: icon(vm-green, "#000");
+    }
+  }
+
+  .poll-complete {
+    .poll-icon {
+      background-image: icon(vm-yellow, "#000");
+    }
+  }
+
+
   .poll-finished {
     background-color: #ececec;
     .poll-title,
     .percent,
     .poll-description {
       color: #747474;
+    }
+    .poll-icon {
+      background-image: icon(vm-gray, "#000");
     }
   }
 }

@@ -24,12 +24,22 @@
       // 닫기 버튼
       // ----
       close:
-      '<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36"><path fill-rule="evenodd" d="M17.694 16.45l7.319-7.32a1.35 1.35 0 0 1 1.909 1.91l-7.319 7.318 6.97 6.97a1.35 1.35 0 0 1-1.909 1.91l-6.97-6.97-6.682 6.682a1.35 1.35 0 0 1-1.91-1.91l6.683-6.682-7.03-7.03a1.35 1.35 0 0 1 1.909-1.91l7.03 7.031z"/></svg>',
+      '<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36"><path fill-rule="evenodd" fill="#{$color}" d="M17.694 16.45l7.319-7.32a1.35 1.35 0 0 1 1.909 1.91l-7.319 7.318 6.97 6.97a1.35 1.35 0 0 1-1.909 1.91l-6.97-6.97-6.682 6.682a1.35 1.35 0 0 1-1.91-1.91l6.683-6.682-7.03-7.03a1.35 1.35 0 0 1 1.909-1.91l7.03 7.031z"/></svg>',
     // ----
       // 필터 셀렉트박스 오른편 화살표 아이콘
       // ----
       filter-down:
       '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><g fill="none" fill-rule="evenodd" transform="translate(-40 -4)"><path fill="#81D9FC" stroke="#29ACE4" d="M50.5 18.117L45.95 11.5h9.1l-4.55 6.617z"/><rect width="65" height="27" x=".5" y=".5" stroke="#D2D2D2" rx="13.5"/></g></svg>',
+    //----
+      // 드롭다운 옆 아이콘 (아래)
+      //----
+      dropdown-down:
+      '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="12"><path fill="#D2D2D2" fill-rule="evenodd" stroke="#A8A8A8" d="M8 11.099L.934.5h14.132L8 11.099z"/></svg>',
+    //----
+      // 드롭다운 옆 아이콘 (위)
+      //----
+      dropdown-up:
+      '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 12"><path d="M8 .5l7.1 10.6H.9L8 .5z" fill="#d2d2d2" stroke="#a8a8a8"/></svg>',
     // ----
       // 투표 리스트 사용자명 옆 사람 아이콘
       // ----
@@ -40,6 +50,26 @@
       // ----
       vm-blue:
       '<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36"><g fill="none" fill-rule="evenodd"><circle cx="18" cy="18" r="18" fill="#29ACE4"/><path fill="#FFF" stroke="#34332E" d="M25.6 15.196h-.01l-.06-.433c-.505-3.74-3.776-6.263-7.98-6.263-4.204 0-7.475 2.524-7.98 6.263l-.06.433H9.5v11.472a.987.987 0 0 0 1.974 0v-.569H23.9v.569a.987.987 0 0 0 1.974 0v-.746a.98.98 0 0 0-.182-.57l-.092-.13V15.195z"/><g transform="translate(15.3 13.478)"><ellipse cx=".771" cy=".913" fill="#000" rx="1" ry="1"/><ellipse cx="4.629" cy=".913" fill="#000" rx="1" ry="1"/><path fill="#FCDC05" stroke="#34332E" d="M.027 3.652h5.346c.018.112.027.226.027.343 0 1.323-1.209 2.396-2.7 2.396S0 5.318 0 3.995c0-.117.01-.231.027-.343z"/></g><path d="M27.5 23.5h3m-25 0h3m21.9-3h3.2m-32.2 0h3.2" stroke="#FFF" stroke-linecap="square"/></g></svg>',
+    // ----
+      // VM - 초록색
+      // ----
+      vm-green:
+      '<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36"><g fill="none" fill-rule="evenodd"><circle cx="18" cy="18" r="18" fill="#37D6BC"/><circle cx="18" cy="18" r="10" fill="#FFF" stroke="#000"/><rect width="1" height="5" x="22" y="16" fill="#FCDC05" stroke="#000" rx=".5" transform="rotate(90 22 18.5)"/><rect width="1" height="5" x="17.4" y="11.5" fill="#FCDC05" stroke="#000" rx=".5"/><circle cx="17.5" cy="18.5" r="2.5" fill="#FCDC05" stroke="#000"/><path d="M27.5 23.5h3m-25 0h3m21.9-3h3.2m-32.2 0h3.2" stroke="#FFF" stroke-linecap="square"/></g></svg>',
+    //----
+      // VM - 다크
+      //----
+      vm-dark:
+      '<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36"><g fill="none" fill-rule="evenodd"><circle cx="18" cy="18" r="18" fill="#4F6975"/><circle cx="4.5" cy="14.5" r="1" fill="#D8D8D8"/><circle cx="14.5" cy="4.5" r="1" fill="#D8D8D8"/><circle cx="31.5" cy="13.5" r="1" fill="#D8D8D8"/><path fill="#FFD33F" stroke="#28292A" d="M24.402 5.742a3.589 3.589 0 1 0 4.62 5.237 5.795 5.795 0 0 1-4.62-5.237z"/><path fill="#FFF" stroke="#34332E" d="M24.6 28.099V17.196h-.01l-.06-.433c-.505-3.74-3.776-6.263-7.98-6.263-4.204 0-7.475 2.524-7.98 6.263l-.06.433H8.5v10.903h1v.569a.987.987 0 0 0 1.974 0v-.569H21.9v.569a.987.987 0 0 0 1.974 0v-.569h.726z"/><g stroke="#000"><path fill="#C7C7C7" d="M10.873 15.5v.191l-.294.133C9.32 16.394 8.5 17.626 8.5 19c0 1.93 1.605 3.5 3.59 3.5 1.987 0 3.592-1.57 3.592-3.5v-.5h2.636v.5c0 1.93 1.605 3.5 3.591 3.5 1.986 0 3.591-1.57 3.591-3.5a3.468 3.468 0 0 0-1.504-2.849l-.214-.149V15.5h-12.91z"/><path d="M10.7 17.667c1.394 2.619.345 2.038 3.6.227m6.3-.227c1.394 2.619.345 2.038 3.6.227"/></g></g></svg>',
+    //----
+      // VM - 회색
+      //----
+      vm-gray:
+      '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="36" height="36"><defs><circle id="a" cx="18" cy="18" r="18"/></defs><g fill="none" fill-rule="evenodd"><mask id="b" fill="#fff"><use xlink:href="#a"/></mask><use fill="#6E6E6E" xlink:href="#a"/><path fill="#FFF" stroke="#34332E" d="M32.043 25.795h-.061l-.058-.433C31.056 18.873 25.446 14.5 18.27 14.5c-7.174 0-12.785 4.373-13.652 10.862l-.058.433H4.5V46A1.5 1.5 0 0 0 6 47.5h.964a1.5 1.5 0 0 0 1.5-1.5v-1.124h20.072V46a1.5 1.5 0 0 0 1.5 1.5H31a1.5 1.5 0 0 0 1.5-1.5v-2.275a1.49 1.49 0 0 0-.343-.955l-.114-.138V25.795z" mask="url(#b)"/><g transform="translate(14 23)"><ellipse cx="1.286" cy="1.565" fill="#000" rx="1.286" ry="1.565"/><ellipse cx="7.714" cy="1.565" fill="#000" rx="1.286" ry="1.565"/><path fill="#FCDC05" stroke="#34332E" d="M.046 6.26h8.908c.03.193.046.389.046.588 0 2.269-2.015 4.109-4.5 4.109S0 9.117 0 6.847c0-.198.016-.394.046-.586z"/></g><path fill="#FFF" stroke="#3E3B33" d="M12.5 6.5h11v11h-11z"/><path fill="#000" d="M21.018 9.538l-2.365 5.247c-.158.36-.428.539-.812.539-.384 0-.657-.18-.82-.539l-2.365-5.247h1.151l1.9 4.211c.026.06.07.09.134.09.063 0 .108-.03.134-.09l1.9-4.21h1.143z"/></g></svg>',
+    //----
+      // VM - 노랑
+      //----
+      vm-yellow:
+      '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="36" height="36"><defs><circle id="a" cx="18" cy="18" r="18"/></defs><g fill="none" fill-rule="evenodd"><mask id="b" fill="#fff"><use xlink:href="#a"/></mask><use fill="#FFD33F" xlink:href="#a"/><path fill="#FFF" stroke="#34332E" d="M32.043 25.795h-.061l-.058-.433C31.056 18.873 25.446 14.5 18.27 14.5c-7.174 0-12.785 4.373-13.652 10.862l-.058.433H4.5V46A1.5 1.5 0 0 0 6 47.5h.964a1.5 1.5 0 0 0 1.5-1.5v-1.124h20.072V46a1.5 1.5 0 0 0 1.5 1.5H31a1.5 1.5 0 0 0 1.5-1.5v-2.275a1.49 1.49 0 0 0-.343-.955l-.114-.138V25.795z" mask="url(#b)"/><g transform="translate(14 23)"><ellipse cx="1.286" cy="1.565" fill="#000" rx="1.286" ry="1.565"/><ellipse cx="7.714" cy="1.565" fill="#000" rx="1.286" ry="1.565"/><path fill="#FCDC05" stroke="#34332E" d="M.046 6.26h8.908c.03.193.046.389.046.588 0 2.269-2.015 4.109-4.5 4.109S0 9.117 0 6.847c0-.198.016-.394.046-.586z"/></g><path fill="#FFF" stroke="#3E3B33" d="M12.5 6.5h11v11h-11z"/><path fill="#000" d="M21.018 9.538l-2.365 5.247c-.158.36-.428.539-.812.539-.384 0-.657-.18-.82-.539l-2.365-5.247h1.151l1.9 4.211c.026.06.07.09.134.09.063 0 .108-.03.134-.09l1.9-4.21h1.143z"/></g></svg>',
     // ----
       // 검색 아이콘
       // ----
@@ -80,10 +110,23 @@
       //----
       toggle-on-head:
       '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 28"><g transform="translate(22 2)"><circle cx="12" cy="12" r="12" fill="#fff" stroke="#373631"/><ellipse cx="9.4" cy="7.7" rx="1.4" ry="1.7"/><ellipse cx="16.5" cy="7.7" rx="1.4" ry="1.7"/><path d="M8.1 12.7h9.8v.6c0 2.4-2.2 4.4-5 4.4-2.7 0-5-2-5-4.4.1-.2.1-.4.2-.6z" fill="#fcdc05" stroke="#34332e"/></g></svg>',
-      //----
+    //----
       // 추가(+) 버튼
       // ----
-      plus: '<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"><g fill="none" fill-rule="evenodd"><path stroke="#{$color}" stroke-dasharray="1,2" stroke-linecap="round" stroke-linejoin="round" d="M14.5 28C21.956 28 28 21.956 28 14.5S21.956 1 14.5 1 1 7.044 1 14.5 7.044 28 14.5 28z"/><path fill="#{$color}" d="M14.118 14.118V8.382a.382.382 0 1 1 .764 0v5.736h5.736a.382.382 0 1 1 0 .764h-5.736v5.736a.382.382 0 1 1-.764 0v-5.736H8.382a.382.382 0 1 1 0-.764h5.736z"/></g></svg>',
+      plus:
+      '<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"><g fill="none" fill-rule="evenodd"><path stroke="#{$color}" stroke-dasharray="1,2" stroke-linecap="round" stroke-linejoin="round" d="M14.5 28C21.956 28 28 21.956 28 14.5S21.956 1 14.5 1 1 7.044 1 14.5 7.044 28 14.5 28z"/><path fill="#{$color}" d="M14.118 14.118V8.382a.382.382 0 1 1 .764 0v5.736h5.736a.382.382 0 1 1 0 .764h-5.736v5.736a.382.382 0 1 1-.764 0v-5.736H8.382a.382.382 0 1 1 0-.764h5.736z"/></g></svg>',
+      //----
+      //체크박스 배경(체크됨)
+      //----
+      checkbox: '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><g fill="none" fill-rule="evenodd"><path fill="#F4F4F4" d="M-22-399h360v710H-22z"/><path fill="#FFF" d="M-22-329h360v440H-22z"/><path fill="#F4F4F4" stroke="#E7E7E7" d="M-11.5-14.5h339v49h-339z"/><path fill="#FFF" stroke="#34332E" d="M19.5.5H.5v19h19z"/><path fill="#000" d="M6 7l2.602 6.349c.174.434.472.651.894.651.422 0 .723-.217.902-.651L13 7h-1.266l-2.091 5.095c-.029.072-.078.108-.147.108-.07 0-.119-.036-.148-.108L7.258 7H6z"/></g></svg>',
+      //----
+      //체크박스 배경(체크안됨)
+      //----
+      checkbox-unchecked: '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><path fill="#FFF" fill-rule="evenodd" stroke="#34332E" d="M19.5.5H.5v19h19z"/></svg>',
+      //----
+      //체크 아이콘
+      //----
+      checkmark: '<svg xmlns="http://www.w3.org/2000/svg" width="12" height="9"><path fill="#{$color}" fill-rule="evenodd" d="M4.414 8.485l-.171.172L0 4.414 1.414 3l2.829 2.828L10.07 0l1.414 1.414-7.07 7.071z"/></svg>'
   );
   $icon: _buildIcon(map-get($icons, $icon-name));
   @return url("data:image/svg+xml;utf8,#{$icon}");

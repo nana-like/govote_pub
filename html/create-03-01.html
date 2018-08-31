@@ -62,29 +62,119 @@
             <li>
               <p class="create-title">투표 대상 (아래에서 선택해주세요)</p>
             </li>
+            <li>
+              <div class="voters-list-container">
+
+                <div class="voters-list">
+                  <p class="text">대학원/물리학과/전체</p>
+                  <button class="voters-list-delete"></button>
+                </div>
+                <div class="voters-list">
+                  <p class="text">대학/전체/여자/3학년</p>
+                  <button class="voters-list-delete"></button>
+                </div>
+                <div class="voters-list">
+                  <p class="text">교직원/화학과/전체/교수</p>
+                  <button class="voters-list-delete"></button>
+                </div>
+                <div class="voters-list">
+                  <p class="text">대학/수학과/남자/1학년,2학년</p>
+                  <button class="voters-list-delete"></button>
+                </div>
+              </div>
+            </li>
           </ul>
 
           <ul class="create-item">
             <li>
               <p class="create-title">그룹 선택</p>
             </li>
-            <li class="ly-padding-sm">
-              <div>
-                소속
+            <li class="ly-padding-sm voters-selectGroup">
+
+              <div class="voters-setting">
+                <div class="title">
+                  <p>소속</p>
+                </div>
+                <div class="body voters-radio-container">
+                  <div class="block">
+                    <input type="radio" id="voters-group-undergraduate" name="voters-group" checked/>
+                    <label for="voters-group-undergraduate">대학</label>
+                  </div>
+                  <div class="block">
+                    <input type="radio" id="voters-group-graduate" name="voters-group" />
+                    <label for="voters-group-graduate">대학원</label>
+                  </div>
+                  <div class="block">
+                    <input type="radio" id="voters-group-employees" name="voters-group" />
+                    <label for="voters-group-employees">교직원</label>
+                  </div>
+                  <div class="block">
+                    <input type="radio" id="voters-group-others" name="voters-group" />
+                    <label for="voters-group-others">기타</label>
+                  </div>
+                </div>
               </div>
-              <div>
-                <input type="radio" id="" class="" />
-                <label for="">대학</label>
+
+              <div class="voters-setting">
+                <div class="title">
+                  <p>학과/부서</p>
+                  <input type="checkbox" id="voters-selectAll-department" class="selectAll" />
+                  <label for="voters-selectAll-department">전체</label>
+                </div>
+                <ul class="body voters-dropdown-container ">
+                  <!--
+                    [전달사항]
+                    활성화 시에는 .voters-dropdown-container에 .active클래스를 추가해 주세요.
+                  -->
+                  <p class="placeholder-text">학과 또는 부서를 선택하세요.</p>
+                  <div class="icon-container"><i class="icon icon-dropdown"></i></div>
+
+                  <ul class="dropdown-list">
+                    <li class="dropdown-list-item">인문사회학부</li>
+                    <li class="dropdown-list-item">물리학과</li>
+                    <li class="dropdown-list-item">생명과학과</li>
+                    <li class="dropdown-list-item">수학과</li>
+                    <li class="dropdown-list-item">화학과</li>
+                    <li class="dropdown-list-item">화학과</li>
+                    <li class="dropdown-list-item">화학과</li>
+                  </ul>
+                  <!--
+                    [전달사항]
+                    .voters-dropdown-container에 active 클래스가 추가되면 화면에 보입니다.
+                  -->
               </div>
-              <!-- 복수선택 불가 -->
+
+              <div class="voters-setting">
+                <div class="title">
+                  <p>성별</p>
+                  <input type="checkbox" id="voters-selectAll-gender" class="selectAll" checked/>
+                  <label for="voters-selectAll-gender">전체</label>
+                  <!--
+                    [전달사항]
+                    checked됐을 때 활성화 ui가 보입니다.
+                  -->
+                </div>
+                <div class="body voters-checkbox-container">
+                  <div class="checkbox-block">
+                    <input id="voters-gender-male" type="checkbox" class="checkbox-style01" />
+                    <label for="voters-gender-male">남자</label>
+                  </div>
+                  <div class="checkbox-block">
+                    <input id="voters-gender-female" type="checkbox" class="checkbox-style01" />
+                    <label for="voters-gender-female">여자</label>
+                  </div>
+                </div>
+              </div>
+
+              <button class="button-select-done">선택 완료</button>
 
             </li>
-          </ul>
+            </ul>
 
-          <div class="create-buttons-container">
-            <button class="button-prev">이전</button>
-            <button class="button-next">다음</button>
-          </div>
+            <div class="create-buttons-container">
+              <button class="button-prev">이전</button>
+              <button class="button-next">다음</button>
+            </div>
         </form>
       </div>
 
