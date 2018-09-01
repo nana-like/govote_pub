@@ -75,5 +75,20 @@
 
 .icon-checkmark {
   background-image: icon(checkmark, #a8a8a8);
+}
 
+.icon-write {
+  background-image: icon(write, #000);
+}
+
+.icon-checkmark-one {
+  background-image: icon(checkmark, $color-blue);
+}
+
+.icon-checkmark-multiple {
+  background-image: icon(checkmark-multiple, #000);
+}
+
+.icon-checkmark-result {
+  background-image: icon(checkmark-result, #000);
 }

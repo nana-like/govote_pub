@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <title>go vote</title>
+
+  <link type="text/css" rel="stylesheet" href="../css/style.css" />
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi"
+  />
+  <meta name="format-detection" content="telephone=no, address=no, email=no" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+</head>
+
+<body class="body-takeVote">
+  <!-- 투표하기 화면 -->
+  <div id="wrapper" class="takeVote">
+
+    <div class="page-top">
+
+      <div class="page-header">
+        <div class="page-header-left">
+          <button class="icon-container"><i class="icon icon-back"></i></button>
+        </div>
+        <h1 class="page-title">
+          투표하기
+        </h1>
+      </div>
+
+    </div>
+
+    <div class="page-body">
+
+      <div class="takeVote-container">
+
+        <ul class="create-item">
+          <li>
+            <p class="create-title">총학생회 투표</p>
+          </li>
+          <li class="ly-padding-sm">
+            <div class="create-description-image">
+              <img src="../images/thumbnail-test.png" alt="image" />
+            </div>
+            <div class="create-description">
+              <div>제 21대 총학생회장 선거를 실시합니다. <br>많은 참여 부탁드립니다.</div>
+            </div>
+
+            <!-- <div class="takeVote-title">
+              <i class="icon icon-checkmark-multiple"></i>복수 선택 가능
+            </div> -->
+            <div class="takeVote-title">
+              <i class="icon icon-checkmark-one"></i>하나만 선택 가능
+            </div>
+
+            <ul class="takeVote-item-container">
+              <li class="takeVote-item">
+                <div class="checkbox-block">
+                  <input id="voters-item-1" type="checkbox" class="checkbox-style01" />
+                  <label for="voters-item-1">김포항</label>
+                  <div class="number">100</div>
+                </div>
+              </li>
+              <li class="takeVote-item">
+                <div class="checkbox-block">
+                  <input id="voters-item-2" type="checkbox" class="checkbox-style01" />
+                  <label for="voters-item-2">김공대</label>
+                  <div class="number">10</div>
+                </div>
+              </li>
+              <li class="takeVote-item">
+                <div class="checkbox-block">
+                  <input id="voters-item-3" type="checkbox" class="checkbox-style01" />
+                  <label for="voters-item-3">김수한무거북이와두루미</label>
+                  <div class="number">0</div>
+                </div>
+              </li>
+            </ul>
+
+
+          </li>
+        </ul>
+
+
+        <div class="takeVote-title">
+          <i class="icon icon-write"></i>투표 항목 직접 입력
+        </div>
+        <ul class="create-item">
+          <li>
+            <input type="text" placeholder="투표 항목을 입력하세요." class="create-input" />
+          </li>
+        </ul>
+
+        <div class="takeVote-title">
+          <i class="icon icon-checkmark-result"></i>결과 받아보기
+        </div>
+        <ul class="create-item">
+          <li>
+            <div class="create-toggle">
+              <p class="toggle-title">앱 알림 수신</p>
+
+              <input id="option-noti-app" type="checkbox" class="toggle-checkbox" checked/>
+              <label for="option-noti-app" class="toggle-switch">
+                <div class="toggle-body"></div>
+                <div class="toggle-head"></div>
+              </label>
+            </div>
+            <!--
+              [전달사항]
+              checkbox가 checked 된 상태일 때 활성화된 ui로 바뀝니다. 
+            -->
+          </li>
+          <li>
+            <div class="create-toggle">
+              <p class="toggle-title">이메일 알림 수신</p>
+
+              <input id="option-noti-email" type="checkbox" class="toggle-checkbox" />
+              <label for="option-noti-email" class="toggle-switch">
+                <div class="toggle-body"></div>
+                <div class="toggle-head"></div>
+              </label>
+            </div>
+          </li>
+        </ul>
+
+        <div class="create-buttons-container">
+          <button class="button-next">투표하기</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</body>

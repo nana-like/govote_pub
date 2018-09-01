@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <title>go vote</title>
+
+  <link type="text/css" rel="stylesheet" href="../css/style.css" />
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi"
+  />
+  <meta name="format-detection" content="telephone=no, address=no, email=no" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+</head>
+
+<body class="body-create">
+  <!-- 투표 생성 화면 (4단계) - 작성 정보 확인 -->
+  <div id="wrapper" class="create create-confirmation">
+
+    <div class="page-top">
+
+      <div class="page-header">
+        <div class="page-header-left">
+          <button class="icon-container"><i class="icon icon-close"></i></button>
+        </div>
+        <h1 class="page-title">
+          투표 생성
+        </h1>
+      </div>
+
+      <div class="create-process active-4">
+        <!--
+          [전달사항]
+          활성화된 순서에 따라 create-process에
+          active-1, active-2, active-3, active-4
+          클래스를 추가해주세요.
+        -->
+        <div class="process-level">
+          <span class="text">투표 정보 입력</span>
+        </div>
+        <div class="process-level">
+          <span class="text">투표 항목 입력</span>
+        </div>
+        <div class="process-level">
+          <span class="text">투표 항목 입력</span>
+        </div>
+        <div class="process-level">
+          <span class="text">작성 정보 확인</span>
+        </div>
+      </div>
+
+
+    </div>
+
+    <div class="page-body">
+
+      <ul class="create-item-container">
+        <form>
+          <ul class="create-item">
+            <li>
+              <p class="create-title">총학생회 투표</p>
+            </li>
+            <li class="ly-padding-sm">
+              <div class="create-description-image">
+                <img src="../images/thumbnail-test.png" alt="image" />
+              </div>
+              <div class="create-description">
+                <div>제 21대 총학생회장 선거를 실시합니다. <br>많은 참여 부탁드립니다.</div>
+              </div>
+
+              <ul class="item-confirmation">
+                <li>
+                  <p class="text">김포항</p>
+                  <div class="image"><img src="../images/thumbnail-test.png" alt="image"></div>
+                </li>
+                <li>
+                  <p class="text">김공대</p>
+                  <div class="image"><img src="../images/thumbnail-test.png" alt="image"></div>
+                </li>
+                <li>
+                  <p class="text">홍길동</p>
+                </li>
+                <li>
+                  <p class="text">김수한무거북이와두루미</p>
+                </li>
+              </ul>
+
+            </li>
+          </ul>
+
+          <div class="create-option-info">
+            <div class="option-info-title">투표 옵션 정보</div>
+            <div class="option-info-container">
+              <div class="option-block">
+                <div class="option-name">복수 선택</div>
+                <div class="option-setting active">허용</div>
+                <!--
+                  [전달사항]
+                  활성화 시 .option-setting에 active 클래스를 추가해주세요.
+                -->
+              </div>
+              <div class="option-block">
+                <div class="option-name">직접 입력</div>
+                <div class="option-setting active">허용</div>
+              </div>
+              <div class="option-block">
+                <div class="option-name">기권 허용 여부</div>
+                <div class="option-setting">허용 안 함</div>
+              </div>
+              <div class="option-block">
+                <div class="option-name">앱 알림</div>
+                <div class="option-setting">설정 안 함</div>
+              </div>
+              <div class="option-block">
+                <div class="option-name">이메일 알림</div>
+                <div class="option-setting active">설정</div>
+              </div>
+              <div class="option-block">
+                <div class="option-name">무기명 투표</div>
+                <div class="option-setting">설정 안 함</div>
+              </div>
+              <div class="option-block">
+                <div class="option-name">투표 시작</div>
+                <div class="option-setting"><small>2018년 7월 16일 수요일 오후 3:30</small></div>
+              </div>
+              <div class="option-block">
+                <div class="option-name">투표 종료</div>
+                <div class="option-setting small"><small>2018년 7월 20일 일요일 오후 3:30</small></div>
+              </div>
+              <div class="option-block">
+                <div class="option-name">투표 대상</div>
+                <div class="option-setting small">
+                  <small>대학 / 물리학과 / 전체 / 전학년</small>
+                  <small>대학원 / 물리학과 / 전체</small>
+                  <small>교수 / 물리학과 / 정교수 / 전체</small>
+                  <small>대학 / 전체 / 전체 / 1학년</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="create-buttons-container">
+            <button class="button-prev">이전</button>
+            <button class="button-next">생성</button>
+          </div>
+        </form>
+    </div>
+  </div>
+
+  </div>
+</body>

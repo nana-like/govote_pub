@@ -1,0 +1,155 @@
+@charset "utf-8";
+
+// **** take vote page
+
+.body-takeVote {
+  overflow: hidden;
+  background-color: $color-noPolls-bg;
+}
+
+.takeVote {
+  //[*] 투표 생성 페이지
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+  .page-top {
+    height: $ly-takeVote-header-height;
+    background-color: $color-yellow;
+    box-sizing: border-box;
+  }
+
+  .page-body {
+    overflow: hidden;
+    width: 100%;
+    padding-top: $ly-takeVote-header-height;
+    height: 100%;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .takeVote-container {
+    height: 100%;
+    overflow-y: auto;
+
+    input[type="text"] {
+      // color: #0c0c0c;
+    }
+  }
+
+  .takeVote-title {
+    width: 100%;
+    padding-left: 1rem;
+    padding-top: 1.6rem;
+    padding-bottom: 0.8rem;
+    font-size: 1.2rem;
+
+    .icon-write {
+      width: 1.3rem;
+      height: 1.2rem;
+      margin-right: 0.7rem;
+    }
+
+    .icon-checkmark-one {
+      width: 1.2rem;
+      height: 0.9rem;
+      margin-right: 0.6rem;
+    }
+
+    .icon-checkmark-multiple {
+      width: 1.8rem;
+      height: 0.9rem;
+      margin-right: 0.2rem;
+    }
+
+    .icon-checkmark-result {
+      width: 1.6rem;
+      height: 1rem;
+      margin-right: 0.4rem;
+    }
+  }
+
+  //단, create-item내에 있는 takeVote-title은 padding-left 제거
+  .create-item .takeVote-title {
+    padding-left: 0;
+  }
+
+  .create-description-image {
+    margin: 2rem 0 0;
+  }
+  .create-description {
+    color: #0c0c0c;
+    padding-bottom: 0.6rem;
+  }
+
+  .takeVote-item-container {
+    //투표 가능한 영역
+    width: 100%;
+
+    .takeVote-item {
+      position: relative;
+      @include flexbox;
+      @include justify-content(space-between);
+      @include align-items(center);
+      width: 100%;
+      height: 5rem;
+      margin-bottom: 0.2rem;
+      background-color: $color-noPolls-bg;
+
+      &:last-child {
+        margin-bottom: 1rem;
+      }
+
+      .checkbox-block {
+        position: relative;
+        width: 100%;
+        height: 100%;
+
+        label {
+          width: 100%;
+          height: 100%;
+          line-height: 4.8rem;
+          padding-left: 4.2rem;
+          border: 1px solid $color-noPolls-bg;
+
+          &:before {
+            margin-left: 1rem;
+          }
+        }
+
+        [type="checkbox"]:checked + label {
+          background-color: #93d5f1;
+          border-color: #29ace4;
+
+          & + .number {
+            color: #0c0c0c;
+
+            &:before {
+              background-image: icon(person, #0c0c0c);
+              background-size: 100%;
+            }
+          }
+        }
+      } //end of .checkbox-block
+
+      .number {
+        position: absolute;
+        top: 50%;
+        right: 2rem;
+        font-size: 1.2rem;
+        color: #bcbcbc;
+        transform: translateY(-50%);
+
+        &:before {
+          width: 1.2rem;
+          height: 1.4rem;
+          display: inline-block;
+          margin-right: 0.2rem;
+          content: "";
+          vertical-align: sub;
+          background-image: icon(person, #bcbcbc);
+          background-size: 100%;
+        }
+      }
+    }
+  }
+}

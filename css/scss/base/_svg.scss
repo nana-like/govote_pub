@@ -115,18 +115,36 @@
       // ----
       plus:
       '<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"><g fill="none" fill-rule="evenodd"><path stroke="#{$color}" stroke-dasharray="1,2" stroke-linecap="round" stroke-linejoin="round" d="M14.5 28C21.956 28 28 21.956 28 14.5S21.956 1 14.5 1 1 7.044 1 14.5 7.044 28 14.5 28z"/><path fill="#{$color}" d="M14.118 14.118V8.382a.382.382 0 1 1 .764 0v5.736h5.736a.382.382 0 1 1 0 .764h-5.736v5.736a.382.382 0 1 1-.764 0v-5.736H8.382a.382.382 0 1 1 0-.764h5.736z"/></g></svg>',
-      //----
+    //----
       //체크박스 배경(체크됨)
       //----
-      checkbox: '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><g fill="none" fill-rule="evenodd"><path fill="#F4F4F4" d="M-22-399h360v710H-22z"/><path fill="#FFF" d="M-22-329h360v440H-22z"/><path fill="#F4F4F4" stroke="#E7E7E7" d="M-11.5-14.5h339v49h-339z"/><path fill="#FFF" stroke="#34332E" d="M19.5.5H.5v19h19z"/><path fill="#000" d="M6 7l2.602 6.349c.174.434.472.651.894.651.422 0 .723-.217.902-.651L13 7h-1.266l-2.091 5.095c-.029.072-.078.108-.147.108-.07 0-.119-.036-.148-.108L7.258 7H6z"/></g></svg>',
-      //----
+      checkbox:
+      '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><g fill="none" fill-rule="evenodd"><path fill="#F4F4F4" d="M-22-399h360v710H-22z"/><path fill="#FFF" d="M-22-329h360v440H-22z"/><path fill="#F4F4F4" stroke="#E7E7E7" d="M-11.5-14.5h339v49h-339z"/><path fill="#FFF" stroke="#34332E" d="M19.5.5H.5v19h19z"/><path fill="#000" d="M6 7l2.602 6.349c.174.434.472.651.894.651.422 0 .723-.217.902-.651L13 7h-1.266l-2.091 5.095c-.029.072-.078.108-.147.108-.07 0-.119-.036-.148-.108L7.258 7H6z"/></g></svg>',
+    //----
       //체크박스 배경(체크안됨)
       //----
-      checkbox-unchecked: '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><path fill="#FFF" fill-rule="evenodd" stroke="#34332E" d="M19.5.5H.5v19h19z"/></svg>',
-      //----
+      checkbox-unchecked:
+      '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><path fill="#FFF" fill-rule="evenodd" stroke="#34332E" d="M19.5.5H.5v19h19z"/></svg>',
+    //----
       //체크 아이콘
       //----
-      checkmark: '<svg xmlns="http://www.w3.org/2000/svg" width="12" height="9"><path fill="#{$color}" fill-rule="evenodd" d="M4.414 8.485l-.171.172L0 4.414 1.414 3l2.829 2.828L10.07 0l1.414 1.414-7.07 7.071z"/></svg>'
+      checkmark:
+      '<svg xmlns="http://www.w3.org/2000/svg" width="12" height="9"><path fill="#{$color}" fill-rule="evenodd" d="M4.414 8.485l-.171.172L0 4.414 1.414 3l2.829 2.828L10.07 0l1.414 1.414-7.07 7.071z"/></svg>',
+    //----
+      //체크 아이콘(복수선택용)
+      //----
+      checkmark-multiple:
+      '<svg xmlns="http://www.w3.org/2000/svg" width="18" height="9"><g fill="none" fill-rule="evenodd"><path fill="#93D5F1" d="M10.414 8.485l-.171.172L6 4.414 7.414 3l2.829 2.828L16.07 0l1.414 1.414-7.07 7.071z"/><path fill="#29ACE4" d="M4.414 8.485l-.171.172L0 4.414 1.414 3l2.829 2.828L10.07 0l1.414 1.414-7.07 7.071z"/></g></svg>',
+    //----
+      //체크 아이콘(결과 받아보기용)
+      //----
+      checkmark-result:
+      '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="10"><g fill="none" fill-rule="evenodd"><path fill="#93D5F1" d="M7 4h7v2H7z"/><path fill="#94D6F2" d="M5 8h11v2H5z"/><path fill="#29ACE4" d="M4.414 8.485l-.171.172L0 4.414 1.414 3l2.829 2.828L10.07 0l1.414 1.414-7.07 7.071z"/></g></svg>',
+    //----
+      //투표항목 직접 입력
+      //----
+      write:
+      '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13 12"><path d="M0 10h13v2H0v-2z" fill="#94d6f2"/><path d="M11.1 0l1.4 1.4-7.1 7.1L4 7.1 11.1 0z" fill="#29ace4"/></svg>'
   );
   $icon: _buildIcon(map-get($icons, $icon-name));
   @return url("data:image/svg+xml;utf8,#{$icon}");
