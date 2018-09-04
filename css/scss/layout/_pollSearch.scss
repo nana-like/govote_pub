@@ -57,7 +57,7 @@
     width: 6.8rem;
     height: 10rem;
     @include bgi("deco-searchback-1");
-    transform: translate(-50%, -50%);
+    @include transform(translate(-50%, -50%));
     background-size: 100%;
   }
 }

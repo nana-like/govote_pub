@@ -51,8 +51,7 @@ $ly-header-height: 4.4rem; //페이지 헤더 높이
     position: absolute;
     top: 50%;
     left: 1em;
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
+    @include transform(translateY(-50%));
   }
   .page-header-right {
     @include flexbox;
@@ -61,7 +60,7 @@ $ly-header-height: 4.4rem; //페이지 헤더 높이
     position: absolute;
     top: 50%;
     right: 1em;
-    transform: translateY(-50%);
+    @include transform(translateY(-50%));
   }
 
   .page-title {

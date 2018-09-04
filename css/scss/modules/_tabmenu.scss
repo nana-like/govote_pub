@@ -43,7 +43,7 @@
       height: 2.5rem;
       top: 50%;
       left: 0;
-      transform: translateY(-50%);
+      @include transform(translateY(-50%));
       content: "";
       background-color: $color-lightgray2;
     }

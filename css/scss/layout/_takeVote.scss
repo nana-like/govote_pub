@@ -137,7 +137,7 @@
         right: 2rem;
         font-size: 1.2rem;
         color: #bcbcbc;
-        transform: translateY(-50%);
+        @include transform(translateY(-50%));
 
         &:before {
           width: 1.2rem;

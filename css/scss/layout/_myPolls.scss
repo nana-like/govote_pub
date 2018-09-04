@@ -63,17 +63,18 @@
     @include align-items(center);
     width: 100%;
     height: 100%;
-    height: calc(100vh - $ly-mypolls-header-height);
+    height: calc(100vh - #{$ly-mypolls-header-height});
     // min-height: 36rem;
     background-color: $color-noPolls-bg;
 
     .no-polls-text {
       position: absolute;
       top: $ly-mypolls-header-height;
+      left: 50%;
       margin-top: 13.7%;
       font-size: 1.7rem;
       text-align: center;
-      line-height: 1.76;
+      @include transform(translateX(-50%));
     }
   }
 

@@ -47,7 +47,7 @@
       .icon-image-attach {
         width: 3.6rem;
         height: 3.6rem;
-        background-position: 100% 50%;
+        background-position: 50% 50%;
         background-size: 2.8rem 2.8rem;
       }
 
@@ -111,8 +111,7 @@
       display: block;
       content: attr(data-placeholder);
       color: $color-create-placeholder;
-      -webkit-transform: translateY(-50%);
-      transform: translateY(-50%);
+      @include transform(translateY(-50%));
     }
   }
 
@@ -236,8 +235,7 @@
         border: 1px solid $color-create-placeholder;
         background: $color-lightgray2;
         border-radius: 50%;
-        -webkit-transform: translateY(-50%);
-        transform: translateY(-50%);
+        @include transform(translateY(-50%));
         content: "";
       }
 
@@ -251,21 +249,18 @@
         top: 0.65rem;
         left: 0.6rem;
         border-radius: 50%;
-        -webkit-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%);
+        @include transform(translate(-50%, -50%));
         // -webkit-transition: all 0.2s ease;
         // transition: all 0.2s ease;
         content: "";
       }
       &:not(:checked) + label:after {
         opacity: 0;
-        -webkit-transform: scale(0);
-        transform: scale(0);
+        @include transform(scale(0));
       }
       &:checked + label:after {
         opacity: 1;
-        -webkit-transform: scale(1);
-        transform: scale(1);
+        @include transform(scale(1));
       }
     }
   } //end of .create-radio-container
@@ -346,8 +341,8 @@
           display: block;
           background-size: 100%;
           transition: transform 0.5s;
-          -webkit-transform: translateX(0);
-          transform: translateX(0);
+          @include transform(translateX(0));
+
           content: "";
         }
         &:before {
@@ -375,14 +370,12 @@
       .toggle-head {
         &:before {
           opacity: 0;
-          -webkit-transform: translateX(2.4rem);
-          transform: translateX(2.4rem);
+          @include transform(translateX(2.4rem));
           transition: transform 0.5s;
         }
         &:after {
           opacity: 1;
-          -webkit-transform: translateX(2.4rem);
-          transform: translateX(2.4rem);
+          @include transform(translateX(2.4rem));
           transition: transform 0.5s;
         }
       } //end of .toggle-head
@@ -493,8 +486,7 @@
           background-color: $color-noPolls-bg;
           border: 1px solid $color-filter-border;
           border-radius: 1.4rem;
-          -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+          @include transform(translateY(-50%));
 
           &:before {
             display: block;
@@ -714,8 +706,7 @@
     top: 50%;
     width: 2rem;
     height: 2rem;
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
+    @include transform(translateY(-50%));
     content: "";
     background-image: icon(checkbox-unchecked, #000);
     background-size: 100%;

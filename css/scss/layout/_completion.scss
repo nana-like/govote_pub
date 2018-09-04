@@ -65,7 +65,7 @@
         content: "";
         @include bgi("deco-completion-1");
         background-size: 100%;
-        transform: translateX(-50%);
+        @include transform(translateX(-50%));
       }
     }
 
