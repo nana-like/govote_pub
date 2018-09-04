@@ -122,26 +122,26 @@
                   <label for="voters-selectAll-department">전체</label>
                 </div>
                 <ul class="body voters-dropdown-container ">
+                  <p class="text placeholder">학과 또는 부서를 선택하세요.</p>
                   <!--
                     [전달사항]
-                    활성화 시에는 .voters-dropdown-container에 .active클래스를 추가해 주세요.
+                    사용자가 학과/부서를 선택하면 .placeholder 클래스를 제거해주세요.
                   -->
-                  <p class="placeholder-text">학과 또는 부서를 선택하세요.</p>
                   <div class="icon-container"><i class="icon icon-dropdown"></i></div>
 
                   <ul class="dropdown-style-01">
-                    <li class="dropdown-item">인문사회학부</li>
-                    <li class="dropdown-item">물리학과</li>
-                    <li class="dropdown-item">생명과학과</li>
-                    <li class="dropdown-item">수학과</li>
-                    <li class="dropdown-item">화학과</li>
-                    <li class="dropdown-item">화학과</li>
-                    <li class="dropdown-item">화학과</li>
+                    <li class="dropdown-item"><a>인문사회학부</a></li>
+                    <li class="dropdown-item"><a>물리학과</a></li>
+                    <li class="dropdown-item"><a>생명과학과</a></li>
+                    <li class="dropdown-item"><a>수학과</a></li>
+                    <li class="dropdown-item"><a>화학과</a></li>
+                    <li class="dropdown-item"><a>화학과</a></li>
+                    <li class="dropdown-item"><a>화학과</a></li>
                   </ul>
                   <!--
-                    [전달사항]
-                    .voters-dropdown-container에 active 클래스가 추가되면 화면에 보입니다.
-                  -->
+                      [전달사항]
+                      .voters-dropdown-container에 active 클래스가 추가되면 화면에 보입니다.
+                    -->
               </div>
 
               <div class="voters-setting">
@@ -162,6 +162,36 @@
                   <div class="checkbox-block">
                     <input id="voters-gender-female" type="checkbox" class="checkbox-style01" />
                     <label for="voters-gender-female">여자</label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="voters-setting">
+                <div class="title">
+                  <p>학년</p>
+                  <input type="checkbox" id="voters-selectAll-grade" class="selectAll" />
+                  <label for="voters-selectAll-grade">전체</label>
+                  <!--
+                    [전달사항]
+                    checked됐을 때 활성화 ui가 보입니다.
+                  -->
+                </div>
+                <div class="body voters-checkbox-container">
+                  <div class="checkbox-block grade">
+                    <input id="voters-grade-1" type="checkbox" class="checkbox-style01" checked/>
+                    <label for="voters-grade-1">1학년</label>
+                  </div>
+                  <div class="checkbox-block grade">
+                    <input id="voters-grade-2" type="checkbox" class="checkbox-style01" checked/>
+                    <label for="voters-grade-2">2학년</label>
+                  </div>
+                  <div class="checkbox-block grade">
+                    <input id="voters-grade-3" type="checkbox" class="checkbox-style01" />
+                    <label for="voters-grade-3">3학년</label>
+                  </div>
+                  <div class="checkbox-block grade">
+                    <input id="voters-grade-4" type="checkbox" class="checkbox-style01" />
+                    <label for="voters-grade-4">4학년</label>
                   </div>
                 </div>
               </div>

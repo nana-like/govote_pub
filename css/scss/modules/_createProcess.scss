@@ -1,0 +1,190 @@
+@charset "utf-8";
+
+// **** create process
+
+.create-process {
+  //[*] 기본적인 컨테이너 스타일 선언
+  @include flexbox;
+  @include justify-content(center);
+  height: 4.8rem;
+  padding: 0 1.8rem;
+  background-color: $color-orange;
+  counter-reset: number; //카운터 리셋
+
+  &:before {
+    //우측 상단의 보팅몬스터
+    display: block;
+    z-index: 1;
+    position: absolute;
+    top: -3.6rem;
+    right: 1.3rem;
+    width: 5.7rem;
+    height: 5.4rem;
+    @include bgi("deco-process-1");
+    background-size: 100%;
+    content: "";
+  }
+
+  .process-level {
+    position: relative;
+    //[*] 기본적인 레벨 스타일 선언
+    @include flexbox;
+    @include align-items(center);
+    height: 100%;
+
+    .text {
+      //텍스트
+
+      color: #fff;
+      font-size: 1.4rem;
+      font-weight: $fw-b;
+      display: none;
+
+      &:after {
+        //삼각형 뒤쪽 모양 정의
+        display: none;
+        position: absolute;
+        top: 0;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        content: "";
+      }
+    }
+
+    &:after {
+      //삼각형 앞쪽 모양 정의
+      display: none;
+      position: absolute;
+      top: 0;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      content: "";
+    }
+
+    &:before {
+      //숫자
+      z-index: 1;
+      position: relative;
+      display: inline-block;
+      width: 2rem;
+      height: 2rem;
+      line-height: 1.7rem;
+      margin-left: 1.5vw;
+      border-radius: 50%;
+      text-align: center;
+      font-size: 1.4rem;
+      color: $color-brown2;
+      background-color: $color-lightorange;
+      border: 1px dotted $color-brown2;
+      box-sizing: border-box;
+      //---
+      content: counter(number);
+      counter-increment: number;
+    }
+  } //end of .process-level (기본)
+
+  // ----
+}
+
+// 공통 스타일링 적용
+@for $i from 1 through 4 {
+  .create-process.active-#{$i} {
+    //n번째 요소가 활성화 상태라면
+
+    .process-level:nth-child(#{$i}) {
+      //n번째 요소에게 스타일 적용
+      margin-right: 2.6rem;
+      padding-left: 4rem;
+      min-width: 19.4rem;
+      width: 70%;
+      position: relative;
+      background-color: $color-lightorange;
+
+      .text {
+        //텍스트 보임
+        display: block;
+
+        &:after {
+          //뒤쪽 화살표 모양 스타일
+          display: block;
+          left: 100%;
+          border-width: 2.4rem 0 2.4rem 2.4rem;
+          border-color: transparent transparent transparent $color-lightorange;
+        }
+      }
+
+      &:before {
+        //숫자 활성화
+        // margin-left: 4.3rem;
+        margin-right: 0.8rem;
+        background-color: #fff;
+        border-color: #fff;
+      }
+    }
+
+    .process-level:nth-child(#{($i) - 1}) {
+      //그 n-1번째에게도 화살표 추가
+
+      &:after {
+        //삼각형 앞
+        z-index: 1;
+        display: block;
+        left: 100%;
+        border-width: 2.4rem 0 2.4rem 2.4rem;
+        border-color: transparent transparent transparent $color-orange;
+      }
+    }
+  }
+} //for문 종료
+
+//예외 상황 정의
+.create-process.active-1 {
+  .process-level:nth-child(1) {
+    margin-left: 0;
+    padding-left: 0;
+    margin-right: 3rem;
+
+    .text:before {
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background-color: $color-lightorange;
+      content: "";
+    }
+  }
+}
+//예외 상황 정의
+.create-process.active-4 {
+  .process-level:nth-child(3) {
+    &:after {
+      // display: none;
+      // width: 100%;
+      height: 100%;
+      background-color: $color-orange;
+    }
+  }
+  .process-level:nth-child(4) {
+    margin-right: 0;
+    margin-left: 4rem;
+    padding-left: 0;
+    .text:before {
+      position: absolute;
+      top: 0;
+      left: 100%;
+      width: 100%;
+      height: 100%;
+      background-color: $color-lightorange;
+      content: "";
+    }
+    .text:after {
+      z-index: 1;
+      left: -2.4rem;
+      border-width: 2.4rem 2.4rem 2.4rem 0;
+      border-color: transparent $color-lightorange transparent transparent;
+    }
+  }
+}
