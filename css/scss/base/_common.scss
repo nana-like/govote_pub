@@ -45,12 +45,13 @@ $ly-header-height: 4.4rem; //페이지 헤더 높이
   }
 
   .page-header-left {
-    @include flexbox;
-    @include justify-content(center);
-    @include align-items(center);
+    // @include flexbox;
+    // @include justify-content(center);
+    // @include align-items(center);
     position: absolute;
     top: 50%;
     left: 1em;
+    -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
   }
   .page-header-right {
