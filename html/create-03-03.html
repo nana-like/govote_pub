@@ -118,27 +118,27 @@
               <div class="voters-setting">
                 <div class="title">
                   <p>학과/부서</p>
-                  <input type="checkbox" id="voters-selectAll-department" class="selectAll" />
+                  <input type="checkbox" id="voters-selectAll-department" class="selectAll" checked/>
                   <label for="voters-selectAll-department">전체</label>
                 </div>
-                <ul class="body voters-dropdown-container">
-                  <p class="text">인문사회학부</p>
+                <div class="body voters-dropdown-container">
+                  <p class="text">전체</p>
                   <!--
                     [전달사항]
-                    사용자가 학과/부서를 선택하면 .placeholder 클래스를 제거해주세요.
+                    사용자가 전체를 누른 경우 .text의 내용을 '전체'로 바꿔주세요.
                   -->
                   <div class="icon-container"><i class="icon icon-dropdown"></i></div>
-
-                  <ul class="dropdown-style-01">
-                    <li class="dropdown-item"><a>인문사회학부</a></li>
-                    <li class="dropdown-item"><a>물리학과</a></li>
-                    <li class="dropdown-item"><a>생명과학과</a></li>
-                    <li class="dropdown-item"><a>수학과</a></li>
-                    <li class="dropdown-item"><a>화학과</a></li>
-                    <li class="dropdown-item"><a>화학과</a></li>
-                    <li class="dropdown-item"><a>화학과</a></li>
-                  </ul>
-                  <!--
+                </div>
+                <ul class="dropdown-style-01">
+                  <li class="dropdown-item"><a>인문사회학부</a></li>
+                  <li class="dropdown-item"><a>물리학과</a></li>
+                  <li class="dropdown-item"><a>생명과학과</a></li>
+                  <li class="dropdown-item"><a>수학과</a></li>
+                  <li class="dropdown-item"><a>화학과</a></li>
+                  <li class="dropdown-item"><a>화학과</a></li>
+                  <li class="dropdown-item"><a>화학과</a></li>
+                </ul>
+                <!--
                     [전달사항]
                     .voters-dropdown-container에 active 클래스가 추가되면 화면에 보입니다.
                   -->
@@ -199,12 +199,12 @@
               <button class="button-select-done">선택 완료</button>
 
             </li>
-            </ul>
+          </ul>
 
-            <div class="create-buttons-container">
-              <button class="button-prev">이전</button>
-              <button class="button-next">다음</button>
-            </div>
+          <div class="create-buttons-container">
+            <button class="button-prev">이전</button>
+            <button class="button-next">다음</button>
+          </div>
         </form>
       </div>
 

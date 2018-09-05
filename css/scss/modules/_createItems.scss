@@ -394,17 +394,17 @@
     position: relative;
     height: 3.4rem;
     margin-bottom: 0.6rem;
-    margin-left: 0.4rem;
+    margin-right: 0.4rem;
     padding-right: 2.8rem;
     padding-left: 0.9rem;
     font-size: 1.2rem;
     line-height: 3.2rem;
-    border-radius: 17px;
+    border-radius: 1.7rem;
     background-color: #ffffff;
     border: solid 1px $color-filter-border;
 
-    &:first-child {
-      margin-left: 0;
+    &:last-child {
+      margin-right: 0;
     }
 
     .voters-list-delete {
@@ -454,6 +454,7 @@
 
   .voters-setting {
     // 개별 항목
+    position: relative;
     width: 100%;
     margin-top: 0.9rem;
     background-color: $color-noPolls-bg;
@@ -565,9 +566,9 @@
         font-size: 1.4rem;
         line-height: 5rem;
 
-        &.placeholder {
-          color: $color-gray;
-        }
+        // &.placeholder {
+        //   color: $color-gray;
+        // }
       }
     }
 
@@ -600,6 +601,9 @@
           background-image: icon(dropdown-up, #000);
         }
         [class^="dropdown-style-"] {
+          display: block;
+        }
+        & + [class^="dropdown-style-"] {
           display: block;
         }
       }

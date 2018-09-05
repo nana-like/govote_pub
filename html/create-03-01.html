@@ -121,27 +121,23 @@
                   <input type="checkbox" id="voters-selectAll-department" class="selectAll" />
                   <label for="voters-selectAll-department">전체</label>
                 </div>
-                <ul class="body voters-dropdown-container ">
-                  <p class="text placeholder">학과 또는 부서를 선택하세요.</p>
-                  <!--
-                    [전달사항]
-                    사용자가 학과/부서를 선택하면 .placeholder 클래스를 제거해주세요.
-                  -->
+                <div class="body voters-dropdown-container">
+                  <p class="text">학과 또는 부서를 선택하세요.</p>
                   <div class="icon-container"><i class="icon icon-dropdown"></i></div>
-
-                  <ul class="dropdown-style-01">
-                    <li class="dropdown-item"><a>인문사회학부</a></li>
-                    <li class="dropdown-item"><a>물리학과</a></li>
-                    <li class="dropdown-item"><a>생명과학과</a></li>
-                    <li class="dropdown-item"><a>수학과</a></li>
-                    <li class="dropdown-item"><a>화학과</a></li>
-                    <li class="dropdown-item"><a>화학과</a></li>
-                    <li class="dropdown-item"><a>화학과</a></li>
-                  </ul>
-                  <!--
-                      [전달사항]
-                      .voters-dropdown-container에 active 클래스가 추가되면 화면에 보입니다.
-                    -->
+                </div>
+                <ul class="dropdown-style-01">
+                  <li class="dropdown-item"><a>인문사회학부</a></li>
+                  <li class="dropdown-item"><a>물리학과</a></li>
+                  <li class="dropdown-item"><a>생명과학과</a></li>
+                  <li class="dropdown-item"><a>수학과</a></li>
+                  <li class="dropdown-item"><a>화학과</a></li>
+                  <li class="dropdown-item"><a>화학과</a></li>
+                  <li class="dropdown-item"><a>화학과</a></li>
+                </ul>
+                <!--
+                  [전달사항]
+                  .voters-dropdown-container에 active 클래스가 추가되면 화면에 보입니다.
+                -->
               </div>
 
               <div class="voters-setting">
@@ -199,12 +195,12 @@
               <button class="button-select-done">선택 완료</button>
 
             </li>
-            </ul>
+          </ul>
 
-            <div class="create-buttons-container">
-              <button class="button-prev">이전</button>
-              <button class="button-next">다음</button>
-            </div>
+          <div class="create-buttons-container">
+            <button class="button-prev">이전</button>
+            <button class="button-next">다음</button>
+          </div>
         </form>
       </div>
 
