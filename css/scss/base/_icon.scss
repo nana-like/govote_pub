@@ -28,6 +28,7 @@
   background-image: icon(filter-down, #000);
 
   &.active {
+    background-image: icon(filter-up, #000);
   }
 }
 

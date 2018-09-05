@@ -184,6 +184,7 @@ input[readonly] {
 }
 
 html {
+  overflow: hidden;
   position: relative;
   width: 100%;
   min-width: 100%;
@@ -195,6 +196,7 @@ html {
   -ms-overflow-style: scrollbar;
   -webkit-tap-highlight-color: transparent;
   font-size: 62.5%; //1em = 10px로 설정
+  font-weight: $fw-m;
 }
 
 body {
@@ -205,15 +207,11 @@ body {
   @include font-main;
   color: #0c0c0c;
   text-align: left;
-  font-weight: 400;
+  font-weight: $fw-m;
   line-height: 1.5;
   background-color: #fff;
 }
 
 #wrapper {
   position: relative;
-}
-
-html {
-  overflow: hidden;
 }

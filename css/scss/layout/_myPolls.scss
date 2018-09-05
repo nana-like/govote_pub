@@ -71,8 +71,10 @@
       position: absolute;
       top: $ly-mypolls-header-height;
       left: 50%;
+      width: 100%;
       margin-top: 13.7%;
       font-size: 1.7rem;
+      font-weight: $fw-r;
       text-align: center;
       @include transform(translateX(-50%));
     }

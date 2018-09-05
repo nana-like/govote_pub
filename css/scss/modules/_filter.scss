@@ -21,6 +21,13 @@
   border: 1px solid $color-filter-border;
   border-radius: 1.4rem;
 
+  &.active {
+    //액티브 시 위 방향으로
+    .icon-filter {
+      background-image: icon(filter-up, #000);
+    }
+  }
+
   &:first-child {
     margin-left: 0;
   }
@@ -31,5 +38,6 @@
     right: 0.6rem;
     width: 2rem;
     height: 2rem;
+    background-size: 100%;
   }
 }

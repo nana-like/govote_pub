@@ -37,7 +37,7 @@
     .percent {
       display: inline-block;
       margin-left: 0.2rem;
-      font-weight: $fw-b;
+      font-weight: $fw-bl;
       color: $color-black;
       vertical-align: middle;
     }
@@ -124,7 +124,6 @@
       background-image: icon(vm-yellow, "#000");
     }
   }
-
 
   .poll-finished {
     background-color: #ececec;

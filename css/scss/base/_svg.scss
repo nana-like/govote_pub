@@ -31,6 +31,11 @@
       filter-down:
       '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><g fill="none" fill-rule="evenodd" transform="translate(-40 -4)"><path fill="#81D9FC" stroke="#29ACE4" d="M50.5 18.117L45.95 11.5h9.1l-4.55 6.617z"/><rect width="65" height="27" x=".5" y=".5" stroke="#D2D2D2" rx="13.5"/></g></svg>',
     //----
+      // 필터 셀렉트박스 오른편 화살표 아이콘
+      // ----
+      filter-up:
+      '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M10.5 7.5l4.5 6.6H6l4.5-6.6z" fill="#81d9fc" stroke="#29ace4"/></svg>',
+    //----
       // 드롭다운 옆 아이콘 (아래)
       //----
       dropdown-down:
@@ -89,7 +94,7 @@
       // 시계 아이콘
       //----
       clock:
-      '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"> <g fill="none" fill-rule="evenodd" stroke="#{$color}"><circle cx="8" cy="8" r="8" fill="#FFF"/><rect width="1" height="4" x="9.5" y="7.5" fill="#FCDC05" rx=".5" transform="rotate(90 9.5 9.5)"/><rect width="1" height="5" x="7.5" y="4.5" fill="#FCDC05" rx=".5"/></g></svg>',
+      '<svg id="레이어_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17.8 17.6"><circle cx="9" cy="8.7" r="8" fill="#fff" stroke="#{$color}"/><path fill="#{$color}" d="M7.9 10.8v-.6c0-.2.1-.4.3-.4h4.3c.2 0 .4.2.4.4v.6c0 .2-.2.4-.4.4H8.2c-.2 0-.3-.2-.3-.4z"/><path fill="#{$color}" d="M8.9 11.2h-.7c-.2 0-.4-.2-.4-.4V5c0-.2.2-.4.4-.4h.7c.2 0 .4.2.4.4v5.9c0 .1-.2.3-.4.3z"/></svg>',
     //----
       // 화살표 오른쪽
       // ----

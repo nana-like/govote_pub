@@ -2,7 +2,7 @@
 
 **Web Published: nykim@nykim.net**
 
-_Last Modified: 2018-08-31_
+_Last Modified: 2018-09-05_
 
 ## Tree Structure
 
@@ -27,7 +27,9 @@ _Last Modified: 2018-08-31_
 - #wrapper 는 페이지 역할에 따라 고유의 클래스(예: .pollSearch)를 갖습니다.
   - .myPolls : 나의 투표함 페이지
   - .pollSearch: 투표 검색
-  - _(작성중...)_
+  - .create : 투표 생성
+  - .takeVote : 투표 참여
+  - .completion : 투표 작성(참여) 완료
 - 대부분의 페이지 구조는 .page-top 과 .page-body 로 이루어집니다.
   - .page-top: 상단 영역. 타이틀이나, 뒤로가기 버튼 또는 검색 박스 등이 위치합니다.
 
@@ -37,9 +39,11 @@ _Last Modified: 2018-08-31_
 
 ### 1.fonts
 
-- 기본 폰트는 '본고딕'을 사용하며, /\_font.scss 에서 정의합니다.
-  - normal
-  - bold
+- 기본 폰트는 'NotoSans'을 사용하며, /\_font.scss 에서 정의합니다.
+  - Bold : 900
+  - Black : 700
+  - Medium : 500 (default)
+  - Regular : 400
 
 ### 2.variables
 

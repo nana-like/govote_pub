@@ -74,6 +74,7 @@
   .create-title {
     @include flex-grow(1);
     font-size: 1.6rem;
+    font-weight: $fw-m;
   }
 
   .create-input {
@@ -82,10 +83,12 @@
     min-height: 5rem;
     font-size: 1.6rem;
     color: $color-gray;
+    font-weight: $fw-m;
     box-sizing: border-box;
 
     @include placeholder {
       color: $color-create-placeholder;
+      font-weight: $fw-r;
     }
   }
 
@@ -102,6 +105,7 @@
     padding-left: 1.1rem;
     padding-right: 1.1rem;
     line-height: 1.88;
+    font-weight: $fw-m;
 
     &[contenteditable="true"]:empty:before {
       position: absolute;
@@ -112,6 +116,7 @@
       content: attr(data-placeholder);
       color: $color-create-placeholder;
       @include transform(translateY(-50%));
+      font-weight: $fw-r;
     }
   }
 
@@ -150,6 +155,7 @@
     width: 100%;
     color: $color-black;
     font-size: 1.4rem;
+    font-weight: $fw-m;
 
     .create-date {
       @include flex-grow(1);
@@ -183,9 +189,10 @@
 
     .icon-clock {
       @include flex-grow(0);
-      width: 1.6rem;
-      height: 1.6rem;
+      width: 1.7rem;
+      height: 1.7rem;
       margin: 0 0.4rem 0 0.8rem;
+      background-size: 100%;
     }
 
     .icon-arrow-right {
@@ -761,9 +768,6 @@
       @include justify-content(space-between);
       @include flex-wrap(wrap);
       margin: 0.7rem 0;
-    }
-
-    .option-name {
     }
 
     .option-setting {
