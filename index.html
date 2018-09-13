@@ -4,8 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"
-    />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
     <meta name="description" content="File List | BC WebApp">
     <meta name="author" content="NY KIM">
 
@@ -184,17 +183,21 @@
             html {
                 font-size: 55%;
             }
+
             #wrap {
                 min-width: 320px;
             }
+
             thead>tr>th:first-child,
             thead>tr>th:nth-child(4),
             thead>tr>th:nth-child(5) {
                 display: none;
             }
+
             td[rowspan] {
                 display: none;
             }
+
             .desc,
             .rmks {
                 display: none;
@@ -223,8 +226,9 @@
             <colgroup>
                 <col width="130px" />
                 <col width="170px" />
-                <col/>
-                <col/>
+                <col />
+                <col width="200px" />
+                <col />
             </colgroup>
             <thead>
 
@@ -232,7 +236,7 @@
                     <th>그룹</th>
                     <th>파일명(LINK)</th>
                     <th>화면 내용</th>
-                    <th>기획안 이름</th>
+                    <th>재플린 화면 이름</th>
                     <th>비고</th>
                 </tr>
 
@@ -240,24 +244,15 @@
             <tbody>
 
                 <tr>
-                    <td rowspan="2">
+                    <td rowspan="1">
                         <strong>My Polls</strong>
                     </td>
                     <td>
-                        <a class="link" href="html/myPolls-01.html" target="_blank">myPolls-01</a>
+                        <a class="link" href="html/myPolls.html" target="_blank">myPolls</a>
                     </td>
-                    <td>내 투표함 - 투표 목록 없음</td>
-                    <td class="desc">Layout - Null</td>
-                    <td class="rmks"></td>
-                </tr>
-
-                <tr>
-                    <td>
-                        <a class="link" href="html/myPolls-02.html" target="_blank">myPolls-02</a>
-                    </td>
-                    <td>내 투표함 - 투표 목록 있음</td>
-                    <td class="desc">My Polls</td>
-                    <td class="rmks"></td>
+                    <td>내 투표함</td>
+                    <td class="desc">01_Go vote_main</td>
+                    <td class="rmks">플로팅버튼 클릭 시 아이템이 추가됩니다.</td>
                 </tr>
 
 
@@ -269,7 +264,7 @@
                         <a class="link" href="html/pollSearch-01.html" target="_blank">pollSearch-01</a>
                     </td>
                     <td class="borderTop2">투표 검색 - 기본</td>
-                    <td class="borderTop2 desc">Search</td>
+                    <td class="borderTop2 desc">04_Go vote_search</td>
                     <td class="borderTop2 rmks"></td>
                 </tr>
 
@@ -278,8 +273,8 @@
                         <a class="link" href="html/pollSearch-02.html" target="_blank">pollSearch-02</a>
                     </td>
                     <td>투표 검색 - 검색 결과 있음</td>
-                    <td class="desc">Search - Search Results</td>
-                    <td class="rmks"></td>
+                    <td class="desc">06_Go vote_search</td>
+                    <td class="rmks">.pollSearch.search-result</td>
                 </tr>
 
                 <tr>
@@ -287,154 +282,136 @@
                         <a class="link" href="html/pollSearch-03.html" target="_blank">pollSearch-03</a>
                     </td>
                     <td>투표 검색 - 검색 결과 없음</td>
-                    <td class="desc">Search - Search Results - Null</td>
-                    <td class="rmks"></td>
+                    <td class="desc">07_Go vote_search</td>
+                    <td class="rmks">.pollSearch.search-null</td>
                 </tr>
 
 
                 <tr>
-                    <td rowspan="12" class="borderTop2">
+                    <td rowspan="10" class="borderTop2">
                         <strong>Create</strong>
                     </td>
                     <td class="borderTop2">
                         <a class="link" href="html/create-01.html" target="_blank">create-01</a>
                     </td>
                     <td class="borderTop2">투표 생성 - 1단계 (정보 입력)</td>
-                    <td class="borderTop2 desc">Create a poll - Step 1.</td>
+                    <td class="borderTop2 desc"></td>
                     <td class="borderTop2 rmks"></td>
                 </tr>
 
                 <tr>
                     <td class="borderTop">
-                        <a class="link" href="html/create-02-01.html" target="_blank">create-02-01</a>
+                        <a class="link" href="html/create-02.html" target="_blank">create-02</a>
                     </td>
                     <td class="borderTop">투표 생성 - 2단계 (항목 입력)</td>
-                    <td class="desc borderTop">Create a poll - Step 2. Poll Items Setting</td>
+                    <td class="desc borderTop"></td>
                     <td class="rmks borderTop"></td>
                 </tr>
 
-                <tr>
-                    <td>
-                        <a class="link" href="html/create-02-02.html" target="_blank">create-02-02</a>
+                <tr class="">
+                    <td class="borderTop">
+                        <a class="link" href="html/create-03.html" target="_blank">create-03</a>
                     </td>
-                    <td>투표 생성 - 2단계 (항목 입력)</td>
-                    <td class="desc">Create a poll - Step 2. Poll Items Setting</td>
-                    <td class="rmks">타입이 날짜일 때</td>
+                    <td class="borderTop">투표 생성 - 3단계 (그룹 대상)</td>
+                    <td class="desc borderTop"></td>
+                    <td class="rmks borderTop"></td>
+                </tr>
+
+                <tr class="">
+                    <td>
+                        <a class="link" href="html/create-04.html" target="_blank">create-04</a>
+                    </td>
+                    <td>투표 생성 - 4단계 (개별 대상)</td>
+                    <td class="desc"></td>
+                    <td class="rmks"></td>
                 </tr>
 
                 <tr class="new">
                     <td>
-                        <a class="link" href="html/create-02-03.html" target="_blank">create-02-03</a>
+                        <a class="link" href="html/create-03-03.html" target="_blank">create-03-03</a>
                     </td>
-                    <td>투표 생성 - 2단계 (항목 입력)</td>
-                    <td class="desc">Create a poll - Step 2. Poll Items Setting</td>
-                    <td class="rmks">이미지 등록 시</td>
-                    </t>
+                    <td>투표 생성 - 3단계 (그룹 대상)</td>
+                    <td class="desc">Create a poll - Step 3. Voters Setting (Select Groups)</td>
+                    <td class="rmks">드롭다운 선택(전체)</td>
+                </tr>
 
-                    <tr class="new">
-                        <td class="borderTop">
-                            <a class="link" href="html/create-03-01.html" target="_blank">create-03-01</a>
-                        </td>
-                        <td class="borderTop">투표 생성 - 3단계 (그룹 대상)</td>
-                        <td class="desc borderTop">Create a poll - Step 3. Voters Setting (Select Groups)</td>
-                        <td class="rmks borderTop"></td>
-                    </tr>
+                <tr class="new">
+                    <td>
+                        <a class="link" href="html/create-03-04.html" target="_blank">create-03-04</a>
+                    </td>
+                    <td>투표 생성 - 3단계 (그룹 대상)</td>
+                    <td class="desc">Create a poll - Step 3. Voters Setting (Select Groups)</td>
+                    <td class="rmks">드롭다운 선택(학과/부서)</td>
+                </tr>
 
-                    <tr class="new">
-                        <td>
-                            <a class="link" href="html/create-03-02.html" target="_blank">create-03-02</a>
-                        </td>
-                        <td>투표 생성 - 3단계 (그룹 대상)</td>
-                        <td class="desc">Create a poll - Step 3. Voters Setting (Select Groups) </td>
-                        <td class="rmks">드롭다운 오픈 시</td>
-                    </tr>
+                <tr class="new" class="borderTop">
+                    <td class="borderTop">
+                        <a class="link" href="html/create-04-01.html" target="_blank">create-04-01</a>
+                    </td>
+                    <td class="borderTop">투표 생성 - 4단계 (개별 대상)</td>
+                    <td class="desc borderTop">Create a poll - Step 3. Voters Setting (Individual)</td>
+                    <td class="rmks borderTop"></td>
+                </tr>
 
-                    <tr class="new">
-                        <td>
-                            <a class="link" href="html/create-03-03.html" target="_blank">create-03-03</a>
-                        </td>
-                        <td>투표 생성 - 3단계 (그룹 대상)</td>
-                        <td class="desc">Create a poll - Step 3. Voters Setting (Select Groups)</td>
-                        <td class="rmks">드롭다운 선택(전체)</td>
-                    </tr>
+                <tr class="new">
+                    <td>
+                        <a class="link" href="html/create-04-02.html" target="_blank">create-04-02</a>
+                    </td>
+                    <td>투표 생성 - 3단계 (개별 대상)</td>
+                    <td class="desc">Create a poll - Step 3. Voters Setting (Individual)</td>
+                    <td class="rmks">검색 결과가 없을 때</td>
+                </tr>
 
-                    <tr class="new">
-                        <td>
-                            <a class="link" href="html/create-03-04.html" target="_blank">create-03-04</a>
-                        </td>
-                        <td>투표 생성 - 3단계 (그룹 대상)</td>
-                        <td class="desc">Create a poll - Step 3. Voters Setting (Select Groups)</td>
-                        <td class="rmks">드롭다운 선택(학과/부서)</td>
-                    </tr>
+                <tr class="new">
+                    <td>
+                        <a class="link" href="html/create-04-03.html" target="_blank">create-04-03</a>
+                    </td>
+                    <td>투표 생성 - 3단계 (개별 대상)</td>
+                    <td class="desc">Create a poll - Step 3. Voters Setting (Individual)</td>
+                    <td class="rmks">검색 값이 있을 때</td>
+                </tr>
 
-                    <tr class="new" class="borderTop">
-                        <td class="borderTop">
-                            <a class="link" href="html/create-04-01.html" target="_blank">create-04-01</a>
-                        </td>
-                        <td class="borderTop">투표 생성 - 4단계 (개별 대상)</td>
-                        <td class="desc borderTop">Create a poll - Step 3. Voters Setting (Individual)</td>
-                        <td class="rmks borderTop"></td>
-                    </tr>
+                <tr class="new">
+                    <td class="borderTop">
+                        <a class="link" href="html/create-05-01.html" target="_blank">create-05-01</a>
+                    </td>
+                    <td class="borderTop">투표 생성 - 4단계 (작성정보 확인)</td>
+                    <td class="desc borderTop">Create a poll - Step 4. Confirmation</td>
+                    <td class="rmks borderTop"></td>
+                </tr>
 
-                    <tr class="new">
-                        <td>
-                            <a class="link" href="html/create-04-02.html" target="_blank">create-04-02</a>
-                        </td>
-                        <td>투표 생성 - 3단계 (개별 대상)</td>
-                        <td class="desc">Create a poll - Step 3. Voters Setting (Individual)</td>
-                        <td class="rmks">검색 결과가 없을 때</td>
-                    </tr>
+                <tr class="new">
+                    <td rowspan="2" class="borderTop2">
+                        <strong>Take a Vote</strong>
+                    </td>
+                    <td class="borderTop2">
+                        <a class="link" href="html/takeVote-01.html" target="_blank">takeVote-01</a>
+                    </td>
+                    <td class="borderTop2">투표하기</td>
+                    <td class="borderTop2 desc">Take a Vote - Process</td>
+                    <td class="borderTop2 rmks"></td>
+                </tr>
 
-                    <tr class="new">
-                        <td>
-                            <a class="link" href="html/create-04-03.html" target="_blank">create-04-03</a>
-                        </td>
-                        <td>투표 생성 - 3단계 (개별 대상)</td>
-                        <td class="desc">Create a poll - Step 3. Voters Setting (Individual)</td>
-                        <td class="rmks">검색 값이 있을 때</td>
-                    </tr>
+                <tr class="new">
+                    <td>
+                        <a class="link" href="html/takeVote-02.html" target="_blank">takeVote-02</a>
+                    </td>
+                    <td>투표하기</td>
+                    <td class="desc">Take a Vote - Process</td>
+                    <td class="rmks">투표 항목을 다르게 설정</td>
+                </tr>
 
-                    <tr class="new">
-                        <td class="borderTop">
-                            <a class="link" href="html/create-05-01.html" target="_blank">create-05-01</a>
-                        </td>
-                        <td class="borderTop">투표 생성 - 4단계 (작성정보 확인)</td>
-                        <td class="desc borderTop">Create a poll - Step 4. Confirmation</td>
-                        <td class="rmks borderTop"></td>
-                    </tr>
-
-                    <tr class="new">
-                        <td rowspan="2" class="borderTop2">
-                            <strong>Take a Vote</strong>
-                        </td>
-                        <td class="borderTop2">
-                            <a class="link" href="html/takeVote-01.html" target="_blank">takeVote-01</a>
-                        </td>
-                        <td class="borderTop2">투표하기</td>
-                        <td class="borderTop2 desc">Take a Vote - Process</td>
-                        <td class="borderTop2 rmks"></td>
-                    </tr>
-
-                    <tr class="new">
-                        <td>
-                            <a class="link" href="html/takeVote-02.html" target="_blank">takeVote-02</a>
-                        </td>
-                        <td>투표하기</td>
-                        <td class="desc">Take a Vote - Process</td>
-                        <td class="rmks">투표 항목을 다르게 설정</td>
-                    </tr>
-
-                    <tr class="new">
-                        <td rowspan="1" class="borderTop2">
-                            <strong>Completion</strong>
-                        </td>
-                        <td class="borderTop2">
-                            <a class="link" href="html/Completion.html" target="_blank">Completion</a>
-                        </td>
-                        <td class="borderTop2">투표(생성) 완료 화면</td>
-                        <td class="borderTop2 desc"></td>
-                        <td class="borderTop2 rmks">투표 생성 및 투표 완료</td>
-                    </tr>
+                <tr class="new">
+                    <td rowspan="1" class="borderTop2">
+                        <strong>Completion</strong>
+                    </td>
+                    <td class="borderTop2">
+                        <a class="link" href="html/Completion.html" target="_blank">Completion</a>
+                    </td>
+                    <td class="borderTop2">투표(생성) 완료 화면</td>
+                    <td class="borderTop2 desc"></td>
+                    <td class="borderTop2 rmks">투표 생성 및 투표 완료</td>
+                </tr>
 
             </tbody>
         </table>

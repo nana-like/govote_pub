@@ -12,6 +12,12 @@
   <meta http-equiv="Content-Script-Type" content="text/javascript">
   <meta http-equiv="Content-Style-Type" content="text/css">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <script type="text/javascript" src="../../js/pub.js"></script>
+  <!--
+    [전달사항]
+    이벤트 확인용 js입니다.
+  -->
 </head>
 
 <body class="body-create">
@@ -73,11 +79,11 @@
                   <button class="voters-list-delete"></button>
                 </div>
                 <div class="voters-list">
-                  <p class="text">교직원/화학과/전체/교수</p>
+                  <p class="text">교직원/화학과,생명과학과/전체/교수</p>
                   <button class="voters-list-delete"></button>
                 </div>
                 <div class="voters-list">
-                  <p class="text">대학/수학과/남자/1학년,2학년</p>
+                  <p class="text">대학/수학과/남자/1학년,2학년대학/수학과/남자/1학년,2학년대학/수학과/남자/1학년,2학년대학/수학과/남자/1학년,2학년대학/수학과/남자/1학년,2학년대학/수학과/남자/1학년,2학년</p>
                   <button class="voters-list-delete"></button>
                 </div>
               </div>
@@ -114,52 +120,50 @@
                 </div>
               </div>
 
-              <div class="voters-setting">
+              <div class="voters-setting dropdown-area">
                 <div class="title">
                   <p>학과/부서</p>
                   <input type="checkbox" id="voters-selectAll-department" class="selectAll" />
                   <label for="voters-selectAll-department">전체</label>
                 </div>
-                <div class="body voters-dropdown-container active">
+                <div class="body voters-dropdown-container">
+                  <div class="dropdown-content">
+                    <button class="button-dropdown">
+                      <p class="text">학과 또는 부서를 선택하세요.</p>
+                      <div class="icon-container"><i class="icon icon-dropdown"></i></div>
+                    </button>
+                    <div class="voters-list-container">
 
-                  <div class="voters-list-container">
-                    <div class="voters-list">
-                      <p class="text">인문사회학부</p>
-                      <button class="voters-list-delete"></button>
-                    </div>
-                    <div class="voters-list">
-                      <p class="text">물리학과</p>
-                      <button class="voters-list-delete"></button>
-                    </div>
-                    <div class="voters-list">
-                      <p class="text">생명과학과</p>
-                      <button class="voters-list-delete"></button>
-                    </div>
-                    <div class="voters-list">
-                      <p class="text">수학과</p>
-                      <button class="voters-list-delete"></button>
+                      <div class="voters-list">
+                        <p class="text">수학과</p>
+                        <button class="voters-list-delete"></button>
+                      </div>
+                      <div class="voters-list">
+                        <p class="text">인문사회학부</p>
+                        <button class="voters-list-delete"></button>
+                      </div>
+                      <div class="voters-list">
+                        <p class="text">물리학과</p>
+                        <button class="voters-list-delete"></button>
+                      </div>
                     </div>
                   </div>
-                  <!-- 
+                  <ul class="dropdown-ui-department">
+                    <li class="dropdown-item"><button>인문사회학부</button></li>
+                    <li class="dropdown-item"><button>물리학과</button></li>
+                    <li class="dropdown-item"><button>생명과학과</button></li>
+                    <li class="dropdown-item"><button>수학과</button></li>
+                    <li class="dropdown-item"><button>화학과</button></li>
+                    <li class="dropdown-item"><button>화학과2</button></li>
+                    <li class="dropdown-item"><button>화학과3</button></li>
+                    <li class="dropdown-item"><button>화학과4</button></li>
+                    <li class="dropdown-item"><button>화학과5</button></li>
+                  </ul>
+                  <!--
                     [전달사항]
-                    사용자가 여러 학과/부서를 선택한 경우 chip 형태로 표시됩니다.
+                    .voters-dropdown-container에 active 클래스가 추가되면 화면에 보입니다.
                   -->
-
-                  <div class="icon-container"><i class="icon icon-dropdown"></i></div>
                 </div>
-                <ul class="dropdown-style-01">
-                  <li class="dropdown-item"><a>인문사회학부</a></li>
-                  <li class="dropdown-item"><a>물리학과</a></li>
-                  <li class="dropdown-item"><a>생명과학과</a></li>
-                  <li class="dropdown-item"><a>수학과</a></li>
-                  <li class="dropdown-item"><a>화학과</a></li>
-                  <li class="dropdown-item"><a>화학과</a></li>
-                  <li class="dropdown-item"><a>화학과</a></li>
-                </ul>
-                <!--
-                  [전달사항]
-                  .voters-dropdown-container에 active 클래스가 추가되면 화면에 보입니다.
-                -->
               </div>
 
               <div class="voters-setting">
@@ -174,11 +178,11 @@
                 </div>
                 <div class="body voters-checkbox-container">
                   <div class="checkbox-block">
-                    <input id="voters-gender-male" type="checkbox" class="checkbox-style01" />
+                    <input id="voters-gender-male" type="checkbox" class="checkbox-style01" checked />
                     <label for="voters-gender-male">남자</label>
                   </div>
                   <div class="checkbox-block">
-                    <input id="voters-gender-female" type="checkbox" class="checkbox-style01" />
+                    <input id="voters-gender-female" type="checkbox" class="checkbox-style01" checked />
                     <label for="voters-gender-female">여자</label>
                   </div>
                 </div>
@@ -231,41 +235,3 @@
 
   </div>
 </body>
-
-
-<!--
-
-9/1 명동커피 2500
-9/1 빠리바게트 2400
-9/1 투썸 7000
-9/2 지에스 7020
-9/2 칭구들 모임 12,000
-9/3 지에스(을지로2가) 2900
-9/3 씨유(점심) 3800
-9/3 씨유(간식) 3020
-9/4 씨유 1500
-9/4 발앤쿡 을지로 40,700 (+21,900/ +8,900)
-9/5 쿠팡 56,870
-9/5 ATM출금 10,000 (케이블 -3000, 배달비 -2000)
-9/5 빠바 4,150
-9/5 림벅 6,000
-9/5 에어비앤비 50,600
-9/6 지에스(을지로) 4,230
-9/6 씨유 2000
-9/6 점심 7400
-9/6 퍼니엠 55800
-9/6 어거스틴 95000 (+23700*3)
-9/7 씨유 4900
-9/9 네이버 2000
-9/9 지에스 5850
-9/10 에어비앤비놀이 34000
-9/10 교통대금 91400
-9/10 카페토브 10500
-9/11 씨유 2000
-9/11 점심 11200
-9/12 미주라도넛 2000
-
-
-
-
--->

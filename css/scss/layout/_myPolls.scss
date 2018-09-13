@@ -58,9 +58,7 @@
   }
 
   .no-polls {
-    @include flexbox;
-    @include justify-content(center);
-    @include align-items(center);
+    display: none;
     width: 100%;
     height: 100%;
     height: calc(100vh - #{$ly-mypolls-header-height});
@@ -79,10 +77,23 @@
       @include transform(translateX(-50%));
     }
   }
+}
 
-  .poll-list-container {
-    // height: calc(100vh - #{$ly-mypolls-header-height});
-    height: 100%;
-    overflow-y: auto;
+.poll-list-container {
+  height: 100%;
+  overflow-y: auto;
+
+  &.init {
+    .filter-container {
+      opacity: 0;
+      visibility: hidden;
+      @include pointer-none;
+      @include select-none;
+    }
+    .no-polls {
+      @include flexbox;
+      @include justify-content(center);
+      @include align-items(center);
+    }
   }
 }

@@ -8,6 +8,10 @@
     margin-bottom: 0.4rem;
     border: 1px solid $color-lightgray2;
     background-color: #fff;
+    & > button {
+      text-align: left;
+      width: 100%;
+    }
   }
 
   .poll-title {

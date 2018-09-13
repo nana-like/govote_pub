@@ -3,6 +3,8 @@
 // **** filter style
 
 .filter-container {
+  opacity: 1;
+  visibility: visible;
   @include flexbox;
   @include align-items(center);
   @include justify-content(flex-end);
