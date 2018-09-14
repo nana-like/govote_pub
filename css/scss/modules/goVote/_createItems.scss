@@ -442,10 +442,11 @@
 
   .voters-list-area {
     min-height: 0;
+    padding-top: 0.6rem;
 
-    .voters-list:first-child {
-      margin-top: 0.6rem;
-    }
+    // .voters-list:first-child {
+    //   margin-top: 0.6rem;
+    // }
   }
 
   .voters-list-container {
@@ -880,10 +881,13 @@
         display: block;
         margin-top: 0.5rem;
         font-size: 1.2rem;
-
         &:first-child {
-          margin-top: 0.1rem;
+          margin-top: 0.13rem;
         }
+      }
+
+      &.small {
+        margin-top: 0.1rem;
       }
     }
   }

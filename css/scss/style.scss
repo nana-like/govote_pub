@@ -1,33 +1,34 @@
 @charset "utf-8";
 
 ////// nykim@nykim.net //////
+/*! style.css */
 
 //[1] 변수, 믹스인
-@import "helpers/variables";
-@import "helpers/mixins";
-@import "helpers/mediaQueries";
-@import "helpers/animations";
+@import "helpers/goVote/variables_goVote";
+@import "helpers/goVote/mixins_goVote";
 
-//[2] 기본 스타일
+//[2-1] 기본 스타일 (공통)
 @import "base/font";
 @import "base/reset";
-@import "base/common";
-@import "base/svg";
-@import "base/icon";
+
+//[2-2] 기본 스타일 (고보트용)
+@import "base/goVote/common_goVote";
+@import "base/goVote/svg_goVote";
+@import "base/goVote/icon_goVote";
 
 //[4] 모듈 (분리하여 사용 가능한 요소)
-@import "modules/button";
-@import "modules/tabmenu";
-@import "modules/searchbox";
-@import "modules/filter";
-@import "modules/pollList";
-@import "modules/createProcess";
-@import "modules/dropdown";
-@import "modules/createItems";
+@import "modules/goVote/button";
+@import "modules/goVote/tabmenu";
+@import "modules/goVote/searchbox";
+@import "modules/goVote/filter";
+@import "modules/goVote/pollList";
+@import "modules/goVote/createProcess";
+@import "modules/goVote/dropdown";
+@import "modules/goVote/createItems";
 
 //[5] 레이아웃
-@import "layout/myPolls";
-@import "layout/pollSearch";
-@import "layout/create";
-@import "layout/takeVote";
-@import "layout/completion";
+@import "layout/goVote/myPolls";
+@import "layout/goVote/pollSearch";
+@import "layout/goVote/create";
+@import "layout/goVote/takeVote";
+@import "layout/goVote/completion";

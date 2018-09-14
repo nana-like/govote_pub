@@ -265,7 +265,7 @@ $(function() {
         $(this)
           .parents(".create-poll-info")
           .find("img")
-          .attr("src", "../images/thumbnail-test.png");
+          .attr("src", "../images/goVote/thumbnail-test.png");
       }
     });
     $(".set-textItem-area .button-image-attach").on("click", function(e) {
@@ -278,7 +278,7 @@ $(function() {
         $(this)
           .next(".image")
           .children("img")
-          .attr("src", "../images/thumbnail-test.png");
+          .attr("src", "../images/goVote/thumbnail-test.png");
       }
     });
 

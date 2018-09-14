@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <title>BLOCKCHAIN CAMPUS</title>
+
+  <link type="text/css" rel="stylesheet" href="../css/style_bc.css" />
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+  <meta name="format-detection" content="telephone=no, address=no, email=no" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <script type="text/javascript" src="../js/library/jquery-2.1.4.js"></script>
+  <script type="text/javascript" src="../js/bc.js"></script>
+  <!--
+    [전달사항]
+    이벤트 확인용 js입니다.
+  -->
+
+</head>
+
+<!-- 
+  >> ver.2 
+  body에 bc 클래스 추가
+-->
+
+<body class="bc login">
+  <!-- 로그인 화면 -->
+  <div id="wrapper" class="login">
+
+    <div class="login-header">
+      <h1 class="logo">BLOCKCHAIN CAMPUS</h1>
+    </div>
+
+    <form>
+      <div class="login-body">
+        <div class="input-item">
+          <p class="input-title">학교명</p>
+          <div class="select-item select-style02">
+            <input id="input-login-university" type="text" placeholder="학교명을 선택하세요." class="input-select-ui" readonly="readonly" disabled="disabled"
+              value="" />
+            <!--
+              [전달사항]
+              - .select-item을 클릭하면 .select-item에 active 클래스를 추가/제거해주세요.
+            -->
+            <i class="icon icon-select02"></i>
+            <ul class="selectbox">
+              <li class="selectbox-item"><button>고려대학교</button></li>
+              <li class="selectbox-item"><button>서강대학교</button></li>
+              <li class="selectbox-item"><button>연세대학교</button></li>
+              <li class="selectbox-item"><button>인천대학교</button></li>
+              <li class="selectbox-item"><button>POSTECH</button></li>
+              <li class="selectbox-item"><button>대학교111</button></li>
+              <li class="selectbox-item"><button>대학교222</button></li>
+            </ul>
+          </div>
+        </div>
+        <div class="input-item">
+          <p class="input-title">이메일</p>
+          <input id="input-login-email" type="text" placeholder="이메일을 입력하세요." class="input-style02 input-email" />
+          <p class="login-area-email-info">@ postech.ac.kr</p>
+          <p class="error-style01 login-area-error"></p>
+          <!-- 
+            [전달사항]
+            - 사용자가 학교 선택 시 .login-area-email-info에 해당하는 학교 이메일을 넣어주세요.
+            - .login-area-email-info에 active 클래스가 있으면 글자가 보입니다.
+          -->
+        </div>
+        <div class="input-item">
+          <p class="input-title">비밀번호</p>
+          <input id="input-login-password" type="password" placeholder="비밀번호를 입력하세요." class="input-style02" />
+          <p class="error-style01 login-area-error"></p>
+          <!-- 
+            [전달사항]
+            오류 발생 시 login-area-error에 에러 메시지를 넣어주세요.
+          -->
+        </div>
+
+        <div class="button-wrap">
+          <button class="button-style01" disabled>로그인</button>
+          <!-- 
+          [전달사항]
+          버튼 활성화 시 disabled 속성을 제거해 주세요.
+        -->
+          <button class="button-style03">회원가입</button>
+        </div>
+      </div>
+    </form>
+
+  </div>
+</body>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <title>BLOCKCHAIN CAMPUS</title>
+
+  <link type="text/css" rel="stylesheet" href="../css/style_bc.css" />
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+  <meta name="format-detection" content="telephone=no, address=no, email=no" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <script type="text/javascript" src="../js/library/jquery-2.1.4.js"></script>
+  <script type="text/javascript" src="../js/bc.js"></script>
+  <!--
+    [전달사항]
+    이벤트 확인용 js입니다.
+  -->
+
+</head>
+
+<!-- 
+  >> ver.2 
+  body에 bc 클래스 추가
+-->
+
+<body class="bc body-wallet">
+  <!-- 지갑 메인 화면 -->
+
+  <div id="wrapper" class="wallet-main">
+    <!--
+      [전달사항] <bc.js>
+      .wallet-main에 경우에 따라 다음의 클래스를 추가/제거해 주세요.
+      - init: 거래 내역 없음
+      - (추가 클래스 없음): 내역이 있을 때 (*현재)
+    -->
+
+    <div class="wallet-top">
+      <div class="info">
+        <div class="label">BCX</div>
+        <div class="balance">14,000</div>
+      </div>
+      <div class="button-wrap-row">
+        <button class="button-wallet">지갑 주소</button>
+        <button class="button-wallet">송금</button>
+      </div>
+    </div>
+    <!-- //end .wallet-top-->
+
+    <div class="wallet-details">
+      <div class="title">Details</div>
+      <div class="no-details">
+        표시할 거래내역이<br />없습니다.
+      </div>
+      <ul class="details-list">
+        <li class="type-in">
+          <!--
+              [전달사항]
+              .details-block에 다음과 같은 클래스를 붙여주세요.
+              - 입금인 경우: type-in
+              - 출금인 경우: type-out
+            -->
+          <div class="details-block">
+            <div class="value">2,400</div>
+            <div class="label">BCX</div>
+          </div>
+          <div class="details-block">
+            <div class="date">2018년 10월 31일 오후 5시 45분</div>
+            <div class="hash">0x2620032cc92a7e25b43f9b94676905edf5339597</div>
+          </div>
+          <button class="button-style-drawer"></button>
+        </li>
+        <li class="type-in">
+          <!--
+              [전달사항]
+              .details-block에 다음과 같은 클래스를 붙여주세요.
+              - 입금인 경우: type-in
+              - 출금인 경우: type-out
+            -->
+          <div class="details-block">
+            <div class="value">700</div>
+            <div class="label">BCX</div>
+          </div>
+          <div class="details-block">
+            <div class="date">2018년 10월 31일 오후 5시 45분</div>
+            <div class="hash">0x2620032cc92a7e25b43f9b94676905edf5339597</div>
+          </div>
+          <button class="button-style-drawer"></button>
+        </li>
+        <li class="type-out">
+          <!--
+              [전달사항]
+              .details-block에 다음과 같은 클래스를 붙여주세요.
+              - 입금인 경우: type-in
+              - 출금인 경우: type-out
+            -->
+          <div class="details-block">
+            <div class="value">13,000</div>
+            <div class="label">BCX</div>
+          </div>
+          <div class="details-block">
+            <div class="date">2018년 10월 31일 오후 5시 45분</div>
+            <div class="hash">0x2620032cc92a7e25b43f9b94676905edf5339597</div>
+          </div>
+          <button class="button-style-drawer"></button>
+        </li>
+        <li class="type-out">
+          <!--
+              [전달사항]
+              .details-block에 다음과 같은 클래스를 붙여주세요.
+              - 입금인 경우: type-in
+              - 출금인 경우: type-out
+            -->
+          <div class="details-block">
+            <div class="value">13,000</div>
+            <div class="label">BCX</div>
+          </div>
+          <div class="details-block">
+            <div class="date">2018년 10월 31일 오후 5시 45분</div>
+            <div class="hash">0x2620032cc92a7e25b43f9b94676905edf5339597</div>
+          </div>
+          <button class="button-style-drawer"></button>
+        </li>
+        <li class="type-in">
+          <!--
+              [전달사항]
+              .details-block에 다음과 같은 클래스를 붙여주세요.
+              - 입금인 경우: type-in
+              - 출금인 경우: type-out
+            -->
+          <div class="details-block">
+            <div class="value">700</div>
+            <div class="label">BCX</div>
+          </div>
+          <div class="details-block">
+            <div class="date">2018년 10월 31일 오후 5시 45분</div>
+            <div class="hash">0x2620032cc92a7e25b43f9b94676905edf5339597</div>
+          </div>
+          <button class="button-style-drawer"></button>
+        </li>
+        <li class="type-out">
+          <!--
+              [전달사항]
+              .details-block에 다음과 같은 클래스를 붙여주세요.
+              - 입금인 경우: type-in
+              - 출금인 경우: type-out
+            -->
+          <div class="details-block">
+            <div class="value">12,345,678</div>
+            <div class="label">BCX</div>
+          </div>
+          <div class="details-block">
+            <div class="date">2018년 10월 31일 오전 11시 22분</div>
+            <div class="hash">0x2620032cc92a7e25b43f9b94676905edf5339597</div>
+          </div>
+          <button class="button-style-drawer"></button>
+        </li>
+        <li class="type-out">
+          <!--
+            [전달사항]
+            .details-block에 다음과 같은 클래스를 붙여주세요.
+            - 입금인 경우: type-in
+            - 출금인 경우: type-out
+          -->
+          <div class="details-block">
+            <div class="value">12,345,678</div>
+            <div class="label">BCX</div>
+          </div>
+          <div class="details-block">
+            <div class="date">2018년 10월 31일 오전 11시 22분</div>
+            <div class="hash">0x2620032cc92a7e25b43f9b94676905edf5339597</div>
+          </div>
+          <button class="button-style-drawer"></button>
+        </li>
+      </ul>
+    </div>
+    <!-- //end .wallet-details-->
+
+
+  </div>
+</body>

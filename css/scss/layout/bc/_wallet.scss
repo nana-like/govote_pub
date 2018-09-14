@@ -1,0 +1,290 @@
+@charset "utf-8";
+
+// * * * * * * * * * * * *
+/* _wallet.scss */
+// * * * * * * * * * * * *
+
+.body-wallet {
+  background-color: #f2f4f7;
+}
+
+// - - - - - - - - - - - - - - -
+// [ .wallet-main ]
+// - - - - - - - - - - - - - - -
+
+.wallet-main {
+  .label {
+    //.label에 대한 기본 스타일링
+    display: inline-block;
+    height: 2.2rem;
+    padding: 0 0.6rem;
+    font-size: 1.4rem;
+    font-weight: $fw-r;
+    letter-spacing: 0.01rem;
+    border-radius: 0.4rem;
+    border: 1px solid;
+  }
+
+  .wallet-top {
+    position: relative;
+    height: 18rem;
+    background-color: $color-blue;
+
+    &:before,
+    &:after {
+      display: block;
+      position: absolute;
+      bottom: 0;
+      content: "";
+      width: 11.5rem;
+      height: 11.5rem;
+      background-size: 100%;
+      background-repeat: no-repeat;
+    }
+
+    &:before {
+      left: 0;
+      @include bgi("deco-wallet-top-1");
+    }
+    &:after {
+      right: 0;
+      @include bgi("deco-wallet-top-2");
+    }
+
+    .info {
+      @include flexbox;
+      @include flex-direction(column);
+      @include justify-content(center);
+      @include align-items(center);
+      height: 13.6rem;
+
+      .label {
+        // BCX 부분
+        color: #fff;
+        border-color: #fff;
+      }
+
+      .balance {
+        // 잔고 부분
+        color: #fff;
+        font-weight: $fw-m;
+        font-size: 3.2rem;
+        letter-spacing: 0.01rem;
+      }
+    }
+
+    .button-wrap-row {
+      position: relative;
+      z-index: 1;
+    }
+
+    .button-wallet {
+      display: block;
+      color: #fff;
+      font-weight: $fw-r;
+      text-align: center;
+      height: 4.4rem;
+      background-color: $color-darkblue;
+      border-left: 1px solid $color-blue;
+      -webkit-tap-highlight-color: rgba(238, 186, 186, 0.4);
+
+      &:first-child {
+        border-left: none;
+      }
+    }
+  } // ---- end of .wallet-top
+
+  .wallet-details {
+    //하단 상세 정보 부분
+    position: relative;
+    height: calc(100vh - 180px);
+
+    .title {
+      height: 4rem;
+      padding: 0 2rem;
+      color: #000;
+      font-size: 1.2rem;
+      font-weight: $fw-dl;
+      line-height: 4rem;
+      background-color: #f2f4f7;
+      border-bottom: solid 1px #ebebee;
+    }
+
+    .no-details {
+      //표시 내역이 없는 경우
+      display: none;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      @include transform(translate(-50%, -50%));
+      font-size: 1.6rem;
+      font-weight: $fw-r;
+      text-align: center;
+      color: #000;
+      letter-spacing: 0.01rem;
+    }
+
+    .details-list {
+      -webkit-overflow-scrolling: touch;
+      overflow-y: auto;
+
+      & > li {
+        position: relative;
+        @include flexbox;
+        @include flex-direction(column);
+        @include justify-content(space-between);
+        width: 100%;
+        height: 10rem;
+        padding: 1rem 2rem;
+        background-color: #fff;
+        border-bottom: 1px solid #ebebeb;
+
+        .details-block:first-child {
+          @include flexbox;
+          @include align-items(center);
+          @include flex-shrink(0);
+        }
+
+        &:last-child {
+          margin-bottom: 0.4rem;
+        }
+      }
+
+      .value {
+        position: relative;
+        padding-left: 2.7rem;
+        font-size: 2rem;
+        font-weight: $fw-m;
+        color: #000;
+
+        &:before {
+          position: absolute;
+          top: 50%;
+          left: 0;
+          display: block;
+          width: 2rem;
+          height: 2rem;
+          content: "";
+          background-size: 100%;
+          background-repeat: no-repeat;
+          @include transform(translateY(-50%));
+        }
+      }
+
+      .date {
+        margin-bottom: 0.2rem;
+        @include ellipsis;
+        font-weight: $fw-r;
+        font-size: 1.2rem;
+        color: #2c496a;
+      }
+
+      .hash {
+        opacity: 0.5;
+        @include ellipsis;
+        font-size: 1rem;
+        font-weight: $fw-dl;
+        color: #2d4a6b;
+      }
+
+      .type-in {
+        //입금인 경우
+        .value:before {
+          background-image: icon(wallet-details-in, #000);
+        }
+        .label {
+          margin-left: 0.6rem;
+          color: #30b9d3;
+          border-color: #30b9d3;
+        }
+      }
+
+      .type-out {
+        //출금인 경우
+        .value:before {
+          background-image: icon(wallet-details-out, #000);
+        }
+        .label {
+          margin-left: 0.6rem;
+          color: #a7b5c8;
+          border-color: #a7b5c8;
+        }
+      }
+
+      .button-style-drawer {
+        position: absolute;
+        top: 1.5rem;
+        right: 1.2rem;
+        display: block;
+        width: 2rem;
+        height: 2rem;
+        background-size: 100% 100%;
+        background-position: 50% 50%;
+        background-image: icon(drawer, #a7b5c8);
+        background-repeat: no-repeat;
+      }
+    } // ---- end of .datails-list
+  } // ---- end of .wallet-details
+} // --- end of .wallet-main
+
+.wallet-main.init {
+  .no-details {
+    display: block;
+  }
+}
+
+#testButton_delete_me {
+  z-index: 10;
+  position: fixed;
+  top: 2rem;
+  left: 2rem;
+  width: 10rem;
+  border: 1px solid #bbb;
+  padding: 6px 10px;
+  background-color: #fff;
+  border-radius: 12px;
+  font-size: 1.2rem;
+  box-shadow: 3px 4px 10px -3px #ccc;
+}
+
+// - - - - - - - - - - - - - - -
+// [ .wallet-setting ]
+// - - - - - - - - - - - - - - -
+
+.wallet-setting {
+  padding-top: 6.5rem;
+
+  .add-wallet {
+    width: 30rem;
+    height: 18rem;
+    margin: 0 auto;
+    border: 1px solid #e0e0e3;
+    border-radius: 0.8rem;
+    background-color: #fff;
+  }
+
+  .add-wallet-text {
+    display: block;
+    // margin-top: 4rem;
+    font-size: 1.8rem;
+    font-weight: $fw-m;
+    text-align: center;
+
+    &:after {
+      display: block;
+      width: 6.4rem;
+      height: 6.4rem;
+      margin: 1.3rem auto 0;
+      background-image: icon(wallet-add, #000);
+      background-size: 100%;
+      content: "";
+    }
+  }
+
+  .add-wallet-info {
+    margin-top: 1.9rem;
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: $fw-r;
+  }
+}

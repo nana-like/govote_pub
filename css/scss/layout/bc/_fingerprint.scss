@@ -1,0 +1,67 @@
+@charset "utf-8";
+
+// * * * * * * * * * * * *
+/* _fingerprint.scss */
+// * * * * * * * * * * * *
+
+.body-fingerprint {
+  // background-color: #fff;
+  background-color: #f2f4f7;
+}
+
+// - - - - - - - - - - - - - - -
+// [ .fingerprint-regist ]
+// - - - - - - - - - - - - - - -
+
+.fingerprint-regist {
+  background-color: #f2f4f7;
+
+  .regist-top {
+    position: relative;
+    padding-top: 6rem;
+    text-align: center;
+
+    .button-close {
+      position: absolute;
+      top: 0;
+      left: 1rem;
+      width: 4rem;
+      height: 4rem;
+      background-image: icon(close, #2c496a);
+      background-size: 100%;
+      background-repeat: no-repeat;
+    }
+
+    .title {
+      font-weight: $fw-m;
+      font-size: 2.4rem;
+    }
+    .title-description {
+      margin-top: 1.3rem;
+      font-weight: $fw-dl;
+      font-size: 1.6rem;
+
+      &:after {
+        display: block;
+        width: 15rem;
+        height: 15rem;
+        margin: 3.5rem auto;
+        @include bgi("deco-fingerprint-1");
+        background-size: 100%;
+        content: "";
+      }
+    }
+  } // ---- end of .regist-top
+
+  .regist-bottom {
+    text-align: center;
+    background-color: #fff;
+
+    .description {
+      padding: 4.5rem 0;
+      font-size: 1.3rem;
+      font-weight: $fw-r;
+      line-height: 1.85;
+    }
+  } // ---- end of .regist-bottom
+}

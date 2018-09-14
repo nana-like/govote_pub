@@ -1,0 +1,20 @@
+@charset "utf-8";
+
+.icon {
+  display: inline-block;
+  font-size: 0;
+  width: 3.4rem;
+  height: 3.4rem;
+  margin: 0 auto;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.icon-select01 {
+  background-image: icon(select, #a8b6c8);
+}
+
+.icon-select02 {
+  background-image: icon(select, #b1c0cf);
+}

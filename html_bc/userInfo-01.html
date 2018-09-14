@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <title>BLOCKCHAIN CAMPUS</title>
+
+  <link type="text/css" rel="stylesheet" href="../../css/style.css" />
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+  <meta name="format-detection" content="telephone=no, address=no, email=no" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+</head>
+
+<body>
+  <!-- 사용자 정보 입력 화면 -->
+  <div id="wrapper" class="user-information">
+
+    <header class="page-header">
+      <h1 class="page-title">사용자 정보 입력</h1>
+    </header>
+
+    <div class="page-body">
+
+      <div class="tab">
+        <button class="tab-item active">학생</button>
+        <button class="tab-item">교직원</button>
+      </div>
+
+      <div class="contents">
+
+        <form>
+
+          <div class="input-item">
+            <p class="input-title">과정</p>
+            <div class="radio-wrap">
+              <div class="radio-item">
+                <input type="radio" name="radio-graduate" id="radio-graduate-0" class="radio-style01" />
+                <label for="radio-graduate-0" class="radio-label">대학</label>
+              </div>
+              <div class="radio-item">
+                <input type="radio" name="radio-graduate" id="radio-graduate-1" class="radio-style01" />
+                <label for="radio-graduate-1" class="radio-label">대학원</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="input-item">
+            <p class="input-title">학부/학과</p>
+
+            <div class="select-item select-style01">
+              <input type="text" placeholder="소속된 학부 또는 학과를 선택하세요." class="input-select-ui" readonly="readonly"
+                disabled="disabled" value="" data-ui-id="input-departments-students" />
+              <!--
+              [전달사항]
+              - 스타일용 input입니다. 현재는 클릭 시 하단의 .selectbox의 data-ui-content 내용이 value로 들어갑니다. (ui.js)
+              - 셀렉트박스 활성/비활성화 시 .input-select-ui와 .selectbo 각각에게 active 클래스를 토글해주세요. (ui.js)
+            -->
+              <i class="icon icon-select02"></i>
+              <ul class="selectbox" data-ui-id="select-departments-students">
+                <li class="selectbox-item" data-ui-content="수학과">수학과</li>
+                <li class="selectbox-item" data-ui-content="물리학과">물리학과</li>
+                <li class="selectbox-item" data-ui-content="화학과">화학과</li>
+                <li class="selectbox-item" data-ui-content="생명과학과">생명과학과</li>
+                <li class="selectbox-item" data-ui-content="신소재공학과">신소재공학과</li>
+                <li class="selectbox-item" data-ui-content="수학과2">수학과2</li>
+                <li class="selectbox-item" data-ui-content="물리학과2">물리학과2</li>
+                <li class="selectbox-item" data-ui-content="화학과2">화학과2</li>
+                <li class="selectbox-item" data-ui-content="생명과학과2">생명과학과2</li>
+                <li class="selectbox-item" data-ui-content="신소재공학과2">신소재공학과2</li>
+                <li class="selectbox-item" data-ui-content="수학과3">수학과3</li>
+                <li class="selectbox-item" data-ui-content="물리학과3">물리학과3</li>
+                <li class="selectbox-item" data-ui-content="화학과3">화학과3</li>
+                <li class="selectbox-item" data-ui-content="생명과학과3">생명과학과3</li>
+                <li class="selectbox-item" data-ui-content="신소재공학과3">신소재공학과3</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="input-item">
+            <p class="input-title">학번</p>
+            <input type="number" placeholder="학번을 입력하세요." class="input-style01" />
+            <p class="input-item-error error-style01 active">정확한 학번을 입력해주세요.</p>
+            <!-- 
+            [전달사항]
+            오류 발생 시 input-item-error에 active 클래스 토글해주세요.
+          -->
+          </div>
+
+          <div class="input-item disable">
+            <!-- 
+            [전달사항]
+            input-item에 비활성화 UI를 주려면
+            disable 클래스를 추가해 주세요.
+          -->
+            <p class="input-title">학년</p>
+            <div class="radio-wrap radio-item-4">
+              <div class="radio-item">
+                <input type="radio" name="radio-grade" id="radio-grade-1" />
+                <label for="radio-grade-1" class="radio-label">1학년</label>
+              </div>
+              <div class="radio-item">
+                <input type="radio" name="radio-grade" id="radio-grade-2" />
+                <label for="radio-grade-2" class="radio-label">2학년</label>
+              </div>
+              <div class="radio-item">
+                <input type="radio" name="radio-grade" id="radio-grade-3" />
+                <label for="radio-grade-3" class="radio-label">3학년</label>
+              </div>
+              <div class="radio-item">
+                <input type="radio" name="radio-grade" id="radio-grade-4" />
+                <label for="radio-grade-4" class="radio-label">4학년</label>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="input-item disable">
+            <p class="input-title">성별</p>
+            <div class="radio-wrap">
+              <div class="radio-item">
+                <input type="radio" name="radio-gender" id="radio-gender-m" class="radio-style01" />
+                <label for="radio-gender-m" class="radio-label">남자</label>
+              </div>
+              <div class="radio-item">
+                <input type="radio" name="radio-gender" id="radio-gender-w" class="radio-style01" />
+                <label for="radio-gender-w" class="radio-label">여자</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="button-wrap">
+            <button class="button-style01 disable">입력 완료</button>
+            <!-- 
+            [전달사항]
+            활성화시에는 disable 클래스를 제거해 주세요.
+          -->
+          </div>
+        </form>
+
+      </div>
+      <!-- //end of .contents -->
+    </div>
+    <!-- //end of .page-body -->
+
+  </div>
+</body>
