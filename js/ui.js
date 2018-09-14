@@ -156,10 +156,13 @@ $(function() {
 
       if ($(this).data("type") === "text") {
         var newVotingItem = `
-        <li>
-          <input type="text" placeholder="투표 항목을 입력하세요." class="create-input" />
-          <button class="button-image-attach"><i class="icon icon-image-attach"></i></button>
-        </li>`;
+        
+        <li class="init">
+        <input type="text" placeholder="투표 항목을 입력하세요." class="create-input" />
+        <button class="button-image-delete"><i class="icon icon-delete"></i></button>
+        <button class="button-image-attach"><i class="icon icon-image-attach"></i></button>
+        <div class="image"><img src="" alt="image"></div>
+      </li>`;
         $(".set-textItem-area li:last").before(newVotingItem);
       } else if ($(this).data("type") === "date") {
         var newVotingItem = `
@@ -178,14 +181,45 @@ $(function() {
     //날짜값 있을 시 init 제거
     $(document).on("change", "input[type='datetime-local']", function() {
       if ($(this).val() !== "") {
+        var date = $(this).val();
         $(this)
           .parent()
           .removeClass("init");
         $(this)
           .parent()
           .find(".create-date")
-          .text("(테스트)");
+          .text(
+            date.slice(0, 4) +
+              "년 " +
+              date.slice(5, 7) +
+              "월 " +
+              date.slice(8, 10) +
+              "일 "
+          );
+      } else {
+        $(this)
+          .parent()
+          .addClass("init");
+        $(this)
+          .parent()
+          .find(".create-date")
+          .empty();
       }
+    });
+
+    $(document).on("click", ".button-date-delete", function() {
+      console.log("!");
+      $(this)
+        .parent()
+        .find(".create-date")
+        .empty();
+      $(this)
+        .parent()
+        .find("input")
+        .val("");
+      $(this)
+        .parent()
+        .addClass("init");
     });
 
     //학과 또는 부서 선택 시 칩 노출
@@ -204,6 +238,84 @@ $(function() {
         .prev()
         .children(".voters-list-container")
         .append(newVotersList);
+    });
+
+    //개별 대상 검색 시 드롭다운 노출
+    $(".create .search-box-style02").on("keyup", function() {
+      var val = $(this).val();
+      if (val.length > 0) {
+        $(this)
+          .parents(".voters-dropdown-container")
+          .addClass("active");
+      } else {
+        $(this)
+          .parents(".voters-dropdown-container")
+          .removeClass("active");
+      }
+    });
+
+    //이미지 첨부 버튼 클릭 이벤트
+    $(".create-poll-info .button-image-attach").on("click", function(e) {
+      e.preventDefault();
+      if (window.confirm("이미지를 등록하시겠습니까?")) {
+        alert("이미지가 등록되었습니다.");
+        $(this)
+          .parents(".create-poll-info")
+          .removeClass("init");
+        $(this)
+          .parents(".create-poll-info")
+          .find("img")
+          .attr("src", "../images/thumbnail-test.png");
+      }
+    });
+    $(".set-textItem-area .button-image-attach").on("click", function(e) {
+      e.preventDefault();
+      if (window.confirm("이미지를 등록하시겠습니까?")) {
+        alert("이미지가 등록되었습니다.");
+        $(this)
+          .parent()
+          .removeClass("init");
+        $(this)
+          .next(".image")
+          .children("img")
+          .attr("src", "../images/thumbnail-test.png");
+      }
+    });
+
+    //이미지 첨부 삭제 버튼 클릭 이벤트
+    $(".create-poll-info .button-image-delete").on("click", function(e) {
+      e.preventDefault();
+      if (window.confirm("이미지를 삭제하시겠습니까?")) {
+        alert("이미지를 삭제했습니다.");
+        $(this)
+          .parents(".create-poll-info")
+          .addClass("init");
+        $(this)
+          .parents(".create-poll-info")
+          .find("img")
+          .attr("src", "");
+      }
+    });
+    $(".set-textItem-area .button-image-delete").on("click", function(e) {
+      e.preventDefault();
+      if (window.confirm("이미지를 삭제하시겠습니까?")) {
+        alert("이미지를 삭제했습니다.");
+        $(this)
+          .parent()
+          .addClass("init");
+        $(this)
+          .next(".image")
+          .children("img")
+          .attr("src", "");
+      }
+    });
+
+    //voters-list-delete 이벤트
+    $(document).on("click", ".voters-list-delete", function(e) {
+      e.preventDefault();
+      $(this)
+        .parent()
+        .remove();
     });
   };
 

@@ -61,6 +61,11 @@
 
     <div class="page-body">
 
+
+      <!--
+        >> ver3 마크업 수정
+      -->
+
       <div class="create-item-containe set-votingItemType-area text">
         <!--
           [전달사항] <ui.js>
@@ -87,17 +92,27 @@
 
         <ul class="create-item set-textItem-area">
           <li>
+            <input type="text" placeholder="투표 항목을 입력하세요." value="김포항" class="create-input" />
+            <button class="button-image-delete"><i class="icon icon-delete"></i></button>
+            <button class="button-image-attach"><i class="icon icon-image-attach"></i></button>
+            <div class="image"><img src="../images/thumbnail-test.png" alt="image"></div>
+          </li>
+          <!--
+            [전달사항] <ui.js>
+            이미지가 등록되면 li에게서 init 클래스를 제거해주세요.
+            이미지가 삭제되면 li에게 다시 init 클래스를 붙여주세요.
+          -->
+          <li class="init">
             <input type="text" placeholder="투표 항목을 입력하세요." class="create-input" />
             <button class="button-image-delete"><i class="icon icon-delete"></i></button>
             <button class="button-image-attach"><i class="icon icon-image-attach"></i></button>
+            <div class="image"><img src="" alt="image"></div>
           </li>
-          <li>
+          <li class="init">
             <input type="text" placeholder="투표 항목을 입력하세요." class="create-input" />
+            <button class="button-image-delete"><i class="icon icon-delete"></i></button>
             <button class="button-image-attach"><i class="icon icon-image-attach"></i></button>
-          </li>
-          <li>
-            <input type="text" placeholder="투표 항목을 입력하세요." class="create-input" />
-            <button class="button-image-attach"><i class="icon icon-image-attach"></i></button>
+            <div class="image"><img src="" alt="image"></div>
           </li>
           <li>
             <button class="button-add-votingItem" data-type="text">
@@ -120,7 +135,7 @@
             </div>
           </li>
           <!--
-              [전달사항]
+              [전달사항] <ui.js>
               날짜 값이 있으면 .create-date-container의 .init 클래스를 제거해주세요.
             -->
           <li>
@@ -138,6 +153,9 @@
           </li>
         </ul>
 
+        <!--
+          // ver3 마크업 수정
+        -->
 
         <ul class="create-item">
           <li>

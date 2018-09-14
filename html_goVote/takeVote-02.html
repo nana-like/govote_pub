@@ -7,12 +7,17 @@
   <link type="text/css" rel="stylesheet" href="../css/style.css" />
 
   <meta charset="UTF-8" />
-  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi"
-  />
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
   <meta name="format-detection" content="telephone=no, address=no, email=no" />
   <meta http-equiv="Content-Script-Type" content="text/javascript">
   <meta http-equiv="Content-Style-Type" content="text/css">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <script type="text/javascript" src="../../js/pub.js"></script>
+  <!--
+    [전달사항]
+    이벤트 확인용 js입니다.
+  -->
 </head>
 
 <body class="body-takeVote">
@@ -41,15 +46,12 @@
             <p class="create-title">총학생회 투표</p>
           </li>
           <li class="ly-padding-sm">
-            <div class="create-description-image">
-              <img src="../images/thumbnail-test.png" alt="image" />
-            </div>
             <div class="create-description">
               <div>제 21대 총학생회장 선거를 실시합니다. <br>많은 참여 부탁드립니다.</div>
             </div>
 
             <div class="takeVote-title">
-              <i class="icon icon-checkmark-multiple"></i>복수 선택 가능
+              <i class="icon icon-checkmark-one"></i>하나만 선택 가능
             </div>
 
             <ul class="takeVote-item-container">
@@ -75,10 +77,45 @@
                 </div>
               </li>
             </ul>
-
-
           </li>
         </ul>
+
+        <!--
+          >> ver3 마크업 수정
+        -->
+
+        <div class="takeVote-title">
+          <i class="icon icon-write"></i>투표 항목 직접 입력
+        </div>
+        <ul class="create-item">
+          <li>
+            <input type="text" placeholder="투표 항목을 입력하세요." class="create-input" />
+          </li>
+          <li>
+            <div class="create-date-container init">
+              <p class="create-date-placeholder">날짜를 선택하세요.</p>
+              <p class="create-date"><i class="icon icon-clock"></i></p>
+              <button class="button-date-delete"><i class="icon icon-delete"></i></button>
+              <input type="datetime-local" id="date-item-1" class="input-hidden" />
+            </div>
+          </li>
+          <li>
+            <div class="create-date-container">
+              <p class="create-date-placeholder">날짜를 선택하세요.</p>
+              <p class="create-date">2018년 8월 30일 목요일 <i class="icon icon-clock"></i>오후 3:30</p>
+              <button class="button-date-delete"><i class="icon icon-delete"></i></button>
+              <input type="datetime-local" id="date-item-0" class="input-hidden" />
+            </div>
+          </li>
+          <!--
+            [전달사항] <ui.js>
+            날짜 값이 있으면 .create-date-container의 .init 클래스를 제거해주세요.
+          -->
+        </ul>
+
+        <!--
+          // ver3 마크업 수정
+        -->
 
         <div class="create-buttons-container">
           <button class="button-next">투표하기</button>

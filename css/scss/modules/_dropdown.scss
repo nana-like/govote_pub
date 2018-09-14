@@ -39,6 +39,7 @@
       padding: 0 1.3rem;
       text-align: left;
       color: $color-gray;
+      @include ellipsis;
 
       &:hover {
         color: $color-gray;
@@ -64,17 +65,42 @@
 //   }
 // }
 
-.dropdown-style-02 {
-  z-index: 1;
-  top: 5rem;
-  left: -1px;
-  position: absolute;
-  width: calc(100% + 2px);
-  max-height: 22.2rem;
-  overflow-y: auto;
+.dropdown-ui-searchResult {
+  overflow: hidden;
+  width: 100%;
+  height: 0;
   background-color: $color-lightgray2;
+  border: none;
+  -webkit-overflow-scrolling: touch;
 
   .dropdown-item {
-    border-top: 1px solid #fff;
+    width: 100%;
+    height: 4.4rem;
+    @include ellipsis;
+    line-height: 4.4rem;
+    font-size: 1.4rem;
+    font-size: 1.4rem;
+    text-align: left;
+    color: $color-gray;
+    border-top: 2px solid #fff;
+
+    &:first-child {
+      border-top: none;
+    }
+
+    & > button {
+      display: block;
+      width: 100%;
+      height: 100%;
+      font-size: 1.4rem;
+      padding: 0 1.3rem;
+      text-align: left;
+      color: $color-gray;
+      @include ellipsis;
+
+      &:hover {
+        color: $color-gray;
+      }
+    }
   }
 }

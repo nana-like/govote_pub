@@ -15,7 +15,7 @@
 </head>
 
 <body class="body-takeVote">
-  <!-- 투표하기 화면 -->
+  <!-- 투표 현황 화면 -->
   <div id="wrapper" class="takeVote">
 
     <div class="page-top">
@@ -25,7 +25,7 @@
           <button class="icon-container"><i class="icon icon-back"></i></button>
         </div>
         <h1 class="page-title">
-          투표하기
+          투표현황
         </h1>
       </div>
 
@@ -37,38 +37,54 @@
 
         <ul class="create-item">
           <li>
-            <p class="create-title">총학생회 투표</p>
+            <p class="create-title">이벤트 장소 투표</p>
           </li>
           <li class="ly-padding-sm">
+            <div class="create-description-image">
+              <img src="../images/thumbnail-test.png" alt="image" />
+            </div>
             <div class="create-description">
-              <div>제 21대 총학생회장 선거를 실시합니다. <br>많은 참여 부탁드립니다.</div>
+              <div>홍진영과 함께하는 ‘베리베리 상큼하군’ 이벤트 장소를 선택해주세요!</div>
             </div>
 
             <div class="takeVote-title">
-              <i class="icon icon-checkmark-one"></i>하나만 선택 가능
+              <i class="icon icon-checkmark-multiple"></i>복수 선택 가능
+              <p class="pollDetails-participants">110명 참여</p>
             </div>
 
-            <ul class="takeVote-item-container">
+
+            <ul class="takeVote-item-container pollDetails">
               <li class="takeVote-item">
                 <div class="checkbox-block">
-                  <input id="voters-item-1" type="checkbox" class="checkbox-style01" />
+                  <input id="voters-item-1" type="checkbox" class="checkbox-style01" disabled checked />
+                  <!--
+                    [전달사항]
+                    - 선택한 항목인 경우 checekd 속성을 추가해주세요.
+                  -->
                   <label for="voters-item-1">김포항</label>
                   <div class="number">100</div>
                 </div>
+                <div class="percentage" style="width: 84%"></div>
+                <!--
+                  [전달사항]
+                  inline style로 너비 조절이 가능합니다.
+                -->
               </li>
               <li class="takeVote-item">
                 <div class="checkbox-block">
-                  <input id="voters-item-2" type="checkbox" class="checkbox-style01" />
+                  <input id="voters-item-2" type="checkbox" class="checkbox-style01" disabled />
                   <label for="voters-item-2">김공대</label>
                   <div class="number">10</div>
                 </div>
+                <div class="percentage" style="width: 12%"></div>
               </li>
               <li class="takeVote-item">
                 <div class="checkbox-block">
-                  <input id="voters-item-3" type="checkbox" class="checkbox-style01" />
+                  <input id="voters-item-3" type="checkbox" class="checkbox-style01" disabled />
                   <label for="voters-item-3">김수한무거북이와두루미</label>
                   <div class="number">0</div>
                 </div>
+                <div class="percentage" style="width: 4%"></div>
               </li>
             </ul>
 
@@ -76,17 +92,24 @@
           </li>
         </ul>
 
-
-        <div class="takeVote-title">
-          <i class="icon icon-write"></i>투표 항목 직접 입력
-        </div>
         <ul class="create-item">
-          <li>
-            <input type="text" placeholder="투표 항목을 입력하세요." class="create-input" />
+          <li class="pollDetails-info">
+            <div class="pollDetails-duedate">
+              2018년 12월 30일 오후 3시 마감
+            </div>
+            <div class="pollDetails-progress">
+              <div class="text">72% 진행률</div>
+              <div class="bar" style="width: 72%"></div>
+            </div>
           </li>
         </ul>
 
         <div class="create-buttons-container">
+          <button class="button-prev">투표 강제 종료</button>
+          <!--
+            [전달사항]
+            강제 종료 가능한 경우 해당 버튼 추가
+          -->
           <button class="button-next">투표하기</button>
         </div>
       </div>

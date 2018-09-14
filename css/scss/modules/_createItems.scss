@@ -193,8 +193,8 @@
       top: 50%;
       left: 2.1rem;
       font-size: 1.6rem;
-      font-weight: $fw-m;
-      color: #b8b8b8;
+      font-weight: $fw-r;
+      color: $color-create-placeholder;
       transform: translateY(-50%);
     }
 
@@ -436,16 +436,24 @@
           @include transform(translateX(2.4rem));
           transition: transform 0.5s;
         }
-      } //end of .toggle-head
+      } //end of .togㄷgle-head
     } //end of .toggle-switch
   } //----end of .toggle-checkbox
+
+  .voters-list-area {
+    min-height: 0;
+
+    .voters-list:first-child {
+      margin-top: 0.6rem;
+    }
+  }
 
   .voters-list-container {
     width: 100%;
     @include flexbox;
     @include flex-wrap(wrap);
     @include align-items(center);
-    padding-top: 0.6rem;
+    // margin-top: 0.6rem;
   }
   .voters-list {
     //투표 대상 - 삭제 가능
@@ -656,7 +664,7 @@
       }
 
       .voters-list-container {
-        padding: 0.6rem 1rem 0;
+        padding: 0 1rem 0;
       }
 
       .placeholder-text {
@@ -730,6 +738,7 @@
   position: relative;
   padding: 1.6rem 1rem;
   min-height: 32rem;
+  @include justify-content(flex-start);
 
   .search-container {
     width: 100%;
@@ -752,16 +761,19 @@
     margin: 0.8rem 1rem;
   }
 
-  [class^="dropdown-style-"] {
-    top: 6rem;
-    left: 1rem;
-    width: calc(100% - 2rem);
-    max-height: 22rem;
-  }
+  &.voters-dropdown-container {
+    //개별 대상 검색
 
-  &.active {
-    [class^="dropdown-style-"] {
-      display: block;
+    &.active {
+      .search-message {
+        display: none;
+      }
+      .dropdown-ui-searchResult {
+        overflow-y: auto;
+        height: auto;
+        max-height: 22rem;
+        border-top: 1px solid #e7e7e7;
+      }
     }
   }
 } //----end of .voters-individual
@@ -904,7 +916,7 @@
     .image {
       position: absolute;
       top: 0.65rem;
-      right: 0.7rem;
+      right: 1.2rem;
       display: block;
       width: 3.6rem;
       height: 3.6rem;
@@ -924,6 +936,11 @@
 
 // [*] 투표 종료 기준에 따라...
 .set-endCondition-area {
+  .unit {
+    font-size: 1.6rem;
+    margin-left: 0.5rem;
+    color: $color-gray;
+  }
   .condition-date,
   .condition-people {
     display: none;
@@ -943,6 +960,47 @@
 
 // [*] 투표 타입 설정에 따라...
 .set-votingItemType-area {
+  .set-textItem-area {
+    & > li {
+      .image {
+        position: absolute;
+        top: 0.75rem;
+        right: 2.1rem;
+        display: block;
+        width: 3.6rem;
+        height: 3.6rem;
+        background-color: #ededed;
+
+        img {
+          display: block;
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+    & > li.init {
+      .button-image-delete {
+        display: none;
+      }
+      .image {
+        display: none;
+      }
+    }
+    .button-image-delete {
+      z-index: 1;
+      position: absolute;
+      top: 0.2rem;
+      right: 1.1rem;
+      width: 2.1rem; //터치 영역을 실제 크기보다 넓게 잡음
+      height: 2.1rem;
+
+      .icon {
+        width: 1.7rem;
+        height: 1.7rem;
+        background-size: 100%;
+      }
+    }
+  }
   .set-textItem-area,
   .set-dateItem-area {
     display: none;
@@ -955,6 +1013,21 @@
   &.text {
     .set-textItem-area {
       display: block;
+    }
+  }
+}
+
+// [*] 투표정보/이미지 등록 영역
+.create-poll-info {
+  .button-image-attach {
+    display: none;
+  }
+  &.init {
+    .button-image-attach {
+      display: block;
+    }
+    .create-description-image {
+      display: none;
     }
   }
 }

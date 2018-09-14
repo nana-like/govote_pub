@@ -7,12 +7,17 @@
   <link type="text/css" rel="stylesheet" href="../css/style.css" />
 
   <meta charset="UTF-8" />
-  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi"
-  />
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
   <meta name="format-detection" content="telephone=no, address=no, email=no" />
   <meta http-equiv="Content-Script-Type" content="text/javascript">
   <meta http-equiv="Content-Style-Type" content="text/css">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <script type="text/javascript" src="../../js/pub.js"></script>
+  <!--
+    [전달사항]
+    이벤트 확인용 js입니다.
+  -->
 </head>
 
 <body class="body-create">
@@ -62,67 +67,51 @@
             <li>
               <p class="create-title">투표 대상 (아래에서 선택해주세요)</p>
             </li>
-            <li>
-              <div class="voters-list-container">
-                <div class="voters-list">
-                  <p class="text">홍길동</p>
-                  <button class="voters-list-delete"></button>
-                </div>
-                <div class="voters-list">
-                  <p class="text">가나다</p>
-                  <button class="voters-list-delete"></button>
-                </div>
-                <div class="voters-list">
-                  <p class="text">라마바</p>
-                  <button class="voters-list-delete"></button>
-                </div>
-                <div class="voters-list">
-                  <p class="text">사아</p>
-                  <button class="voters-list-delete"></button>
-                </div>
-              </div>
-            </li>
           </ul>
+
+
+          <!--
+            >> ver3 마크업 수정
+          -->
 
           <ul class="create-item">
             <li>
               <p class="create-title">개별 대상 검색</p>
             </li>
-            <li class="ly-padding-sm voters-individual active">
+            <li class="ly-padding-sm voters-individual voters-dropdown-container">
               <div class="search-container">
                 <div class="icon-container deco-search">
                   <i class="icon icon-search"></i>
                 </div>
-                <input type="text" value="이아란" class="search-box-style02" />
-                <button class="button-search-delete active"><i class="icon icon-delete"></i></button>
+                <input type="text" value="" class="search-box-style02 able-delete" />
+                <button class="button-search-delete"><i class="icon icon-delete"></i></button>
                 <p class="search-message">이름으로 검색이 가능합니다.</p>
                 <!--
-                  [전달사항]
+                  [전달사항] <ui.js>
                   사용자가 검색을 시작하면 .button-search-delete에 active 클래스를 추가해 주세요.
                   폼에 값이 없으면 active 클래스를 제거해주세요.
                 -->
               </div>
-
-              <ul class="dropdown-style-02">
-                <li class="dropdown-item"><a>이아란 / 대학 / 기계공학과 / 정교수</a></li>
-                <li class="dropdown-item"><a>이아란 / 직원 / 신학협력단 / 계약직</a></li>
-                <li class="dropdown-item"><a>이아란 / 교직원 / 연구처 / 계약직</a></li>
-                <li class="dropdown-item"><a>이아란 / 기타 / 시각디자인과 / 4학년</a></li>
-                <li class="dropdown-item"><a>이아란 / 직원 / 신학협력단 / 계약직</a></li>
-                <li class="dropdown-item"><a>이아란 / 대학 / 기계공학과 / 정교수</a></li>
-                <li class="dropdown-item"><a>이아란 / 직원 / 신학협력단 / 계약직</a></li>
-                <li class="dropdown-item"><a>이아란 / 교직원 / 연구처 / 계약직</a></li>
-                <li class="dropdown-item"><a>이아란 / 기타 / 시각디자인과 / 4학년</a></li>
-                <li class="dropdown-item"><a>이아란 / 직원 / 신학협력단 / 계약직</a></li>
+              <ul class="dropdown-ui-searchResult">
+                <li class="dropdown-item"><button>이아란 / 대학 / 기계공학과 / 정교수</button></li>
+                <li class="dropdown-item"><button>이아란 / 직원 / 신학협력단 / 계약직</button></li>
+                <li class="dropdown-item"><button>이아란 / 교직원 / 연구처 / 계약직</button></li>
+                <li class="dropdown-item"><button>이아란 / 교직원 / 연구처 / 계약직</button></li>
+                <li class="dropdown-item"><button>이아란 / 기타 / 시각디자인과 / 4학년</button></li>
+                <li class="dropdown-item"><button>이아란 / 직원 / 신학협력단 / 계약직</button></li>
+                <li class="dropdown-item"><button>이아란 / 대학 / 기계공학과 / 정교수</button></li>
+                <li class="dropdown-item"><button>이아란 / 직원 / 신학협력단 / 계약직</button></li>
               </ul>
               <!--
                 [전달사항]
-                .voters-individual에 active 클래스가 추가되면 화면에 보입니다.
+                .voters-dropdown-container에 active 클래스가 추가되면 화면에 보입니다.
               -->
-
-
             </li>
           </ul>
+
+          <!--
+            // ver3 마크업 수정
+          -->
 
           <div class="create-buttons-container">
             <button class="button-prev">이전</button>
