@@ -73,6 +73,10 @@ button {
   font-size: 1.6rem;
   font-weight: $fw-dl;
   background-color: $color-blue;
+
+  &:disabled {
+    background-color: $color-disable;
+  }
 }
 
 .button-style-drawer {

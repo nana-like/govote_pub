@@ -35,15 +35,15 @@
     </header>
 
     <!-- 
-        >> ver.2 
-        마크업 변경
-      -->
+      >> ver.2 
+      마크업 변경
+    -->
 
     <div class="page-body">
 
       <div class="tab">
-        <button class="tab-item active">학생</button>
-        <button class="tab-item">교직원</button>
+        <button class="tab-item">학생</button>
+        <button class="tab-item active">교직원</button>
         <button class="tab-item">기타</button>
       </div>
 
@@ -51,29 +51,15 @@
       <div class="contents">
 
         <div class="input-item">
-          <p class="input-title">과정</p>
-          <div class="radio-wrap">
-            <div class="radio-item">
-              <input type="radio" name="radio-graduate" id="radio-graduate-0" class="radio-style01" checked />
-              <label for="radio-graduate-0" class="radio-label">대학</label>
-            </div>
-            <div class="radio-item">
-              <input type="radio" name="radio-graduate" id="radio-graduate-1" class="radio-style01" />
-              <label for="radio-graduate-1" class="radio-label">대학원</label>
-            </div>
-          </div>
-        </div>
-
-        <div class="input-item">
           <p class="input-title">학부 / 학과</p>
 
           <div class="select-item select-style01">
-            <input id="input-departments-students" type="text" placeholder="소속된 학부 또는 학과를 선택하세요." class="input-select-ui"
+            <input id="input-departments-employees" type="text" placeholder="담당 학과 또는 부서를 선택하세요." class="input-select-ui"
               readonly="readonly" disabled="disabled" value="" />
             <!--
-                [전달사항] <bc.js>
-                - 셀렉트박스 활성/비활성화 시 .select-item에게 active 클래스를 토글해주세요. 
-              -->
+              [전달사항] <bc.js>
+              - 셀렉트박스 활성/비활성화 시 .select-item에게 active 클래스를 토글해주세요. 
+            -->
             <i class="icon icon-select02"></i>
             <ul class="selectbox-style02">
               <li class="selectbox-item"><button>생명과학과</button></li>
@@ -88,27 +74,27 @@
         </div>
 
         <div class="input-item">
-          <p class="input-title">학년</p>
-          <div class="radio-wrap radio-item-4">
-            <div class="radio-item">
-              <input type="radio" name="radio-grade" id="radio-grade-1" class="radio-style02" checked />
-              <label for="radio-grade-1" class="radio-label">1학년</label>
-            </div>
-            <div class="radio-item">
-              <input type="radio" name="radio-grade" id="radio-grade-2" class="radio-style02" />
-              <label for="radio-grade-2" class="radio-label">2학년</label>
-            </div>
-            <div class="radio-item">
-              <input type="radio" name="radio-grade" id="radio-grade-3" class="radio-style02" />
-              <label for="radio-grade-3" class="radio-label">3학년</label>
-            </div>
-            <div class="radio-item">
-              <input type="radio" name="radio-grade" id="radio-grade-4" class="radio-style02" />
-              <label for="radio-grade-4" class="radio-label">4학년</label>
-            </div>
+          <p class="input-title">직책 / 직급</p>
+
+          <div class="select-item select-style01">
+            <input id="input-position-employees" type="text" placeholder="직책 또는 직급을 선택하세요." class="input-select-ui"
+              readonly="readonly" disabled="disabled" value="" />
+            <!--
+              [전달사항] <bc.js>
+              - 셀렉트박스 활성/비활성화 시 .select-item에게 active 클래스를 토글해주세요. 
+            -->
+            <i class="icon icon-select02"></i>
+            <ul class="selectbox-style02">
+              <li class="selectbox-item"><button>직책11</button></li>
+              <li class="selectbox-item"><button>직책22</button></li>
+              <li class="selectbox-item"><button>Fugiat commodo in adipisicing sit ex et in aliquip reprehenderit magna
+                  excepteur</button></li>
+              <li class="selectbox-item"><button>직급11</button></li>
+              <li class="selectbox-item"><button>직급22</button></li>
+              <li class="selectbox-item"><button>직급직급직급직급</button></li>
+            </ul>
           </div>
         </div>
-
 
         <div class="input-item">
           <p class="input-title">성별</p>
@@ -133,8 +119,8 @@
     <!-- //end of .page-body -->
 
     <!-- 
-        // ver.2 
-        마크업 변경
-      -->
+      // ver.2 
+      마크업 변경
+    -->
   </div>
 </body>

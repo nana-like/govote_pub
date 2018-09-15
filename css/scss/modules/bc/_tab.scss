@@ -10,30 +10,30 @@
   @include align-items(center);
   width: 100%;
   box-sizing: border-box;
+  background-color: #fff;
 
   .tab-item {
     @include flex-grow(1);
     position: relative;
     width: 20%;
-    height: 3.5rem;
-    color: $color-lightgray;
-    font-size: 1.4rem;
-    border-bottom: 1px solid $color-lightgray;
+    height: 4.9rem;
+    color: #a2b0c1;
+    font-size: 1.6rem;
+    font-weight: $fw-m;
 
     &.active {
-      color: $color-blue;
-      // font-weight: $fw-eb;
+      color: #2c496a;
     }
 
-    &.active:after {
-      position: absolute;
-      left: 0;
-      bottom: -1px;
-      display: block;
-      width: 100%;
-      height: 2px;
-      background-color: $color-blue;
-      content: "";
-    }
+    // &.active:after {
+    //   position: absolute;
+    //   left: 0;
+    //   bottom: -1px;
+    //   display: block;
+    //   width: 100%;
+    //   height: 2px;
+    //   background-color: $color-blue;
+    //   content: "";
+    // }
   }
 }

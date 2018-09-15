@@ -8,23 +8,11 @@
   position: relative;
   @include flexbox;
   @include flex-direction(column);
-  margin-bottom: 3rem;
+  padding-top: 3rem;
+  background-color: #fff;
 
-  &.disable {
-    @include select-none;
-    @include pointer-none;
-
-    .input-title,
-    .radio-label,
-    input {
-      color: $color-disable;
-    }
-
-    input {
-      @include placeholder {
-        -webkit-text-fill-color: $color-disable;
-      }
-    }
+  &:first-child {
+    // padding-top: 0;
   }
 
   &.input-row {
@@ -34,7 +22,8 @@
 
   .input-title {
     //각 인풋의 타이틀 (ex. 학부/학과)
-    margin-bottom: 1rem;
+    margin-bottom: 1.2rem;
+    padding: 0 2.1rem 0 1.9rem;
     font-size: 1.4rem;
     font-weight: $fw-m;
     color: $color-black;
@@ -56,6 +45,20 @@
 }
 
 .input-style01 {
+  width: 100%;
+  height: 4rem;
+  padding: 0 3rem;
+  font-size: 1.5rem;
+  border-bottom: 1px solid #ebebee;
+
+  @include placeholder {
+    font-size: 1.5rem;
+    font-weight: $fw-r;
+    color: #a2b0c1;
+  }
+}
+
+.input-style03 {
   height: 4rem;
   padding: 0 1rem;
   line-height: 4rem;
@@ -95,17 +98,16 @@
   //라디오 묶음 (type 01)
   @include flexbox;
   @include align-items(center);
+  @include flex-direction(column);
 
   .radio-item {
     @include flexbox;
     @include align-items(center);
-    margin-left: 0.4rem;
-    flex-basis: 8rem;
+    flex-basis: 100%;
     flex-shrink: 0;
-
-    &:first-child {
-      margin-left: 0;
-    }
+    width: 100%;
+    height: 4rem;
+    border-bottom: solid 1px #ebebee;
   }
 
   input[type="radio"] {
@@ -129,35 +131,107 @@
     //     background-position: map-get($value, active);
     //   }
     // }
+  }
 
-    &:checked:not(:disabled) + .radio-label {
+  .radio-style01 + .radio-label {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    line-height: 4rem;
+    font-size: 1.5rem;
+    color: #000;
+    padding: 0 3rem;
+    font-weight: $fw-r;
+
+    &:before,
+    &:after {
+      display: block;
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 3.2rem;
+      transform: translateY(-50%);
+    }
+
+    &:before {
+      width: 1.9rem;
+      height: 1.9rem;
+      border: 1px solid #a2b0c1;
       background-color: #fff;
-      border: 2px solid $color-blue;
+      border-radius: 50%;
+    }
+
+    &:after {
+      display: none;
+      width: 0.65rem;
+      height: 0.65rem;
+      right: 3.85rem;
+      border: 1px solid #30b9d3;
+      background-color: #30b9d3;
+      border-radius: 50%;
     }
   }
 
-  .radio-label {
-    width: 100%;
-    font-size: 1.2rem;
-    height: 4rem;
-    color: $color-black;
-    text-align: center;
-    line-height: 3.7rem;
-    border-radius: 0.8rem;
-    background-color: $color-input;
-    border: 2px solid transparent;
-    box-sizing: border-box;
+  .radio-style01:checked:not(:disabled) + .radio-label {
+    background-color: #f1f4f4;
+
+    &:before {
+      border-color: #30b9d3;
+    }
+
+    &:after {
+      display: block;
+    }
   }
+
+  .radio-style02 + .radio-label {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+    color: #2c496a;
+    font-weight: $fw-r;
+    border: 1px solid #a2b0c1;
+    border-left: none;
+  }
+
+  .radio-style02:checked:not(:disabled) + .radio-label {
+    color: #fff;
+    background-color: #30b9d3;
+    brder-color: #30b9d3;
+  }
+
+  // .radio-label {
+  //   width: 100%;
+  //   font-size: 1.2rem;
+  //   height: 4rem;
+  //   color: $color-black;
+  //   text-align: center;
+  //   line-height: 3.7rem;
+  //   border-radius: 0.8rem;
+  //   background-color: $color-input;
+  //   border: 2px solid transparent;
+  //   box-sizing: border-box;
+  // }
 }
 
 .radio-wrap.radio-item-4 {
   //라디오 아이템이 4개인 경우
   @include flexbox;
   @include align-items(center);
+  @include flex-direction(row);
+  padding-left: 2.1rem;
 
   .radio-item {
-    flex-basis: 7.2rem;
-    // margin-left: 0.4rem;
+    flex-basis: 8rem;
+    width: 8rem;
+    height: 4rem;
+    line-height: 4rem;
+    &:first-child {
+      .radio-label {
+        border-left: 1px solid #a2b0c1;
+      }
+    }
   }
 }
 
@@ -175,10 +249,6 @@
   }
 
   &.active {
-    .input-select-ui {
-      border: 1px solid $color-blue;
-      box-sizing: border-box;
-    }
     .selectbox {
       display: block;
     }
@@ -192,11 +262,11 @@
   left: 0;
   width: 100%;
   height: 4rem;
-  outline: 4px solid red;
 }
 
 .select-style01 {
   .input-select-ui {
+    padding-right: 4.4rem;
     @extend .input-style01;
     -webkit-text-fill-color: $color-navy;
 
@@ -205,7 +275,10 @@
     }
   }
   .icon {
-    right: 0.8rem;
+    top: 0.7rem;
+    right: 2.3rem;
+    width: 2.6rem;
+    height: 2.6rem;
   }
 
   //활성화 시, 화살표 아이콘 변경
@@ -259,6 +332,30 @@
 
     &.active {
       background: gold; //TODO: 수정필요
+    }
+  }
+}
+
+////////// disable
+
+.input-item.disable {
+  @include select-none;
+  @include pointer-none;
+
+  .input-title,
+  .radio-label,
+  input {
+    color: $color-disable;
+  }
+
+  .radio-label:before,
+  .radio-label:after {
+    border-color: $color-disable;
+  }
+
+  input {
+    @include placeholder {
+      -webkit-text-fill-color: $color-disable;
     }
   }
 }
