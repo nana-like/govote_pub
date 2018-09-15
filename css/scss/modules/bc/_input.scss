@@ -68,7 +68,7 @@
   color: $color-input-text;
 
   @include placeholder {
-    color: $color-placeholder;
+    color: #8592a2;
     font-size: 1.4rem;
   }
 }
@@ -227,6 +227,7 @@
     width: 8rem;
     height: 4rem;
     line-height: 4rem;
+    border-bottom: none;
     &:first-child {
       .radio-label {
         border-left: 1px solid #a2b0c1;
@@ -266,7 +267,7 @@
 
 .select-style01 {
   .input-select-ui {
-    padding-right: 4.4rem;
+    padding-right: 5rem;
     @extend .input-style01;
     -webkit-text-fill-color: $color-navy;
 
@@ -299,6 +300,24 @@
 
     @include placeholder {
       -webkit-text-fill-color: $color-placeholder2;
+    }
+  }
+
+  //활성화 시, 화살표 아이콘 변경
+  &.active {
+    .icon-select02 {
+      background-image: icon(select-active, #b1c0cf);
+    }
+  }
+}
+
+.select-style03 {
+  .input-select-ui {
+    @extend .input-style03;
+    -webkit-text-fill-color: $color-navy;
+
+    @include placeholder {
+      -webkit-text-fill-color: #8592a2;
     }
   }
 
