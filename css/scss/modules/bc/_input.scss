@@ -92,6 +92,28 @@
   outline: 4px solid gold;
 }
 
+.input-style04 {
+  @extend .input-style03;
+  padding: 0 1.9rem;
+  font-weight: $fw-r;
+  background-color: #f2f4f7;
+  -webkit-text-fill-color: #000;
+  border-radius: 0;
+  @include ellipsis;
+  padding-right: 4rem;
+
+  @include placeholder {
+    -webkit-text-fill-color: #a2b0c1;
+    font-weight: $fw-r;
+  }
+
+  &[type="password"] {
+    @include placeholder {
+      -webkit-text-fill-color: #a2b0c1;
+      font-weight: $fw-r;
+    }
+  }
+}
 ////////// Radio //////////
 
 .radio-wrap {
@@ -150,7 +172,7 @@
       position: absolute;
       top: 50%;
       right: 3.2rem;
-      transform: translateY(-50%);
+      @include transform(translateY(-50%));
     }
 
     &:before {
@@ -256,6 +278,14 @@
   }
 }
 
+.select-float {
+  [class^="selectbox-style"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
 .select-hidden {
   opacity: 0;
   position: absolute;
@@ -325,6 +355,32 @@
   &.active {
     .icon-select02 {
       background-image: icon(select-active, #b1c0cf);
+    }
+  }
+}
+
+.select-style04 {
+  .input-select-ui {
+    @extend .input-style04;
+  }
+  .icon {
+    top: 0.5rem;
+    right: 1rem;
+    width: 3rem;
+    height: 3rem;
+  }
+
+  //활성화 시, 화살표 아이콘 변경
+  &.active {
+    .icon-select02 {
+      background-image: icon(select-active, #b1c0cf);
+    }
+  }
+
+  &.select-float {
+    [class^="selectbox-style"] {
+      top: 3.8rem;
+      left: 1.9rem;
     }
   }
 }

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <title>BLOCKCHAIN CAMPUS</title>
+
+  <link type="text/css" rel="stylesheet" href="../css/style_bc.css" />
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+  <meta name="format-detection" content="telephone=no, address=no, email=no" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <script type="text/javascript" src="../js/library/jquery-2.1.4.js"></script>
+  <script type="text/javascript" src="../js/bc.js"></script>
+  <!--
+    [전달사항]
+    이벤트 확인용 js입니다.
+  -->
+
+</head>
+
+<body class="bc body-login">
+  <!-- 회원가입 화면 -->
+  <div id="wrapper" class="login signup">
+
+    <div class="signup-background">
+      <div class="login-header">
+        <h1 class="logo">BLOCKCHAIN CAMPUS</h1>
+      </div>
+      <div class="login-body">
+        <div class="signup-layout"></div>
+        <div class="button-wrap">
+          <button class="button-style01">로그인</button>
+          <button class="button-style03">회원가입</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="signup-dim"></div>
+    <div class="signup-popup">
+      <strong class="signup-title">사용자 정보 입력</strong>
+
+
+      <div class="input-item">
+        <p class="input-title">학교명</p>
+
+        <div class="select-item select-style04">
+          <input id="input-signup-university" type="text" placeholder="학교명을 선택하세요." class="input-select-ui" readonly="readonly"
+            disabled="disabled" value="" />
+          <!--
+            [전달사항] <bc.js>
+            - 셀렉트박스 활성/비활성화 시 .select-item에게 active 클래스를 토글해주세요. 
+          -->
+          <i class="icon icon-select02"></i>
+          <ul class="selectbox-style02">
+            <li class="selectbox-item"><button>인천대학교</button></li>
+            <li class="selectbox-item"><button>연세대학교</button></li>
+            <li class="selectbox-item"><button>고려대학교</button></li>
+            <li class="selectbox-item"><button>서강대학교</button></li>
+            <li class="selectbox-item"><button> POSTECH</button></li>
+            <li class="selectbox-item"><button> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</button></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="input-item">
+        <p class="input-title">이메일</p>
+        <input id="input-signup-email" type="text" placeholder="이메일을 입력하세요." class="input-style04 input-email" />
+        <p class="signup-area-email-info">@ postech.ac.kr</p>
+        <p class="signup-area-error"></p>
+        <!-- 
+          [전달사항]
+          - 사용자가 학교 선택 시 .signup-area-email-info에 해당하는 학교 이메일을 넣어주세요.
+          - .signup-area-email-info에 active 클래스가 있으면 글자가 보입니다.
+        -->
+      </div>
+
+      <div class="input-item">
+        <p class="input-title">비밀번호</p>
+        <input id="input-signup-password" type="password" placeholder="영문, 숫자, 특수문자 6-15자를 입력하세요." class="input-style04" />
+        <p class="signup-area-error"></p>
+        <!-- 
+          [전달사항]
+          오류 발생 시 signup-area-error에 에러 메시지를 넣어주세요.
+        -->
+      </div>
+
+      <div class="input-item">
+        <p class="input-title">비밀번호 확인</p>
+        <input id="input-signup-passwordCheck" type="password" placeholder="비밀번호를 확인하세요." class="input-style04" />
+        <p class="signup-area-error"></p>
+        <!-- 
+          [전달사항]
+          오류 발생 시 signup-area-error에 에러 메시지를 넣어주세요.
+        -->
+      </div>
+      <div class="button-wrap-row">
+        <button class="button-style04" disabled>이메일 인증하기</button>
+        <!--
+          [전달사항]
+          활성화 시 disabled 속성 제거해주세요.
+        -->
+      </div>
+
+    </div>
+
+
+  </div>
+</body>

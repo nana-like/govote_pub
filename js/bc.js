@@ -1,68 +1,3 @@
-// $(function() {
-//   // var $maskedInput = $(".input-masking");
-//   // $maskedInput.mobilePassword({
-//   //   checkInterval: 100, //set timeout to check whether all the characters are the same
-//   //   transDelay: 100, //delay to transform last letter
-//   //   character: "%u2217" //instead of the character
-//   // });
-
-//   ////
-
-//   var selectboxEvent = function() {
-//     var $selectBox = $(".selectbox");
-
-//     $selectBox.on("mousedown", function(event) {
-//       var selectData = $(this).data("ui-id");
-//       var selectId = selectData
-//         .split("-")
-//         .slice(1)
-//         .join("-")
-//         .toString();
-//       var input = $("input").data("ui-id");
-//       $("input[data-ui-id='input-" + selectId + "']").focus();
-
-//       if (event.target.nodeName == "button") {
-//         var selectContent = event.target.dataset.uiContent;
-//         $("input[data-ui-id='input-" + selectId + "']").attr(
-//           "value",
-//           selectContent
-//         );
-//         $(".login-area-email-info").addClass("active");
-//       }
-//     });
-
-//     $(".select-item").on("click", function(evt) {
-//       evt.stopPropagation();
-//     });
-
-//     $("body").on("click", function() {
-//       var $selectItem = $(".select-item");
-//       if ($selectItem.hasClass("active")) {
-//         $selectItem.removeClass("active");
-//         $selectItem.find(".selectbox").removeClass("active");
-//       }
-//     });
-//   };
-
-//   var selectItemClickEvent = function() {
-//     var $selectItem = $(".select-item");
-
-//     $selectItem.on("click", function() {
-//       if ($(this).hasClass("active")) {
-//         $(this).removeClass("active");
-//       } else {
-//         $selectItem.removeClass("active");
-//         $(this).addClass("active");
-//       }
-//     });
-//   };
-
-//   $(window).on("load", function() {
-//     selectboxEvent();
-//     selectItemClickEvent();
-//   });
-// });
-
 $(function() {
   var loginEvt = function() {
     $(".select-item").on("click", function() {
@@ -80,7 +15,7 @@ $(function() {
         .parents(".select-item")
         .find("input")
         .val(val);
-      $(".login-area-email-info").addClass("active");
+      $("[class$='email-info']").addClass("active");
     });
 
     $("#input-login-email").on("keyup", function() {
@@ -131,8 +66,47 @@ $(function() {
     });
   };
 
+  var signupEvt = function() {
+    $("#input-signup-email").on("keyup", function() {
+      if ($(this).val().length > 0) {
+        $(this)
+          .next()
+          .next(".signup-area-error")
+          .text("이미 가입된 메일 주소입니다.");
+      } else {
+        $(this)
+          .next()
+          .next(".signup-area-error")
+          .text("");
+      }
+    });
+  };
+  $("#input-signup-password").on("keyup", function() {
+    if ($(this).val().length > 0) {
+      $(this)
+        .next(".signup-area-error")
+        .text("영문, 숫자, 특수문자 포함 6~15자로 입력해주세요.");
+    } else {
+      $(this)
+        .next(".signup-area-error")
+        .text("");
+    }
+  });
+  $("#input-signup-passwordCheck").on("keyup", function() {
+    if ($(this).val().length > 0) {
+      $(this)
+        .next(".signup-area-error")
+        .text("비밀번호가 일치하지 않습니다.");
+    } else {
+      $(this)
+        .next(".signup-area-error")
+        .text("");
+    }
+  });
+
   $(window).on("load", function() {
     loginEvt();
     walletEvt();
+    signupEvt();
   });
 });

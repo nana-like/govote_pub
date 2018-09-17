@@ -52,6 +52,12 @@
       width: 100%;
       height: 100%;
       @include ellipsis;
+      -webkit-tap-highlight-color: transparent;
+
+      &:active,
+      &:focus {
+        background-color: #e7f7fa;
+      }
     }
   }
 }
@@ -59,4 +65,9 @@
 .selectbox-style02 {
   @extend .selectbox;
   width: 90%;
+}
+
+.selectbox-style04 {
+  // signup page 전용
+  @extend .selectbox;
 }

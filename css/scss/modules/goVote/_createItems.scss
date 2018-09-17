@@ -195,7 +195,7 @@
       font-size: 1.6rem;
       font-weight: $fw-r;
       color: $color-create-placeholder;
-      transform: translateY(-50%);
+      @include transform(translateY(-50%));
     }
 
     .button-date-delete {
@@ -205,7 +205,7 @@
       right: 2rem;
       width: 3rem;
       height: 3rem;
-      transform: translateY(-50%);
+      @include transform(translateY(-50%));
 
       .icon-delete {
         width: 3rem;
@@ -233,7 +233,7 @@
         position: absolute;
         top: 50%;
         right: 1rem;
-        transform: translateY(-50%);
+        @include transform(translateY(-50%));
       }
     }
 
