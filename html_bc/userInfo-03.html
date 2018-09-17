@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <title>BLOCKCHAIN CAMPUS</title>
+
+  <link type="text/css" rel="stylesheet" href="../css/style_bc.css" />
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+  <meta name="format-detection" content="telephone=no, address=no, email=no" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <script type="text/javascript" src="../js/library/jquery-2.1.4.js"></script>
+  <script type="text/javascript" src="../js/bc.js"></script>
+  <!--
+    [전달사항]
+    이벤트 확인용 js입니다.
+  -->
+
+  <!-- 
+    >> ver.2 
+    body에 bc 클래스 추가
+  -->
+</head>
+
+<body class="bc body-userinfo">
+  <!-- 사용자 정보 입력 화면 -->
+  <div id="wrapper" class="user-information">
+
+    <header class="page-header">
+      <h1 class="page-title">사용자 정보 입력</h1>
+    </header>
+
+    <!-- 
+      >> ver.2 
+      마크업 변경
+    -->
+
+    <div class="page-body">
+
+      <div class="tab">
+        <button class="tab-item">학생</button>
+        <button class="tab-item">교직원</button>
+        <button class="tab-item active">기타</button>
+      </div>
+
+
+      <div class="contents">
+
+        <div class="input-item">
+          <p class="input-title">구분</p>
+
+          <div class="select-item select-style01">
+            <input id="input-departments-employees" type="text" placeholder="항목을 선택하세요." class="input-select-ui"
+              readonly="readonly" disabled="disabled" value="" />
+            <!--
+              [전달사항] <bc.js>
+              - 셀렉트박스 활성/비활성화 시 .select-item에게 active 클래스를 토글해주세요. 
+            -->
+            <i class="icon icon-select02"></i>
+            <ul class="selectbox-style02">
+              <li class="selectbox-item"><button>항목123123123123123123</button></li>
+              <li class="selectbox-item"><button>항목22</button></li>
+              <li class="selectbox-item"><button>Ea cillum nostrud elit ut.</button></li>
+              <li class="selectbox-item"><button>Non anim mollit qui do ea elit duis.</button></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="input-item">
+          <p class="input-title">성별</p>
+          <div class="radio-wrap">
+            <div class="radio-item">
+              <input type="radio" name="radio-gender" id="radio-gender-m" class="radio-style01" checked />
+              <label for="radio-gender-m" class="radio-label">남자</label>
+            </div>
+            <div class="radio-item">
+              <input type="radio" name="radio-gender" id="radio-gender-w" class="radio-style01" />
+              <label for="radio-gender-w" class="radio-label">여자</label>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!-- //end of .contents -->
+      <div class="button-wrap-row">
+        <button class="button-style04">입력 완료</button>
+      </div>
+    </div>
+    <!-- //end of .page-body -->
+
+    <!-- 
+      // ver.2 
+      마크업 변경
+    -->
+  </div>
+</body>
