@@ -114,9 +114,9 @@
       //표시 내역이 없는 경우
       display: none;
       position: absolute;
-      top: 50%;
-      left: 50%;
-      @include transform(translate(-50%, -50%));
+      margin-top: 25vh;
+      // @include transform(translateY(-50%));
+      width: 100%;
       font-size: 1.6rem;
       font-weight: $fw-r;
       text-align: center;

@@ -125,7 +125,7 @@
   .radio-item {
     @include flexbox;
     @include align-items(center);
-    flex-basis: 100%;
+    //@include flex-basis(100%); //킷캣버전에서 레이아웃 무너짐
     flex-shrink: 0;
     width: 100%;
     height: 4rem;
@@ -156,9 +156,10 @@
   }
 
   .radio-style01 + .radio-label {
+    display: block;
     position: relative;
     width: 100%;
-    height: 100%;
+    height: 4rem;
     line-height: 4rem;
     font-size: 1.5rem;
     color: #000;
@@ -196,6 +197,7 @@
 
   .radio-style01:checked:not(:disabled) + .radio-label {
     background-color: #f1f4f4;
+    border-bottom: 1px solid #ebebee;
 
     &:before {
       border-color: #30b9d3;
@@ -220,21 +222,8 @@
   .radio-style02:checked:not(:disabled) + .radio-label {
     color: #fff;
     background-color: #30b9d3;
-    brder-color: #30b9d3;
+    border-color: #30b9d3;
   }
-
-  // .radio-label {
-  //   width: 100%;
-  //   font-size: 1.2rem;
-  //   height: 4rem;
-  //   color: $color-black;
-  //   text-align: center;
-  //   line-height: 3.7rem;
-  //   border-radius: 0.8rem;
-  //   background-color: $color-input;
-  //   border: 2px solid transparent;
-  //   box-sizing: border-box;
-  // }
 }
 
 .radio-wrap.radio-item-4 {
