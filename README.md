@@ -1,10 +1,11 @@
-# Go Vote
+# [ BlockChain Campus & Go Vote ] WebApp
 
-**Web Published: nykim@nykim.net**
-**저장소 주소: [https://github.com/AnnYKim/govote_pub](https://github.com/AnnYKim/govote_pub)**
-
+- **Web Published: nykim@nykim.net**
+- **저장소 주소: [https://github.com/AnnYKim/govote_pub](https://github.com/AnnYKim/govote_pub)**
 - _Last Modified: 2018-09-18_
 - 09-18 수정된 부분: style_bc.css, bc.js, html_bc/
+
+---
 
 ## Tree Structure
 
