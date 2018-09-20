@@ -14,6 +14,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
   <script type="text/javascript" src="../js/library/jquery-2.1.4.js"></script>
+  <script type="text/javascript" src="../js/library/jquery.mobile-1.4.5.min.js"></script>
   <script type="text/javascript" src="../js/bc.js"></script>
   <!--
     [전달사항]
@@ -29,8 +30,47 @@
 
 <body class="bc body-wallet">
   <!-- 지갑 메인 화면 -->
+  <div data-role="page" id="home">
+    <div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="b">
+      <h1>Header</h1>
+    </div>
+    <div role="main" class="ui-content">
+      <ul data-role="listview" id="list">
+        <li>Item 1</li>
+        <div class="delete"></div>
+        <span class="off"></span>
+        <li>Item 2</li>
+        <span class="off"></span>
+        <li>Item 3</li>
+        <span class="on"></span>
+        <li>Item 4</li>
+        <span class="off"></span>
+        <li>Item 5</li>
+      </ul>
+    </div>
+  </div>
 
-  <div id="wrapper" class="wallet-main">
+  <div data-role="page" id="home">
+    <div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="b">
+      <h1>Header</h1>
+    </div>
+    <div role="main" class="ui-content">
+      <ul data-role="listview" id="list">
+        <li>Item 1</li>
+        <div class="delete"></div>
+        <span class="off"></span>
+        <li>Item 2</li>
+        <span class="off"></span>
+        <li>Item 3</li>
+        <span class="on"></span>
+        <li>Item 4</li>
+        <span class="off"></span>
+        <li>Item 5</li>
+      </ul>
+    </div>
+  </div>
+
+  <div id=" wrapper" class="wallet-main">
     <!--
       [전달사항] <bc.js>
       .wallet-main에 경우에 따라 다음의 클래스를 추가/제거해 주세요.
@@ -56,24 +96,29 @@
         표시할 거래내역이<br />없습니다.
       </div>
       <ul class="details-list">
-        <li class="type-in">
+        <li>
           <!--
               [전달사항]
               .details-block에 다음과 같은 클래스를 붙여주세요.
               - 입금인 경우: type-in
               - 출금인 경우: type-out
             -->
-          <div class="details-block">
-            <div class="value">2,400</div>
-            <div class="label">BCX</div>
-          </div>
-          <div class="details-block">
-            <div class="date">2018년 10월 31일 오후 5시 45분</div>
-            <div class="hash">0x2620032cc92a7e25b43f9b94676905edf5339597</div>
-          </div>
-          <button class="button-style-drawer"></button>
+          <a href="#" id="details-list-item" class="type-in">
+            <div class="details-block">
+              <div class="value">2,400</div>
+              <div class="label">BCX</div>
+            </div>
+            <div class="details-block">
+              <div class="date">2018년 10월 31일 오후 5시 45분</div>
+              <div class="hash">0x2620032cc92a7e25b43f9b94676905edf5339597</div>
+            </div>
+            <button class="button-style-drawer"></button>
+          </a>
+          <!-- //// -->
+          <button class="button-delete-details">삭제</button>
         </li>
-        <li class="type-in">
+
+        <li id="details-list-item" class="type-in">
           <!--
               [전달사항]
               .details-block에 다음과 같은 클래스를 붙여주세요.
@@ -89,6 +134,7 @@
             <div class="hash">0x2620032cc92a7e25b43f9b94676905edf5339597</div>
           </div>
           <button class="button-style-drawer"></button>
+          <button class="button-delete-details2">삭제</button>
         </li>
         <li class="type-out">
           <!--

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <title>BLOCKCHAIN CAMPUS</title>
+
+  <link type="text/css" rel="stylesheet" href="../css/style_bc.css" />
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+  <meta name="format-detection" content="telephone=no, address=no, email=no" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <script type="text/javascript" src="../js/library/jquery-2.1.4.js"></script>
+  <script type="text/javascript" src="../js/bc.js"></script>
+  <!--
+    [전달사항]
+    이벤트 확인용 js입니다.
+  -->
+
+</head>
+
+<body class="bc body-drawers">
+  <!-- 백업 -->
+  <div id="wrapper" class="drawers-backup">
+
+    <p class="setting-guide">
+      Keystore file을 저장하거나 Private Key를 저장하여 백업할 수 있습니다.
+    </p>
+
+    <div class="setting-container">
+
+      <div class="backup-container">
+        <strong class="title">Keystore File 다운로드</strong>
+        <div class="description">Keystore file은 Private key를 암호화하여
+          저장한 파일이며, 지정한 계정 비밀번호를
+          입력해야 사용할 수 있습니다.
+        </div>
+        <button class="button-backup">Keystore File 다운로드</button>
+      </div>
+
+      <div class="backup-container">
+        <strong class="title">Private Key 저장</strong>
+        <div class="description">Private Key는 지갑의 고유 정보이며, 비밀번호가 설정되어 있지 않습니다. 개인키만 알고 있으면 지갑 실행 및 복구가 가능하므로 타인에게 노출되지
+          않도록 각별한 관리가 필요합니다.</div>
+        <button class="button-backup">복사하기</button>
+      </div>
+
+    </div>
+
+    <div class="button-wrap-row">
+      <button class="button-style04">완료</button>
+    </div>
+
+  </div>
+</body>

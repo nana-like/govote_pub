@@ -4,8 +4,8 @@
 /* _fingerprint.scss */
 // * * * * * * * * * * * *
 
-.body-fingerprint {
-  // background-color: #fff;
+.body-fingerprint,
+.body-faceID {
   background-color: #f2f4f7;
 }
 
@@ -13,7 +13,8 @@
 // [ .fingerprint-regist ]
 // - - - - - - - - - - - - - - -
 
-.fingerprint-regist {
+.body-fingerprint [class^="fingerprint-"],
+.body-faceID [class^="faceID-"] {
   background-color: #f2f4f7;
 
   .regist-top {
@@ -23,7 +24,7 @@
 
     .button-close {
       position: absolute;
-      top: 0;
+      top: 0.5rem;
       left: 1rem;
       width: 4rem;
       height: 4rem;
@@ -31,37 +32,68 @@
       background-size: 100%;
       background-repeat: no-repeat;
     }
-
-    .title {
-      font-weight: $fw-m;
-      font-size: 2.4rem;
-    }
-    .title-description {
-      margin-top: 1.3rem;
-      font-weight: $fw-dl;
-      font-size: 1.6rem;
-
-      &:after {
-        display: block;
-        width: 15rem;
-        height: 15rem;
-        margin: 3.5rem auto;
-        @include bgi("deco-fingerprint-1");
-        background-size: 100%;
-        content: "";
-      }
-    }
   } // ---- end of .regist-top
+
+  .title {
+    font-weight: $fw-m;
+    font-size: 2.4rem;
+  }
+  .title-description {
+    margin-top: 1.3rem;
+    font-weight: $fw-dl;
+    font-size: 1.6rem;
+
+    &:after {
+      display: block;
+      width: 15rem;
+      height: 15rem;
+      margin: 3.5rem auto;
+      background-size: 100%;
+      content: "";
+    }
+  }
 
   .regist-bottom {
     text-align: center;
     background-color: #fff;
 
     .description {
-      padding: 4.5rem 0;
+      padding: 4.9rem 0;
       font-size: 1.3rem;
       font-weight: $fw-r;
       line-height: 1.85;
     }
   } // ---- end of .regist-bottom
+}
+
+// -- 지문 최초 등록 시
+.body-fingerprint .fingerprint-regist {
+  .title-description:after {
+    @include bgi("deco-fingerprint-1");
+  }
+}
+
+// -- 지문 등록 완료
+.body-fingerprint .fingerprint-done {
+  .title-description:after {
+    @include bgi("deco-fingerprint-2");
+  }
+  .regist-bottom .description {
+    padding: 6.8rem 0;
+    font-size: 1.6rem;
+  }
+}
+
+// -- Face ID 최초 등록 시
+.body-faceID .faceID-regist {
+  .title-description:after {
+    @include bgi("deco-faceID-1");
+  }
+}
+
+// -- Face ID 등록 완료
+.body-faceID .faceID-done {
+  .title-description:after {
+    @include bgi("deco-faceID-2");
+  }
 }

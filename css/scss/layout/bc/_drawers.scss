@@ -1,0 +1,166 @@
+@charset "utf-8";
+
+// **** drawers page
+
+.body-drawers {
+  padding-top: 2.9rem;
+  background-color: #f2f4f7;
+
+  .setting-guide {
+    margin-bottom: 3.5rem;
+    padding: 0 2.7rem;
+    font-size: 1.6rem;
+    font-weight: $fw-r;
+    color: $color-black;
+    word-break: keep-all;
+    line-height: 1.63;
+  }
+
+  .setting-container {
+    padding: 0 1.1rem;
+  }
+
+  .button-setting {
+    display: block;
+    width: 100%;
+    height: 5rem;
+    padding: 0 1.8rem;
+    line-height: 5rem;
+    color: $color-black;
+    font-size: 1.6rem;
+    font-weight: $fw-m;
+    text-align: left;
+    background-color: #fff;
+  }
+
+  .input-setting {
+    position: relative;
+    margin-bottom: 0.2rem;
+
+    input {
+      width: 100%;
+      height: 6rem;
+      padding: 0 1.6rem;
+      font-size: 1.6rem;
+      color: #2c496a;
+      background-color: #fff;
+
+      @include placeholder {
+        color: #9baabc;
+        font-size: 1.6rem;
+        font-weight: $fw-r;
+      }
+    }
+  }
+
+  .setting-area-error {
+    //비밀번호 변경 시 나타나는 에러 메시지 (absolute 아님!)
+    margin-top: 0.2rem;
+    margin-bottom: 0.3rem;
+    margin-left: 1.6rem;
+    font-size: 1.2rem;
+    font-weight: $fw-r;
+    color: #30b9d3;
+  }
+
+  .backup-container {
+    width: 100%;
+    background-color: #fff;
+    margin-bottom: 2rem;
+
+    &:last-child {
+      margin-bottom: 6rem;
+    }
+
+    .title {
+      display: block;
+      padding: 1rem 1.5rem;
+      color: $color-black;
+      font-size: 1.2rem;
+      font-weight: $fw-b;
+      border-bottom: solid 1px #ebebee;
+    }
+
+    .description {
+      padding: 1rem 1.5rem;
+      color: $color-black;
+      font-size: 1.5rem;
+      line-height: 2;
+      font-weight: $fw-r;
+      word-break: keep-all;
+    }
+
+    .button-backup {
+      display: block;
+      width: 100%;
+      height: 5rem;
+      padding-left: 1.6rem;
+      line-height: 5rem;
+      color: #fff;
+      font-weight: $fw-m;
+      text-align: left;
+      background-color: #93a2b6;
+      background-image: icon(backup-arrow, #fff);
+      background-repeat: no-repeat;
+      background-position: right 1.6rem top 50%;
+      background-size: 2rem 2rem;
+    }
+  }
+
+  .drawers-appInfo {
+    @include flexbox;
+    @include justify-content(center);
+    @include flex-wrap(wrap);
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 2rem;
+
+    .app-icon {
+      width: 10rem;
+      height: 10rem;
+      margin-right: 2rem;
+
+      img {
+        display: block;
+        width: 100%;
+      }
+    }
+    .app-name {
+      display: block;
+      max-width: calc(100vw - 28rem);
+      font-size: 1.8rem;
+      font-weight: $fw-m;
+      color: $color-black;
+    }
+    .app-version {
+      display: block;
+      font-size: 1.3rem;
+      font-weight: $fw-l;
+      color: $color-black;
+    }
+    .button-update {
+      display: block;
+      margin-top: 2.2rem;
+      width: 9rem;
+      height: 2.7rem;
+      font-size: 1.2rem;
+      letter-spacing: -0.04rem;
+      color: #161616;
+      border-radius: 1.9rem;
+      border: 1px solid #b1c0cf;
+    }
+    .text {
+      display: none;
+      margin-top: 3rem;
+    }
+  }
+
+  .drawers-appInfo.version-newest {
+    .button-update {
+      display: none;
+    }
+    .text {
+      display: block;
+    }
+  }
+}

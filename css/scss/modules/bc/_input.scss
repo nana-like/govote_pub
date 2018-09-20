@@ -140,19 +140,14 @@
     width: 0px;
     height: 0px;
 
-    //TODO: 삭제 예정
-    // @each $map, $value in $radio-button {
-    //   &.radio-#{$map} {
-    //     background-image: url(#{$path-image}common/button/radio.png);
-    //     background-position: map-get($value, normal);
-    //   }
-    // }
+    &[readonly] + label {
+      @include select-none;
+      @include pointer-none;
+    }
+  }
 
-    // @each $map, $value in $radio-button {
-    //   &.radio-#{$map}:checked {
-    //     background-position: map-get($value, active);
-    //   }
-    // }
+  .radio-label {
+    cursor: pointer;
   }
 
   .radio-style01 + .radio-label {
@@ -165,6 +160,7 @@
     color: #000;
     padding: 0 3rem;
     font-weight: $fw-r;
+    border-bottom: 1px solid transparent;
 
     &:before,
     &:after {
@@ -208,6 +204,22 @@
     }
   }
 
+  .radio-style01[readonly] + .radio-label,
+  .radio-style01:checked[readonly] + .radio-label {
+    color: #93a2b6;
+    &:before {
+      border: 1px solid #a2b0c1;
+    }
+    &:after {
+      border: 1px solid #a2b0c1;
+      background-color: #a2b0c1;
+    }
+  }
+
+  .radio-style01:checked[readonly] + .radio-label {
+    background-color: #f2f4f7;
+  }
+
   .radio-style02 + .radio-label {
     width: 100%;
     height: 100%;
@@ -223,6 +235,16 @@
     color: #fff;
     background-color: #30b9d3;
     border-color: #30b9d3;
+  }
+
+  .radio-style02[readonly] + .radio-label {
+    color: #a2b0c1;
+    border-color: #a2b0c1;
+  }
+
+  .radio-style02:checked[readonly] + .radio-label {
+    background-color: #a2b0c1;
+    border-color: #a2b0c1;
   }
 }
 
@@ -250,6 +272,10 @@
 ////////// Select //////////
 .select-item {
   position: relative;
+
+  .input-select-ui {
+    cursor: pointer;
+  }
 
   .input-select-ui:valid {
     -webkit-text-fill-color: $color-black !important;
@@ -400,7 +426,7 @@
   }
 }
 
-////////// disable
+////////// disable //////////
 
 .input-item.disable {
   @include select-none;
@@ -423,3 +449,72 @@
     }
   }
 }
+
+////////// checkbox item //////////
+.checkbox-item {
+  margin-bottom: 0.2rem;
+}
+
+.checkbox-style01 {
+  @include flexbox;
+  @include justify-content(space-between);
+  @include align-items(center);
+  padding: 0 1.8rem;
+  height: 5rem;
+  background-color: #fff;
+
+  .checkbox-title {
+    color: #000;
+    font-size: 1.6rem;
+    font-weight: $fw-m;
+    @include flex-shrink(0);
+  }
+
+  input[type="checkbox"] {
+    &:checked,
+    &:not(:checked) {
+      //기본 체크박스 ui 숨기기
+      position: absolute;
+      left: -9999rem;
+    }
+  }
+
+  input[type="checkbox"] + .checkbox-label {
+    position: relative;
+    width: 4rem;
+    height: 1.5rem;
+    border-radius: 1rem;
+    background-color: rgba(162, 176, 193, 0.3);
+
+    &:before {
+      position: absolute;
+      top: -0.4rem;
+      left: 0;
+      display: block;
+      width: 2.2rem;
+      height: 2.2rem;
+      background-color: #98a7b9;
+      border-radius: 50%;
+      content: "";
+      transition: transform 0.5s, background-color 0.5s;
+    }
+  }
+
+  input[type="checkbox"]:checked:not(:disabled) + .checkbox-label {
+    &:before {
+      @include transform(translateX(2rem));
+      transition: transform 0.5s, background-color 0.5s;
+      background-color: #30b9d3;
+    }
+  }
+}
+
+/*
+
+    width: 4rem;
+    height: 1.8rem;
+    border-radius: 1rem;
+    background-color: rgba(162, 176, 193, 0.3);
+    
+    
+*/

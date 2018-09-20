@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <title>BLOCKCHAIN CAMPUS</title>
+
+  <link type="text/css" rel="stylesheet" href="../css/style_bc.css" />
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+  <meta name="format-detection" content="telephone=no, address=no, email=no" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <script type="text/javascript" src="../js/library/jquery-2.1.4.js"></script>
+  <script type="text/javascript" src="../js/bc.js"></script>
+  <!--
+    [전달사항]
+    이벤트 확인용 js입니다.
+  -->
+
+</head>
+
+<body class="bc body-drawers">
+  <!-- 알림 설정 -->
+  <div id="wrapper" class="drawers-notifySetting">
+
+    <p class="setting-guide">
+      푸시 알림 수신에 동의하시면 블록체인 캠퍼스에서 제공하는 푸시 알림을 받을 수 있습니다.
+    </p>
+
+    <div class="setting-container">
+
+      <div class="checkbox-item checkbox-style01">
+        <div class="checkbox-title">앱 알림</div>
+        <input type="checkbox" name="checkbox-setting-notify-app" id="checkbox-setting-notify-app" checked />
+        <label for="checkbox-setting-notify-app" class="checkbox-label"></label>
+      </div>
+
+      <div class="checkbox-item checkbox-style01">
+        <div class="checkbox-title">이메일 알림</div>
+        <input type="checkbox" name="checkbox-setting-notify-email" id="checkbox-setting-notify-email" />
+        <label for="checkbox-setting-notify-email" class="checkbox-label"></label>
+      </div>
+
+
+    </div>
+
+  </div>
+</body>

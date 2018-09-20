@@ -27,11 +27,12 @@
 </head>
 
 <body class="bc body-userinfo">
-  <!-- 사용자 정보 입력 화면 -->
-  <div id="wrapper" class="user-information">
-    <!-- 
-      >> ver.2 
-      마크업 변경
+  <!-- 사용자 정보 수정 화면 -->
+  <div id="wrapper" class="user-information user-information-setting disable">
+    <!--
+      [전달사항] <bc.js>
+      입력 가능한 경우에는 .user-information-setting의 disable 클래스를 제거하고,
+      아래 input의 readonly 속성을 제거해주세요.
     -->
 
     <div class="page-body">
@@ -49,11 +50,11 @@
           <p class="input-title">과정</p>
           <div class="radio-wrap">
             <div class="radio-item">
-              <input type="radio" name="radio-graduate" id="radio-graduate-0" class="radio-style01" checked />
+              <input type="radio" name="radio-graduate" id="radio-graduate-0" class="radio-style01" checked readonly />
               <label for="radio-graduate-0" class="radio-label">대학</label>
             </div>
             <div class="radio-item">
-              <input type="radio" name="radio-graduate" id="radio-graduate-1" class="radio-style01" />
+              <input type="radio" name="radio-graduate" id="radio-graduate-1" class="radio-style01" readonly />
               <label for="radio-graduate-1" class="radio-label">대학원</label>
             </div>
           </div>
@@ -64,7 +65,7 @@
 
           <div class="select-item select-style01">
             <input id="input-departments-students" type="text" placeholder="소속된 학부 또는 학과를 선택하세요." class="input-select-ui"
-              readonly="readonly" disabled="disabled" value="" />
+              readonly="readonly" disabled="disabled" value="생명과학과" />
             <!--
                 [전달사항] <bc.js>
                 - 셀렉트박스 활성/비활성화 시 .select-item에게 active 클래스를 토글해주세요. 
@@ -86,19 +87,19 @@
           <p class="input-title">학년</p>
           <div class="radio-wrap radio-item-4">
             <div class="radio-item">
-              <input type="radio" name="radio-grade" id="radio-grade-1" class="radio-style02" checked />
+              <input type="radio" name="radio-grade" id="radio-grade-1" class="radio-style02" checked readonly />
               <label for="radio-grade-1" class="radio-label">1학년</label>
             </div>
             <div class="radio-item">
-              <input type="radio" name="radio-grade" id="radio-grade-2" class="radio-style02" />
+              <input type="radio" name="radio-grade" id="radio-grade-2" class="radio-style02" readonly />
               <label for="radio-grade-2" class="radio-label">2학년</label>
             </div>
             <div class="radio-item">
-              <input type="radio" name="radio-grade" id="radio-grade-3" class="radio-style02" />
+              <input type="radio" name="radio-grade" id="radio-grade-3" class="radio-style02" readonly />
               <label for="radio-grade-3" class="radio-label">3학년</label>
             </div>
             <div class="radio-item">
-              <input type="radio" name="radio-grade" id="radio-grade-4" class="radio-style02" />
+              <input type="radio" name="radio-grade" id="radio-grade-4" class="radio-style02" readonly />
               <label for="radio-grade-4" class="radio-label">4학년</label>
             </div>
           </div>
@@ -109,11 +110,11 @@
           <p class="input-title">성별</p>
           <div class="radio-wrap">
             <div class="radio-item">
-              <input type="radio" name="radio-gender" id="radio-gender-m" class="radio-style01" checked />
+              <input type="radio" name="radio-gender" id="radio-gender-m" class="radio-style01" checked readonly />
               <label for="radio-gender-m" class="radio-label">남자</label>
             </div>
             <div class="radio-item">
-              <input type="radio" name="radio-gender" id="radio-gender-w" class="radio-style01" />
+              <input type="radio" name="radio-gender" id="radio-gender-w" class="radio-style01" readonly />
               <label for="radio-gender-w" class="radio-label">여자</label>
             </div>
           </div>
@@ -122,14 +123,9 @@
       </div>
       <!-- //end of .contents -->
       <div class="button-wrap-row">
-        <button class="button-style04">입력 완료</button>
+        <button id="button-setting-userinfo" class="button-style04">정보 수정하기</button>
       </div>
     </div>
     <!-- //end of .page-body -->
-
-    <!-- 
-        // ver.2 
-        마크업 변경
-      -->
   </div>
 </body>
