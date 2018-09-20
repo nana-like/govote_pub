@@ -14,7 +14,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
   <script type="text/javascript" src="../js/library/jquery-2.1.4.js"></script>
+  <script type="text/javascript" src="../js/library/jquery.mobile-1.4.5.min.js"></script>
   <script type="text/javascript" src="../js/bc.js"></script>
+  <script>
+    $(document).on('mobileinit', function () {
+      $.mobile.ignoreContentEnabled = true;
+    });
+  </script>
   <!--
     [전달사항]
     이벤트 확인용 js입니다.
@@ -22,20 +28,15 @@
 
 </head>
 
-<!-- 
-  >> ver.2 
-  body에 bc 클래스 추가
--->
-
 <body class="bc body-wallet">
-  <!-- 지갑 화면 (내역 없음) -->
+  <!-- 지갑 메인 화면 -->
 
-  <div id="wrapper" class="wallet-main init">
+  <div id=" wrapper" class="wallet-main init">
     <!--
       [전달사항] <bc.js>
       .wallet-main에 경우에 따라 다음의 클래스를 추가/제거해 주세요.
-      - init: 거래 내역 없음 (*현재)
-      - (추가 클래스 없음): 내역이 있을 때
+      - init: 거래 내역 없음
+      - (추가 클래스 없음): 내역이 있을 때 (*현재)
     -->
 
     <div class="wallet-top">
@@ -52,11 +53,14 @@
 
     <div class="wallet-details">
       <div class="title">Details</div>
+      <button class="button-reload">새로고침 버튼</button>
       <div class="no-details">
         표시할 거래내역이<br />없습니다.
       </div>
+
       <ul class="details-list">
       </ul>
+
     </div>
     <!-- //end .wallet-details-->
 
