@@ -2,7 +2,7 @@
 
 - **Web Published: nykim@nykim.net**
 - **저장소 주소: [https://github.com/AnnYKim/govote_pub/tree/Update_09-28](https://github.com/AnnYKim/govote_pub/tree/Update_09-28)**
-- _Last Modified: 2018-09-18_
+- _Last Modified: 2018-09-28_
 - 09-18 수정된 부분: style_bc.css, bc.js, html_bc/
 
 ---

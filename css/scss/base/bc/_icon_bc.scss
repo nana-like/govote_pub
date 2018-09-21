@@ -1,6 +1,7 @@
 @charset "utf-8";
 
-.icon {
+.icon,
+[class^="icon-"] {
   display: inline-block;
   font-size: 0;
   width: 3.4rem;
@@ -17,4 +18,15 @@
 
 .icon-select02 {
   background-image: icon(select, #b1c0cf);
+}
+
+.icon-search {
+  background-image: icon(search, #000);
+}
+.icon-filter {
+  background-image: icon(filter, #000);
+}
+.icon-delete {
+  //삭제 아이콘
+  background-image: icon(delete, #9dacc1);
 }

@@ -114,6 +114,27 @@
     }
   }
 }
+
+.search-box {
+  position: relative;
+  @include ellipsis;
+  width: 100%;
+  height: 4.4rem;
+  line-height: 4.4rem;
+  font-size: 1.6rem;
+  padding-left: 5.1rem;
+  padding-right: 4.8rem;
+  text-align: left;
+  color: #2c496a;
+  font-weight: $fw-m;
+  background-color: #f2f4f7;
+
+  @include placeholder {
+    color: #899aab;
+    font-weight: $fw-r;
+  }
+}
+
 ////////// Radio //////////
 
 .radio-wrap {
