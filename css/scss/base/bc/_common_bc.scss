@@ -4,7 +4,7 @@
 
 .bc {
   // **** VARIABLES ****
-  $ly-header-height: 7rem; //페이지 헤더 높이
+  $ly-header-height: 4.4rem; //페이지 헤더 높이
   //////////////////////
 
   // 페이지 헤더
@@ -19,18 +19,26 @@
     text-align: center;
     line-height: $ly-header-height;
     background-color: #fff;
+    border-bottom: solid 1px #ebebee;
 
     .page-header-left {
       position: absolute;
+      top: 50%;
+      left: 1rem;
+      transform: translateY(-50%);
     }
     .page-header-right {
       position: absolute;
+      top: 50%;
+      right: 1rem;
+      transform: translateY(-50%);
     }
 
     .page-title {
-      color: #323232;
+      height: 100%;
+      color: #2b486b;
       font-size: 1.6rem;
-      font-weight: $fw-b;
+      font-weight: $fw-m;
     }
 
     & + .page-body {

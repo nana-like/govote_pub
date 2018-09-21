@@ -79,12 +79,11 @@ button {
   }
 }
 
-.button-style-drawer {
-  // 세로 ... 버튼
-  width: 2rem;
-  height: 2rem;
+.button-header-drawer {
+  width: 4rem;
+  height: 4rem;
+  outline: 2px solid red;
 }
-
 // 사이즈 정의
 
 .size-full {
