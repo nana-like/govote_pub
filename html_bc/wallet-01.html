@@ -16,11 +16,6 @@
   <script type="text/javascript" src="../js/library/jquery-2.1.4.js"></script>
   <script type="text/javascript" src="../js/library/jquery.mobile-1.4.5.min.js"></script>
   <script type="text/javascript" src="../js/bc.js"></script>
-  <script>
-    $(document).on('mobileinit', function () {
-      $.mobile.ignoreContentEnabled = true;
-    });
-  </script>
   <!--
     [전달사항]
     이벤트 확인용 js입니다.
@@ -28,8 +23,52 @@
 
 </head>
 
+<!-- 
+  >> ver.2 
+  body에 bc 클래스 추가
+-->
+
 <body class="bc body-wallet">
   <!-- 지갑 메인 화면 -->
+  <div data-role="page" id="home">
+    <div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="b">
+      <h1>Header</h1>
+    </div>
+    <div role="main" class="ui-content">
+      <ul data-role="listview" id="list">
+        <li>Item 1</li>
+        <div class="delete"></div>
+        <span class="off"></span>
+        <li>Item 2</li>
+        <span class="off"></span>
+        <li>Item 3</li>
+        <span class="on"></span>
+        <li>Item 4</li>
+        <span class="off"></span>
+        <li>Item 5</li>
+      </ul>
+    </div>
+  </div>
+
+  <div data-role="page" id="home">
+    <div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="b">
+      <h1>Header</h1>
+    </div>
+    <div role="main" class="ui-content">
+      <ul data-role="listview" id="list">
+        <li>Item 1</li>
+        <div class="delete"></div>
+        <span class="off"></span>
+        <li>Item 2</li>
+        <span class="off"></span>
+        <li>Item 3</li>
+        <span class="on"></span>
+        <li>Item 4</li>
+        <span class="off"></span>
+        <li>Item 5</li>
+      </ul>
+    </div>
+  </div>
 
   <div id=" wrapper" class="wallet-main">
     <!--
@@ -53,181 +92,136 @@
 
     <div class="wallet-details">
       <div class="title">Details</div>
-      <button class="button-reload">새로고침 버튼</button>
       <div class="no-details">
         표시할 거래내역이<br />없습니다.
       </div>
-
       <ul class="details-list">
-        <!-- 
-          >> ver.4
-          li에 id 및 버튼 추가
-        -->
-        <!--
-          [전달사항]
-          .details-block에 다음과 같은 클래스를 붙여주세요.
-          - 입금인 경우: type-in
-          - 출금인 경우: type-out
-        -->
-        <li id="details-list-item" class="type-in">
-          <a href="#" class="link">
+        <li>
+          <!--
+              [전달사항]
+              .details-block에 다음과 같은 클래스를 붙여주세요.
+              - 입금인 경우: type-in
+              - 출금인 경우: type-out
+            -->
+          <a href="#" id="details-list-item" class="type-in">
             <div class="details-block">
-              <div class="value">700</div>
+              <div class="value">2,400</div>
               <div class="label">BCX</div>
             </div>
             <div class="details-block">
-              <div class="date">2018년 10월 31일 오후 5시 0분</div>
+              <div class="date">2018년 10월 31일 오후 5시 45분</div>
               <div class="hash">0x2620032cc92a7e25b43f9b94676905edf5339597</div>
             </div>
+            <button class="button-style-drawer"></button>
           </a>
-          <button class="button-delete-details">삭제</button>
-        </li>
-        <li id="details-list-item" class="type-out">
-          <a href="#" class="link">
-            <div class="details-block">
-              <div class="value">1,234</div>
-              <div class="label">BCX</div>
-            </div>
-            <div class="details-block">
-              <div class="date">2018년 10월 31일 오후 5시 11분</div>
-              <div class="hash">0x2620032cc92a7e25b43f9b94676905edf5339597</div>
-            </div>
-          </a>
-          <button class="button-delete-details">삭제</button>
-        </li>
-        <li id="details-list-item" class="type-in">
-          <a href="#" class="link">
-            <div class="details-block">
-              <div class="value">58</div>
-              <div class="label">BCX</div>
-            </div>
-            <div class="details-block">
-              <div class="date">2018년 10월 31일 오후 5시 22분</div>
-              <div class="hash">0x2620032cc92a7e25b43f9b94676905edf5339597</div>
-            </div>
-          </a>
-          <button class="button-delete-details">삭제</button>
-        </li>
-        <li id="details-list-item" class="type-out">
-          <a href="#" class="link">
-            <div class="details-block">
-              <div class="value">1</div>
-              <div class="label">BCX</div>
-            </div>
-            <div class="details-block">
-              <div class="date">2018년 10월 31일 오후 5시 33분</div>
-              <div class="hash">0x2620032cc92a7e25b43f9b94676905edf5339597</div>
-            </div>
-          </a>
-          <button class="button-delete-details">삭제</button>
-        </li>
-        <li id="details-list-item" class="type-out">
-          <a href="#" class="link">
-            <div class="details-block">
-              <div class="value">1</div>
-              <div class="label">BCX</div>
-            </div>
-            <div class="details-block">
-              <div class="date">2018년 10월 31일 오후 5시 33분</div>
-              <div class="hash">0x2620032cc92a7e25b43f9b94676905edf5339597</div>
-            </div>
-          </a>
-          <button class="button-delete-details">삭제</button>
-        </li>
-        <li id="details-list-item" class="type-out">
-          <a href="#" class="link">
-            <div class="details-block">
-              <div class="value">1</div>
-              <div class="label">BCX</div>
-            </div>
-            <div class="details-block">
-              <div class="date">2018년 10월 31일 오후 5시 33분</div>
-              <div class="hash">0x2620032cc92a7e25b43f9b94676905edf5339597</div>
-            </div>
-          </a>
-          <button class="button-delete-details">삭제</button>
-        </li>
-        <li id="details-list-item" class="type-out">
-          <a href="#" class="link">
-            <div class="details-block">
-              <div class="value">1</div>
-              <div class="label">BCX</div>
-            </div>
-            <div class="details-block">
-              <div class="date">2018년 10월 31일 오후 5시 33분</div>
-              <div class="hash">0x2620032cc92a7e25b43f9b94676905edf5339597</div>
-            </div>
-          </a>
-          <button class="button-delete-details">삭제</button>
-        </li>
-        <li id="details-list-item" class="type-out">
-          <a href="#" class="link">
-            <div class="details-block">
-              <div class="value">1</div>
-              <div class="label">BCX</div>
-            </div>
-            <div class="details-block">
-              <div class="date">2018년 10월 31일 오후 5시 33분</div>
-              <div class="hash">0x2620032cc92a7e25b43f9b94676905edf5339597</div>
-            </div>
-          </a>
-          <button class="button-delete-details">삭제</button>
-        </li>
-        <li id="details-list-item" class="type-out">
-          <a href="#" class="link">
-            <div class="details-block">
-              <div class="value">1</div>
-              <div class="label">BCX</div>
-            </div>
-            <div class="details-block">
-              <div class="date">2018년 10월 31일 오후 5시 33분</div>
-              <div class="hash">0x2620032cc92a7e25b43f9b94676905edf5339597</div>
-            </div>
-          </a>
-          <button class="button-delete-details">삭제</button>
-        </li>
-        <li id="details-list-item" class="type-out">
-          <a href="#" class="link">
-            <div class="details-block">
-              <div class="value">1</div>
-              <div class="label">BCX</div>
-            </div>
-            <div class="details-block">
-              <div class="date">2018년 10월 31일 오후 5시 33분</div>
-              <div class="hash">0x2620032cc92a7e25b43f9b94676905edf5339597</div>
-            </div>
-          </a>
-          <button class="button-delete-details">삭제</button>
-        </li>
-        <li id="details-list-item" class="type-out">
-          <a href="#" class="link">
-            <div class="details-block">
-              <div class="value">1</div>
-              <div class="label">BCX</div>
-            </div>
-            <div class="details-block">
-              <div class="date">2018년 10월 31일 오후 5시 33분</div>
-              <div class="hash">0x2620032cc92a7e25b43f9b94676905edf5339597</div>
-            </div>
-          </a>
-          <button class="button-delete-details">삭제</button>
-        </li>
-        <li id="details-list-item" class="type-out">
-          <a href="#" class="link">
-            <div class="details-block">
-              <div class="value">1</div>
-              <div class="label">BCX</div>
-            </div>
-            <div class="details-block">
-              <div class="date">2018년 10월 31일 오후 5시 33분</div>
-              <div class="hash">0x2620032cc92a7e25b43f9b94676905edf5339597</div>
-            </div>
-          </a>
+          <!-- //// -->
           <button class="button-delete-details">삭제</button>
         </li>
 
+        <li id="details-list-item" class="type-in">
+          <!--
+              [전달사항]
+              .details-block에 다음과 같은 클래스를 붙여주세요.
+              - 입금인 경우: type-in
+              - 출금인 경우: type-out
+            -->
+          <div class="details-block">
+            <div class="value">700</div>
+            <div class="label">BCX</div>
+          </div>
+          <div class="details-block">
+            <div class="date">2018년 10월 31일 오후 5시 45분</div>
+            <div class="hash">0x2620032cc92a7e25b43f9b94676905edf5339597</div>
+          </div>
+          <button class="button-style-drawer"></button>
+          <button class="button-delete-details2">삭제</button>
+        </li>
+        <li class="type-out">
+          <!--
+              [전달사항]
+              .details-block에 다음과 같은 클래스를 붙여주세요.
+              - 입금인 경우: type-in
+              - 출금인 경우: type-out
+            -->
+          <div class="details-block">
+            <div class="value">13,000</div>
+            <div class="label">BCX</div>
+          </div>
+          <div class="details-block">
+            <div class="date">2018년 10월 31일 오후 5시 45분</div>
+            <div class="hash">0x2620032cc92a7e25b43f9b94676905edf5339597</div>
+          </div>
+          <button class="button-style-drawer"></button>
+        </li>
+        <li class="type-out">
+          <!--
+              [전달사항]
+              .details-block에 다음과 같은 클래스를 붙여주세요.
+              - 입금인 경우: type-in
+              - 출금인 경우: type-out
+            -->
+          <div class="details-block">
+            <div class="value">13,000</div>
+            <div class="label">BCX</div>
+          </div>
+          <div class="details-block">
+            <div class="date">2018년 10월 31일 오후 5시 45분</div>
+            <div class="hash">0x2620032cc92a7e25b43f9b94676905edf5339597</div>
+          </div>
+          <button class="button-style-drawer"></button>
+        </li>
+        <li class="type-in">
+          <!--
+              [전달사항]
+              .details-block에 다음과 같은 클래스를 붙여주세요.
+              - 입금인 경우: type-in
+              - 출금인 경우: type-out
+            -->
+          <div class="details-block">
+            <div class="value">700</div>
+            <div class="label">BCX</div>
+          </div>
+          <div class="details-block">
+            <div class="date">2018년 10월 31일 오후 5시 45분</div>
+            <div class="hash">0x2620032cc92a7e25b43f9b94676905edf5339597</div>
+          </div>
+          <button class="button-style-drawer"></button>
+        </li>
+        <li class="type-out">
+          <!--
+              [전달사항]
+              .details-block에 다음과 같은 클래스를 붙여주세요.
+              - 입금인 경우: type-in
+              - 출금인 경우: type-out
+            -->
+          <div class="details-block">
+            <div class="value">12,345,678</div>
+            <div class="label">BCX</div>
+          </div>
+          <div class="details-block">
+            <div class="date">2018년 10월 31일 오전 11시 22분</div>
+            <div class="hash">0x2620032cc92a7e25b43f9b94676905edf5339597</div>
+          </div>
+          <button class="button-style-drawer"></button>
+        </li>
+        <li class="type-out">
+          <!--
+            [전달사항]
+            .details-block에 다음과 같은 클래스를 붙여주세요.
+            - 입금인 경우: type-in
+            - 출금인 경우: type-out
+          -->
+          <div class="details-block">
+            <div class="value">12,345,678</div>
+            <div class="label">BCX</div>
+          </div>
+          <div class="details-block">
+            <div class="date">2018년 10월 31일 오전 11시 22분</div>
+            <div class="hash">0x2620032cc92a7e25b43f9b94676905edf5339597</div>
+          </div>
+          <button class="button-style-drawer"></button>
+        </li>
       </ul>
-
     </div>
     <!-- //end .wallet-details-->
 

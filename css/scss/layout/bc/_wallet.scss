@@ -110,20 +110,6 @@
       border-bottom: solid 1px #ebebee;
     }
 
-    .button-reload {
-      position: absolute;
-      top: 0.5rem;
-      right: 1.5rem;
-      width: 3rem;
-      height: 3rem;
-      background-image: icon(wallet-reload, #000);
-      background-repeat: no-repeat;
-      background-position: 50% 50%;
-      background-size: 2rem 2rem;
-      text-indent: -999rem;
-      overflow-x: hidden;
-    }
-
     .no-details {
       //표시 내역이 없는 경우
       display: none;
@@ -141,7 +127,6 @@
     .details-list {
       -webkit-overflow-scrolling: touch;
       overflow-y: auto;
-      overflow-x: hidden;
 
       & > li {
         position: relative;
@@ -183,14 +168,6 @@
         width: 10rem;
         height: 10rem;
         transform: translateX(10rem);
-        color: #2c496a;
-        font-size: 1.4rem;
-        font-weight: $fw-r;
-        padding-top: 3.2rem;
-        background-color: #d8e0e7;
-        @include bgi("icon-delete-details");
-        background-position: top 1.8rem left 50%;
-        background-size: 4rem 4rem;
       }
 
       .value {
@@ -334,10 +311,10 @@
 }
 
 #details-list-item {
-  transition: transform 0.5s;
+  transition: all 0.5s;
+  touch-action: none;
 
   &.swiped {
-    // touch-action: none;
-    transform: translateX(-10rem);
+    transform: translateX(-100px);
   }
 }
