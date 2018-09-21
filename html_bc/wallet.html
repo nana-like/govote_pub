@@ -39,198 +39,211 @@
       - (추가 클래스 없음): 내역이 있을 때 (*현재)
     -->
 
-    <div class="wallet-top">
-      <div class="info">
-        <div class="label">BCX</div>
-        <div class="balance">14,000</div>
+    <header class="page-header">
+      <div class="page-header-left">
+        <button class="button-header-drawer">메뉴</button>
       </div>
-      <div class="button-wrap-row">
-        <button class="button-wallet">지갑 주소</button>
-        <button class="button-wallet">송금</button>
+      <h1 class="page-title">지갑</h1>
+      <div class="page-header-right">
+        <button class="button-header-alarm">알람</button>
       </div>
-    </div>
-    <!-- //end .wallet-top-->
+    </header>
 
-    <div class="wallet-details">
-      <div class="title">Details</div>
-      <button class="button-reload">새로고침 버튼</button>
-      <div class="no-details">
-        표시할 거래내역이<br />없습니다.
-      </div>
+    <div class="page-body">
 
-      <ul class="details-list">
-        <!-- 
+      <div class="wallet-top">
+        <div class="info">
+          <div class="label">BCX</div>
+          <div class="balance">14,000</div>
+        </div>
+        <div class="button-wrap-row">
+          <button class="button-wallet">지갑 주소</button>
+          <button class="button-wallet">송금</button>
+        </div>
+      </div>
+      <!-- //end .wallet-top-->
+
+      <div class="wallet-details">
+        <div class="title">Details</div>
+        <button class="button-reload">새로고침 버튼</button>
+        <div class="no-details">
+          표시할 거래내역이<br />없습니다.
+        </div>
+
+        <ul class="details-list">
+          <!-- 
           >> ver.4
           li에 id 및 버튼 추가
         -->
-        <!--
+          <!--
           [전달사항]
           .details-block에 다음과 같은 클래스를 붙여주세요.
           - 입금인 경우: type-in
           - 출금인 경우: type-out
         -->
-        <li id="details-list-item" class="type-in">
-          <a href="#" class="link">
-            <div class="details-block">
-              <div class="value">700</div>
-              <div class="label">BCX</div>
-            </div>
-            <div class="details-block">
-              <div class="date">2018년 10월 31일 오후 5시 0분</div>
-              <div class="hash">0x2620032cc92a7e25b43f9b94676905edf5339597</div>
-            </div>
-          </a>
-          <button class="button-delete-details">삭제</button>
-        </li>
-        <li id="details-list-item" class="type-out">
-          <a href="#" class="link">
-            <div class="details-block">
-              <div class="value">1,234</div>
-              <div class="label">BCX</div>
-            </div>
-            <div class="details-block">
-              <div class="date">2018년 10월 31일 오후 5시 11분</div>
-              <div class="hash">0x2620032cc92a7e25b43f9b94676905edf5339597</div>
-            </div>
-          </a>
-          <button class="button-delete-details">삭제</button>
-        </li>
-        <li id="details-list-item" class="type-in">
-          <a href="#" class="link">
-            <div class="details-block">
-              <div class="value">58</div>
-              <div class="label">BCX</div>
-            </div>
-            <div class="details-block">
-              <div class="date">2018년 10월 31일 오후 5시 22분</div>
-              <div class="hash">0x2620032cc92a7e25b43f9b94676905edf5339597</div>
-            </div>
-          </a>
-          <button class="button-delete-details">삭제</button>
-        </li>
-        <li id="details-list-item" class="type-out">
-          <a href="#" class="link">
-            <div class="details-block">
-              <div class="value">1</div>
-              <div class="label">BCX</div>
-            </div>
-            <div class="details-block">
-              <div class="date">2018년 10월 31일 오후 5시 33분</div>
-              <div class="hash">0x2620032cc92a7e25b43f9b94676905edf5339597</div>
-            </div>
-          </a>
-          <button class="button-delete-details">삭제</button>
-        </li>
-        <li id="details-list-item" class="type-out">
-          <a href="#" class="link">
-            <div class="details-block">
-              <div class="value">1</div>
-              <div class="label">BCX</div>
-            </div>
-            <div class="details-block">
-              <div class="date">2018년 10월 31일 오후 5시 33분</div>
-              <div class="hash">0x2620032cc92a7e25b43f9b94676905edf5339597</div>
-            </div>
-          </a>
-          <button class="button-delete-details">삭제</button>
-        </li>
-        <li id="details-list-item" class="type-out">
-          <a href="#" class="link">
-            <div class="details-block">
-              <div class="value">1</div>
-              <div class="label">BCX</div>
-            </div>
-            <div class="details-block">
-              <div class="date">2018년 10월 31일 오후 5시 33분</div>
-              <div class="hash">0x2620032cc92a7e25b43f9b94676905edf5339597</div>
-            </div>
-          </a>
-          <button class="button-delete-details">삭제</button>
-        </li>
-        <li id="details-list-item" class="type-out">
-          <a href="#" class="link">
-            <div class="details-block">
-              <div class="value">1</div>
-              <div class="label">BCX</div>
-            </div>
-            <div class="details-block">
-              <div class="date">2018년 10월 31일 오후 5시 33분</div>
-              <div class="hash">0x2620032cc92a7e25b43f9b94676905edf5339597</div>
-            </div>
-          </a>
-          <button class="button-delete-details">삭제</button>
-        </li>
-        <li id="details-list-item" class="type-out">
-          <a href="#" class="link">
-            <div class="details-block">
-              <div class="value">1</div>
-              <div class="label">BCX</div>
-            </div>
-            <div class="details-block">
-              <div class="date">2018년 10월 31일 오후 5시 33분</div>
-              <div class="hash">0x2620032cc92a7e25b43f9b94676905edf5339597</div>
-            </div>
-          </a>
-          <button class="button-delete-details">삭제</button>
-        </li>
-        <li id="details-list-item" class="type-out">
-          <a href="#" class="link">
-            <div class="details-block">
-              <div class="value">1</div>
-              <div class="label">BCX</div>
-            </div>
-            <div class="details-block">
-              <div class="date">2018년 10월 31일 오후 5시 33분</div>
-              <div class="hash">0x2620032cc92a7e25b43f9b94676905edf5339597</div>
-            </div>
-          </a>
-          <button class="button-delete-details">삭제</button>
-        </li>
-        <li id="details-list-item" class="type-out">
-          <a href="#" class="link">
-            <div class="details-block">
-              <div class="value">1</div>
-              <div class="label">BCX</div>
-            </div>
-            <div class="details-block">
-              <div class="date">2018년 10월 31일 오후 5시 33분</div>
-              <div class="hash">0x2620032cc92a7e25b43f9b94676905edf5339597</div>
-            </div>
-          </a>
-          <button class="button-delete-details">삭제</button>
-        </li>
-        <li id="details-list-item" class="type-out">
-          <a href="#" class="link">
-            <div class="details-block">
-              <div class="value">1</div>
-              <div class="label">BCX</div>
-            </div>
-            <div class="details-block">
-              <div class="date">2018년 10월 31일 오후 5시 33분</div>
-              <div class="hash">0x2620032cc92a7e25b43f9b94676905edf5339597</div>
-            </div>
-          </a>
-          <button class="button-delete-details">삭제</button>
-        </li>
-        <li id="details-list-item" class="type-out">
-          <a href="#" class="link">
-            <div class="details-block">
-              <div class="value">1</div>
-              <div class="label">BCX</div>
-            </div>
-            <div class="details-block">
-              <div class="date">2018년 10월 31일 오후 5시 33분</div>
-              <div class="hash">0x2620032cc92a7e25b43f9b94676905edf5339597</div>
-            </div>
-          </a>
-          <button class="button-delete-details">삭제</button>
-        </li>
+          <li id="details-list-item" class="type-in">
+            <a href="#" class="link">
+              <div class="details-block">
+                <div class="value">700</div>
+                <div class="label">BCX</div>
+              </div>
+              <div class="details-block">
+                <div class="date">2018년 10월 31일 오후 5시 0분</div>
+                <div class="hash">0x2620032cc92a7e25b43f9b94676905edf5339597</div>
+              </div>
+            </a>
+            <button class="button-delete-details">삭제</button>
+          </li>
+          <li id="details-list-item" class="type-out">
+            <a href="#" class="link">
+              <div class="details-block">
+                <div class="value">1,234</div>
+                <div class="label">BCX</div>
+              </div>
+              <div class="details-block">
+                <div class="date">2018년 10월 31일 오후 5시 11분</div>
+                <div class="hash">0x2620032cc92a7e25b43f9b94676905edf5339597</div>
+              </div>
+            </a>
+            <button class="button-delete-details">삭제</button>
+          </li>
+          <li id="details-list-item" class="type-in">
+            <a href="#" class="link">
+              <div class="details-block">
+                <div class="value">58</div>
+                <div class="label">BCX</div>
+              </div>
+              <div class="details-block">
+                <div class="date">2018년 10월 31일 오후 5시 22분</div>
+                <div class="hash">0x2620032cc92a7e25b43f9b94676905edf5339597</div>
+              </div>
+            </a>
+            <button class="button-delete-details">삭제</button>
+          </li>
+          <li id="details-list-item" class="type-out">
+            <a href="#" class="link">
+              <div class="details-block">
+                <div class="value">1</div>
+                <div class="label">BCX</div>
+              </div>
+              <div class="details-block">
+                <div class="date">2018년 10월 31일 오후 5시 33분</div>
+                <div class="hash">0x2620032cc92a7e25b43f9b94676905edf5339597</div>
+              </div>
+            </a>
+            <button class="button-delete-details">삭제</button>
+          </li>
+          <li id="details-list-item" class="type-out">
+            <a href="#" class="link">
+              <div class="details-block">
+                <div class="value">1</div>
+                <div class="label">BCX</div>
+              </div>
+              <div class="details-block">
+                <div class="date">2018년 10월 31일 오후 5시 33분</div>
+                <div class="hash">0x2620032cc92a7e25b43f9b94676905edf5339597</div>
+              </div>
+            </a>
+            <button class="button-delete-details">삭제</button>
+          </li>
+          <li id="details-list-item" class="type-out">
+            <a href="#" class="link">
+              <div class="details-block">
+                <div class="value">1</div>
+                <div class="label">BCX</div>
+              </div>
+              <div class="details-block">
+                <div class="date">2018년 10월 31일 오후 5시 33분</div>
+                <div class="hash">0x2620032cc92a7e25b43f9b94676905edf5339597</div>
+              </div>
+            </a>
+            <button class="button-delete-details">삭제</button>
+          </li>
+          <li id="details-list-item" class="type-out">
+            <a href="#" class="link">
+              <div class="details-block">
+                <div class="value">1</div>
+                <div class="label">BCX</div>
+              </div>
+              <div class="details-block">
+                <div class="date">2018년 10월 31일 오후 5시 33분</div>
+                <div class="hash">0x2620032cc92a7e25b43f9b94676905edf5339597</div>
+              </div>
+            </a>
+            <button class="button-delete-details">삭제</button>
+          </li>
+          <li id="details-list-item" class="type-out">
+            <a href="#" class="link">
+              <div class="details-block">
+                <div class="value">1</div>
+                <div class="label">BCX</div>
+              </div>
+              <div class="details-block">
+                <div class="date">2018년 10월 31일 오후 5시 33분</div>
+                <div class="hash">0x2620032cc92a7e25b43f9b94676905edf5339597</div>
+              </div>
+            </a>
+            <button class="button-delete-details">삭제</button>
+          </li>
+          <li id="details-list-item" class="type-out">
+            <a href="#" class="link">
+              <div class="details-block">
+                <div class="value">1</div>
+                <div class="label">BCX</div>
+              </div>
+              <div class="details-block">
+                <div class="date">2018년 10월 31일 오후 5시 33분</div>
+                <div class="hash">0x2620032cc92a7e25b43f9b94676905edf5339597</div>
+              </div>
+            </a>
+            <button class="button-delete-details">삭제</button>
+          </li>
+          <li id="details-list-item" class="type-out">
+            <a href="#" class="link">
+              <div class="details-block">
+                <div class="value">1</div>
+                <div class="label">BCX</div>
+              </div>
+              <div class="details-block">
+                <div class="date">2018년 10월 31일 오후 5시 33분</div>
+                <div class="hash">0x2620032cc92a7e25b43f9b94676905edf5339597</div>
+              </div>
+            </a>
+            <button class="button-delete-details">삭제</button>
+          </li>
+          <li id="details-list-item" class="type-out">
+            <a href="#" class="link">
+              <div class="details-block">
+                <div class="value">1</div>
+                <div class="label">BCX</div>
+              </div>
+              <div class="details-block">
+                <div class="date">2018년 10월 31일 오후 5시 33분</div>
+                <div class="hash">0x2620032cc92a7e25b43f9b94676905edf5339597</div>
+              </div>
+            </a>
+            <button class="button-delete-details">삭제</button>
+          </li>
+          <li id="details-list-item" class="type-out">
+            <a href="#" class="link">
+              <div class="details-block">
+                <div class="value">1</div>
+                <div class="label">BCX</div>
+              </div>
+              <div class="details-block">
+                <div class="date">2018년 10월 31일 오후 5시 33분</div>
+                <div class="hash">0x2620032cc92a7e25b43f9b94676905edf5339597</div>
+              </div>
+            </a>
+            <button class="button-delete-details">삭제</button>
+          </li>
 
-      </ul>
+        </ul>
+
+      </div>
+      <!-- //end .wallet-details-->
 
     </div>
-    <!-- //end .wallet-details-->
-
 
   </div>
 </body>
