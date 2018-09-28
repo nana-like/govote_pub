@@ -69,7 +69,7 @@
           - 입금인 경우: type-in
           - 출금인 경우: type-out
         -->
-        <li id="details-list-item" class="type-in">
+        <li id="details-list-item" class="type-in swiped">
           <a href="#" class="link">
             <div class="details-block">
               <div class="value">700</div>
@@ -81,6 +81,11 @@
             </div>
           </a>
           <button class="button-delete-details">삭제</button>
+          <!--
+            [전달사항] <bc.js>
+            이 삭제 버튼은 오른편에 숨겨져 있습니다.
+            #details-list-item에 .swiped 클래스가 붙으면 삭제 버튼이 보입니다.
+          -->
         </li>
         <li id="details-list-item" class="type-out">
           <a href="#" class="link">

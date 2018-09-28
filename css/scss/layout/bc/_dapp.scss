@@ -24,13 +24,16 @@
       display: block;
     }
     .app-list-container {
-      min-height: 3rem;
+      min-height: 30rem;
       // height: calc(100vh - 32rem);
     }
   }
   .govote-image {
     // max-height: 15.3rem;
+    display: block;
+    width: 100%;
     margin: 0 auto;
+    background-color: #eae3db;
 
     img {
       display: block;
@@ -189,7 +192,7 @@
     //앱 이름 및 배포자 ID 등
     position: relative;
     width: 100%;
-    max-width: calc(100% - 12rem);
+    width: calc(100% - 12rem);
     margin-left: 2rem;
 
     .name {
@@ -290,15 +293,26 @@
 // [ .drawer ]
 // - - - - - - - - - - - - - - -
 
-#drawer {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
+body.drawer-opend {
   height: 100%;
+  overflow: hidden;
 
+  #wrapper {
+    height: 100vh;
+  }
+}
+.faceID-done {
+  height: 100vh;
+}
+
+.stop {
+  position: fixed;
+  width: 100%;
+}
+
+#drawer {
   .dim {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -308,8 +322,10 @@
   }
 
   [class^="drawer-container-"] {
-    position: fixed;
+    z-index: 10;
+    position: relative;
     top: 0;
+    right: 0;
     width: 86%;
     height: 100%;
     background-color: #fff;
@@ -321,69 +337,83 @@
   .drawer-container-right {
     right: 0;
   }
+}
 
-  .notification {
-    .notification-top {
-      width: 100%;
-      height: 10rem;
-      background-color: #f2f4f7;
-      @include bgi("deco-notification");
-      background-size: 6rem 6rem;
-      background-position: 2rem 50%;
-    }
-    .notification-list {
-      overflow-y: auto;
-      padding-bottom: 1rem;
-      height: calc(100vh - 10rem);
+.notification {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #fff;
+
+  .notification-top {
+    width: 100%;
+    height: 10rem;
+    background-color: #f2f4f7;
+    @include bgi("deco-notification");
+    background-size: 6rem 6rem;
+    background-position: 2rem 50%;
+  }
+  .notification-list {
+    z-index: 100;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 1rem;
+    height: calc(100vh - 10rem);
+  }
+
+  .button-close-drawer {
+    overflow-x: hidden;
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    text-indent: -999rem;
+    width: 2.6rem;
+    height: 2.6rem;
+    background-image: icon(close, #2c496a);
+    background-repeat: no-repeat;
+    background-size: 3rem;
+    background-position: 50% 50%;
+  }
+
+  .noti-list-item {
+    position: relative;
+    @include flexbox;
+    @include flex-direction(Column);
+    @include justify-content(space-between);
+    padding: 1.5rem 2rem;
+    width: 100%;
+    height: 8rem;
+    border-bottom: solid 1px #e7e7e7;
+
+    .title {
+      @include ellipsis;
+      max-width: 96%;
+      font-size: 1.6rem;
+      font-weight: $fw-r;
+      color: $color-black;
     }
 
-    .button-close-drawer {
-      overflow-x: hidden;
+    .type {
+      @include ellipsis;
+      font-weight: $fw-r;
+      color: #888b8e;
+      font-size: 1.4rem;
+      max-width: calc(100% - 11rem);
+      min-width: 6rem;
+    }
+
+    .date {
       position: absolute;
-      top: 2rem;
-      right: 2rem;
-      text-indent: -999rem;
-      width: 2.6rem;
-      height: 2.6rem;
-      background-image: icon(close, #2c496a);
-      background-repeat: no-repeat;
-      background-size: 3rem;
-      background-position: 50% 50%;
-    }
-
-    .noti-list-item {
-      position: relative;
-      @include flexbox;
-      @include flex-direction(Column);
-      @include justify-content(space-between);
-      padding: 1.5rem 2rem;
-      width: 100%;
-      height: 8rem;
-      border-bottom: solid 1px #e7e7e7;
-
-      .title {
-        @include ellipsis;
-        max-width: 96%;
-        font-size: 1.6rem;
-        font-weight: $fw-r;
-        color: $color-black;
-      }
-
-      .type {
-        @include ellipsis;
-        font-weight: $fw-r;
-        color: #888b8e;
-        font-size: 1.4rem;
-      }
-
-      .date {
-        position: absolute;
-        bottom: 1.5rem;
-        right: 1.8rem;
-        font-weight: $fw-r;
-        color: #445d7b;
-        font-size: 1.2rem;
-      }
+      bottom: 1.7rem;
+      right: 1.8rem;
+      font-weight: $fw-r;
+      color: #445d7b;
+      font-size: 1.2rem;
     }
   }
 }

@@ -24,19 +24,19 @@
 
 <body class="bc body-dappSearch">
   <!-- DApp 검색 화면 -->
-  <div id="wrapper" class="dappSearch">
+  <div id="wrapper" class="dappSearch search-null">
     <!--
         [전달사항]
         .dappSearch 경우에 따라 다음의 클래스를 추가/제거해 주세요.
-        - (추가 클래스 없음): 기본 (*현재)
-        - search-null: 검색 결과가 없을 때
-        - search-result: 검색 결과가 있을 때
+        - (추가 클래스 없음): 기본
+        - search-null: 검색 결과가 없을 때 (*현재)
+        - search-result: 검색 결과가 있을 때 
       -->
 
     <div class="search-container">
       <i class="icon-search"></i>
-      <input type="text" placeholder="DApp을 검색해보세요!" value="" class="search-box able-delete" />
-      <button class="button-search-delete"><i class="icon-delete"></i></button>
+      <input type="text" placeholder="DApp을 검색해보세요!" value="AlfAlfjgAlfjgAlfjgAlfjgAlfjgAlfjgAlfjg" class="search-box able-delete" />
+      <button class="button-search-delete active"><i class="icon-delete"></i></button>
       <!--
         [전달사항] <bc.js>
         사용자가 검색을 시작하면 .button-search-delete에 active 클래스를 추가해 주세요.
@@ -44,7 +44,8 @@
       -->
     </div>
 
-    <p class="search-description"></p>
+    <p class="search-description">‘<span class="keyword">AlfAlfjgAlfjgAlfjgAlfjgAlfjgAlfjgAlfjg</span>’ 에 대한 검색 결과가
+      없습니다.</p>
 
     <div class="app-list-container">
 
@@ -52,17 +53,6 @@
         <!--
           [전달사항] 
           여기에 app-list-item이 추가됩니다.
-          ````
-          <div class="app-list-item">
-            <button class="button-app-list">
-              <div class="app-list-icon"><img src="../images/bc/thumbnail-icon-1.png" alt="app icon" /></div>
-              <div class="app-list-content">
-                <div class="name">앱 이름</div>
-                <div class="text">앱 설명</div>
-              </div>
-            </button>
-          </div>
-          ````
         -->
       </div>
 

@@ -38,33 +38,6 @@ $(function() {
         .parents(".voters-dropdown-container")
         .toggleClass("active");
     });
-
-    //전체 선택에 대한 UI
-    // $(".selectAll").on("change", function() {
-    //   if ($("#voters-selectAll-department").is(":checked")) {
-    //     $(this)
-    //       .parents(".voters-setting")
-    //       .find(".text")
-    //       .text("전체");
-    //   } else {
-    //     $(this)
-    //       .parents(".voters-setting")
-    //       .find(".text")
-    //       .text("학과 또는 부서를 선택하세요.");
-    //   }
-
-    //   if ($("#voters-selectAll-gender").is(":checked")) {
-    //     $(this)
-    //       .parents(".voters-setting")
-    //       .find("input[type='checkbox']")
-    //       .prop("checked", true);
-    //   } else {
-    //     $(this)
-    //       .parents(".voters-setting")
-    //       .find("input[type='checkbox']")
-    //       .prop("checked", false);
-    //   }
-    // });
   };
 
   var myPollsEvt = function() {
@@ -325,15 +298,6 @@ $(function() {
     createEvt();
   });
 
-  // var $maskedInput = $(".input-masking");
-  // $maskedInput.mobilePassword({
-  //   checkInterval: 100, //set timeout to check whether all the characters are the same
-  //   transDelay: 100, //delay to transform last letter
-  //   character: "%u2217" //instead of the character
-  // });
-
-  ////
-
   var selectboxEvent = function() {
     var $selectBox = $(".selectbox");
 
@@ -356,13 +320,6 @@ $(function() {
         $(".login-area-email-info").addClass("active");
       }
     });
-
-    // $(".input-select-ui").on("blur focusout", function(event){
-    //   $(this).parent().removeClass("active");
-    //   $(this)
-    //     .next().next(".selectbox")
-    //     .removeClass("active");
-    // });
     $(".select-item").on("click", function(evt) {
       evt.stopPropagation();
     });

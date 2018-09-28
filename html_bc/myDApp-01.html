@@ -25,6 +25,12 @@
 <body class="bc body-myDApp">
   <!-- my DApp 화면 -->
   <div id="wrapper" class="myDApp-main">
+    <!--
+        [전달사항]
+        .myDApp-main에 경우에 따라 다음의 클래스를 추가/제거해 주세요.
+        - init: DApp list 없음
+        - (추가 클래스 없음): DApp list 있을 때  (*현재)
+      -->
 
     <div class="search-container">
       <i class="icon-search"></i>
@@ -34,6 +40,22 @@
     <div class="app-list-container">
 
       <div class="app-list">
+        <!--
+            [전달사항] <bc.js>
+            여기에 app-list-item이 추가됩니다.
+          ``````
+          <div class="app-list-item">
+            <button class="button-app-list">
+            <div class="app-list-icon"><img src="../images/bc/thumbnail-icon-1.png" alt="app icon" /></div>
+            <div class="app-list-content">
+              <div class="name">앱 이름</div>
+              <div class="text">앱 설명</div>
+              <button class="button-toggle-star on">myDApp 등록 버튼</button>
+            </div>
+            </button>
+          </div>
+          ``````
+          -->
 
         <div class="app-list-item">
           <button class="button-app-list">

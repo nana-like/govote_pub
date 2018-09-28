@@ -3,8 +3,17 @@
 // **** dappsearch
 
 .dappSearch {
-  .search-container {
-    // margin-bottom: 0;
+  &.search-null {
+    //검색 결과가 없을 때
+    .search-description {
+      display: block;
+    }
+  }
+  &.search-result {
+    //검색 결과가 있을 때
+    .search-description {
+      display: block;
+    }
   }
 }
 
@@ -40,6 +49,7 @@
 }
 
 .search-description {
+  display: none;
   padding: 0 2.2rem;
   height: 4rem;
   line-height: 4rem;

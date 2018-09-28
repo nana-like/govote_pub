@@ -22,54 +22,46 @@
 
 </head>
 
-<body class="bc body-homeScreen">
-  <!-- 홈 스크린 -->
-  <div id="wrapper" class="homeScreen-main">
+<body class="bc body-dappSearch">
+  <!-- DApp 검색 화면 -->
+  <div id="wrapper" class="dappSearch search-result">
     <!--
-      [전달사항]
-      .homeScreen-main에 경우에 따라 다음의 클래스를 추가/제거해 주세요.
-      - init: DApp list 없음
-      - (추가 클래스 없음): DApp list 있을 때 (*현재)
-    -->
+        [전달사항]
+        .dappSearch 경우에 따라 다음의 클래스를 추가/제거해 주세요.
+        - (추가 클래스 없음): 기본
+        - search-null: 검색 결과가 없을 때
+        - search-result: 검색 결과가 있을 때 (*현재)
+      -->
 
     <div class="search-container">
       <i class="icon-search"></i>
-      <button class="button-search">앱을 검색해보세요!</button>
+      <input type="text" placeholder="DApp을 검색해보세요!" value="A" class="search-box able-delete" />
+      <button class="button-search-delete active"><i class="icon-delete"></i></button>
+      <!--
+        [전달사항] <bc.js>
+        사용자가 검색을 시작하면 .button-search-delete에 active 클래스를 추가해 주세요.
+        폼에 값이 없으면 active 클래스를 제거해주세요.
+      -->
     </div>
 
-    <button class="govote-image">
-      <img src="../images/bc/thumbnail-govote.png" alt="thumbnail">
-    </button>
+    <p class="search-description">‘<span class="keyword">A</span>’ 에 대한 검색 결과입니다.</p>
 
     <div class="app-list-container">
-
-      <div class="dapplist-top">
-        <p class="title">DApp list</p>
-
-        <div class="filter-container">
-          <button class="button-filter active">최신순<i class="icon-filter"></i></button>
-          <!--
-            [전달사항]
-            .button-filter에 active 클래스를 추가하면 화살표 아이콘이 위를 향한 모양이 됩니다.
-          -->
-        </div>
-      </div>
-
 
       <div class="app-list">
         <!--
           [전달사항] 
           여기에 app-list-item이 추가됩니다.
           ````
-            <div class="app-list-item">
-              <button class="button-app-list">
-              <div class="app-list-icon"><img src="../images/appICON.png" alt="app icon" /></div>
+          <div class="app-list-item">
+            <button class="button-app-list">
+              <div class="app-list-icon"><img src="../images/bc/thumbnail-icon-1.png" alt="app icon" /></div>
               <div class="app-list-content">
                 <div class="name">앱 이름</div>
-                <div class="text">앱 설명 문구</div>
+                <div class="text">앱 설명</div>
               </div>
             </button>
-            </div>
+          </div>
           ````
         -->
         <div class="app-list-item">

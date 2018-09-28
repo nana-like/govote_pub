@@ -182,7 +182,7 @@
         right: 0;
         width: 10rem;
         height: 10rem;
-        transform: translateX(10rem);
+        @include transform(translateX(10rem));
         color: #2c496a;
         font-size: 1.4rem;
         font-weight: $fw-r;

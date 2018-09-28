@@ -1,5 +1,15 @@
 $(function() {
-  var loginEvt = function() {
+  ///////////////////
+  var commonEvt = function() {
+    /* Disable scroll */
+
+    // $("#wrapper").on("scroll touchmove mousewheel", function(e) {
+    //   e.preventDefault();
+    //   e.stopPropagation();
+    //   return false;
+    // });
+
+    //셀렉트 아이템에 대한 active 클래스 추가
     $(".select-item").on("click", function() {
       if ($(this).hasClass("active")) {
         $(this).removeClass("active");
@@ -7,7 +17,42 @@ $(function() {
         $(this).addClass("active");
       }
     });
+    //인풋 입력 시 삭제 버튼에 active 클래스 추가
+    $(".able-delete").each(function() {
+      if ($(this).val().length > 0) {
+        $(this)
+          .next(".button-search-delete")
+          .addClass("active");
+      } else {
+        $(this)
+          .next(".button-search-delete")
+          .removeClass("active");
+      }
+    });
+    $(".able-delete").on("change keyup", function() {
+      if ($(this).val().length > 0) {
+        $(this)
+          .next(".button-search-delete")
+          .addClass("active");
+      } else {
+        $(this)
+          .next(".button-search-delete")
+          .removeClass("active");
+      }
+    });
+    //인풋 삭제 버튼에 대한 처리
+    $(".button-search-delete").on("click", function() {
+      $(this)
+        .removeClass("active")
+        .prev(".able-delete")
+        .val("")
+        .focus();
+    });
+  };
 
+  ///////////////////
+  var loginEvt = function() {
+    //이메일에 active 클래스 추가
     $(".selectbox-item button").on("click", function(e) {
       e.preventDefault();
       var val = $(this).text();
@@ -18,6 +63,7 @@ $(function() {
       $("[class$='email-info']").addClass("active");
     });
 
+    //버튼 disabled 해제
     $("#input-login-email").on("keyup", function() {
       var val = $(this).val();
       if (val.length > 0) {
@@ -27,6 +73,7 @@ $(function() {
       }
     });
 
+    //error 영역에 미시지 추가
     $("#input-login-password").on("keyup", function() {
       var val = $(this).val();
       if (val.length > 0) {
@@ -41,7 +88,9 @@ $(function() {
     });
   };
 
+  ///////////////////
   var signupEvt = function() {
+    //에러 영역에 미시지 추가
     $("#input-signup-email").on("keyup", function() {
       if ($(this).val().length > 0) {
         $(this)
@@ -55,6 +104,7 @@ $(function() {
           .text("");
       }
     });
+    //에러 영역에 미시지 추가
     $("#input-signup-password").on("keyup", function() {
       if ($(this).val().length > 0) {
         $(this)
@@ -66,6 +116,7 @@ $(function() {
           .text("");
       }
     });
+    //에러 영역에 미시지 추가
     $("#input-signup-passwordCheck").on("keyup", function() {
       if ($(this).val().length > 0) {
         $(this)
@@ -79,7 +130,9 @@ $(function() {
     });
   };
 
+  ///////////////////
   var settingEvt = function() {
+    //사용자 정보 수정 시 disable 클래스 및 readonly 토글
     $("#button-setting-userinfo").on("click", function() {
       if ($(".user-information-setting").hasClass("disable")) {
         $(".user-information-setting").removeClass("disable");
@@ -97,7 +150,9 @@ $(function() {
     });
   };
 
+  ///////////////////
   var walletEvt = function() {
+    //왼쪽 슬라이드로 삭제 버튼 노출
     $(".details-list").on("swipeleft", "#details-list-item", function() {
       $(this)
         .addClass("swiped")
@@ -111,31 +166,32 @@ $(function() {
         );
     });
 
-    $(".button-delete-details").on("click", function() {
-      var itemLength = $(".details-list").children().length;
-      if (itemLength < 2) {
-        $(".wallet-main").addClass("init");
-      }
-    });
-
+    //링크 클릭에 대한 알림
     $(".details-list").on("click", ".link", function(e) {
       e.stopPropagation();
       alert("링크 이동");
     });
 
+    //거래내역 삭제
     $(".details-list").on("click", ".button-delete-details", function() {
-      // alert("내역 삭제");
+      var itemLength = $(".details-list").children().length;
+      if (itemLength < 2) {
+        $(".wallet-main").addClass("init");
+      }
       $(this)
         .parent()
         .remove();
     });
   };
 
+  ///////////////////
   var dappEvt = function() {
-    $(".dappDetails .button-toggle-star").on("click", function() {
+    //스타 버튼 토글
+    $(".body-dappDetails").on("click", ".button-toggle-star", function() {
       $(this).toggleClass("on");
     });
 
+    //마이 디앱 삭제
     $(".body-myDApp").on("click", ".button-toggle-star", function() {
       var itemLength = $(".app-list-item").length;
       console.log(itemLength);
@@ -149,6 +205,7 @@ $(function() {
   };
 
   $(window).on("load", function() {
+    commonEvt();
     loginEvt();
     walletEvt();
     signupEvt();
