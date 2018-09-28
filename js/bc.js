@@ -111,6 +111,13 @@ $(function() {
         );
     });
 
+    $(".button-delete-details").on("click", function() {
+      var itemLength = $(".details-list").children().length;
+      if (itemLength < 2) {
+        $(".wallet-main").addClass("init");
+      }
+    });
+
     $(".details-list").on("click", ".link", function(e) {
       e.stopPropagation();
       alert("링크 이동");
@@ -124,10 +131,28 @@ $(function() {
     });
   };
 
+  var dappEvt = function() {
+    $(".dappDetails .button-toggle-star").on("click", function() {
+      $(this).toggleClass("on");
+    });
+
+    $(".body-myDApp").on("click", ".button-toggle-star", function() {
+      var itemLength = $(".app-list-item").length;
+      console.log(itemLength);
+      if (itemLength < 2) {
+        $(".myDApp-main").addClass("init");
+      }
+      $(this)
+        .parent(".app-list-item")
+        .remove();
+    });
+  };
+
   $(window).on("load", function() {
     loginEvt();
     walletEvt();
     signupEvt();
     settingEvt();
+    dappEvt();
   });
 });

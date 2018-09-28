@@ -4,7 +4,7 @@
 
 .dappSearch {
   .search-container {
-    margin-bottom: 0;
+    // margin-bottom: 0;
   }
 }
 
@@ -46,9 +46,11 @@
   color: #2c496a;
   font-size: 1.3rem;
   font-weight: $fw-m;
-  border-bottom: solid 1px #ebebee;
+  border-top: solid 1px #ebebee;
+  // border-bottom: solid 1px #ebebee;
 
   .keyword {
+    // margin-right: -0.4rem;
     display: inline-block;
     max-width: 30%;
     @include ellipsis;

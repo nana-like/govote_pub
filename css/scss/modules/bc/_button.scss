@@ -85,6 +85,19 @@ button {
   height: 2rem;
 }
 
+.button-toggle-star {
+  width: 2.4rem;
+  height: 2.4rem;
+  text-indent: -999rem;
+  background-image: icon(myDApp, #000);
+  background-repeat: no-repeat;
+  background-size: 100%;
+
+  &.on {
+    background-image: icon(myDApp-on, #000);
+  }
+}
+
 // 사이즈 정의
 
 .size-full {

@@ -528,6 +528,16 @@
       background-color: #30b9d3;
     }
   }
+
+  input[type="checkbox"][readonly] + .checkbox-label {
+    @include pointer-none;
+    @include select-none;
+    opacity: 0.7;
+
+    &:before {
+      background-color: #aaa !important;
+    }
+  }
 }
 
 /*

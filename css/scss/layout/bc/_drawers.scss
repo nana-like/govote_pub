@@ -110,13 +110,14 @@
   .drawers-appInfo {
     @include flexbox;
     @include justify-content(center);
-    @include flex-wrap(wrap);
+    @include flex-wrap(nowrap);
     margin: 0 auto;
     width: 100%;
     padding: 0 2rem;
 
     .app-icon {
       width: 10rem;
+      min-width: 10rem;
       height: 10rem;
       margin-right: 2rem;
 
@@ -125,10 +126,11 @@
         width: 100%;
       }
     }
+    .app-content {
+    }
     .app-name {
       display: block;
-      max-width: calc(100vw - 28rem);
-      font-size: 1.8rem;
+      font-size: 1.7rem;
       font-weight: $fw-m;
       color: $color-black;
     }
