@@ -31,6 +31,7 @@
 * 18-10-12 : 상단바를 추가했습니다. 마크업은 다음과 같습니다.
   또한 .page-header 가 있으면 바로 다음에 .page-body 가 와야합니다.
   상단바가 필요한 페이지인데 퍼블리싱에 없다면 #wrapper 바로 아래와 같이 추가해주세요.
+  (우선 **userInfo(drawers-userinfo), dappDetails, dappSearch** 페이지들만 수정된 상태인데, 다른 페이지들도 수정해야 한다면 메일 주세요!)
 
 1. 타이틀만 있음
 
