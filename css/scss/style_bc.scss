@@ -12,9 +12,9 @@
 @import "base/reset";
 
 //[2-2] 기본 스타일 (블록체인 캠퍼스용)
-@import "base/bc/common_bc";
 @import "base/bc/svg_bc";
 @import "base/bc/icon_bc";
+@import "base/bc/common_bc";
 
 //[4] 모듈 (분리하여 사용 가능한 요소)
 @import "modules/bc/button";

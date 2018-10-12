@@ -4,7 +4,7 @@
 
 .bc {
   // **** VARIABLES ****
-  $ly-header-height: 7rem; //페이지 헤더 높이
+  $ly-header-height: 4.4rem; //페이지 헤더 높이
   //////////////////////
   -webkit-overflow-scrolling: touch;
 
@@ -23,15 +23,17 @@
 
     .page-header-left {
       position: absolute;
+      height: 100%;
     }
     .page-header-right {
       position: absolute;
+      height: 100%;
     }
 
     .page-title {
-      color: #323232;
+      color: #2b486b;
       font-size: 1.6rem;
-      font-weight: $fw-b;
+      font-weight: $fw-m;
     }
 
     & + .page-body {
@@ -40,6 +42,31 @@
       left: 0;
       width: 100%;
       height: auto;
+    }
+    .button-close {
+      position: absolute;
+      top: 50%;
+      left: 1rem;
+      width: 4rem;
+      height: 4rem;
+      background-image: icon(close, #2c496a);
+      background-size: 100%;
+      background-repeat: no-repeat;
+      @include transform(translateY(-50%));
+    }
+    .button-back {
+      position: absolute;
+      top: 50%;
+      left: 1rem;
+      width: 4rem;
+      height: 4rem;
+      background-image: icon(back, #2c496a);
+      background-size: 100%;
+      background-repeat: no-repeat;
+      @include transform(translateY(-50%));
+    }
+    .page-header + .page-body {
+      top: 4.4rem;
     }
   }
 
@@ -161,5 +188,12 @@
   html {
     font-size: 100%;
     height: 100%;
+  }
+}
+
+.body-fingerprint,
+.body-faceID {
+  .page-header {
+    background-color: #f2f4f7;
   }
 }

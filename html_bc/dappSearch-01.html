@@ -33,23 +33,46 @@
         - search-result: 검색 결과가 있을 때
       -->
 
-    <div class="search-container">
-      <i class="icon-search"></i>
-      <input type="text" placeholder="DApp을 검색해보세요!" value="" class="search-box able-delete" />
-      <button class="button-search-delete"><i class="icon-delete"></i></button>
-      <!--
+    <!-- 
+        >> ver.5 
+        상단바 추가
+      -->
+
+    <header class="page-header">
+      <div class="page-header-left">
+        <button class="button-back"></button>
+      </div>
+      <div class="page-title">DApp 검색</div>
+    </header>
+
+    <!-- //상단바 끝 -->
+
+
+    <!-- 
+      >> ver.5 
+      .page-header 바로 다음에는 .page-body가 와야합니다~!
+    -->
+
+
+    <div class="page-body">
+
+      <div class="search-container">
+        <i class="icon-search"></i>
+        <input type="text" placeholder="DApp을 검색해보세요!" value="" class="search-box able-delete" />
+        <button class="button-search-delete"><i class="icon-delete"></i></button>
+        <!--
         [전달사항] <bc.js>
         사용자가 검색을 시작하면 .button-search-delete에 active 클래스를 추가해 주세요.
         폼에 값이 없으면 active 클래스를 제거해주세요.
       -->
-    </div>
+      </div>
 
-    <p class="search-description"></p>
+      <p class="search-description"></p>
 
-    <div class="app-list-container">
+      <div class="app-list-container">
 
-      <div class="app-list">
-        <!--
+        <div class="app-list">
+          <!--
           [전달사항] 
           여기에 app-list-item이 추가됩니다.
           ````
@@ -64,15 +87,15 @@
           </div>
           ````
         -->
-      </div>
+        </div>
 
-      <div class="no-DApp">
-        <p class="no-DApp-text">
-          등록된 DApp이 없습니다.
-        </p>
+        <div class="no-DApp">
+          <p class="no-DApp-text">
+            등록된 DApp이 없습니다.
+          </p>
+        </div>
       </div>
     </div>
-
 
   </div>
 </body>

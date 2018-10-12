@@ -26,25 +26,37 @@
   <!-- 잠금 설정 -->
   <div id="wrapper" class="drawers-lockSetting">
 
-    <p class="setting-guide">
-      생체 인증을 설정하면 비밀번호를 입력하는 대신 생체 인증을 통해 로그인 할 수 있습니다.
-    </p>
 
-    <div class="setting-container">
+    <header class="page-header">
+      <div class="page-header-left">
+        <button class="button-close"></button>
+      </div>
+      <div class="page-title">잠금 설정</div>
+    </header>
 
-      <div class="checkbox-item checkbox-style01">
-        <div class="checkbox-title">생체 인증</div>
-        <input type="checkbox" name="checkbox-setting-notify-app" id="checkbox-setting-notify-app" readonly />
-        <!--
+    <div class="page-body">
+
+      <p class="setting-guide">
+        생체 인증을 설정하면 비밀번호를 입력하는 대신 생체 인증을 통해 로그인 할 수 있습니다.
+      </p>
+
+      <div class="setting-container">
+
+        <div class="checkbox-item checkbox-style01">
+          <div class="checkbox-title">생체 인증</div>
+          <input type="checkbox" name="checkbox-setting-notify-app" id="checkbox-setting-notify-app" readonly />
+          <!--
           [전달사항]
           생체인증이 불가능한 단말의 경우, readonly 속성을 넣어주세요.
         -->
-        <label for="checkbox-setting-notify-app" class="checkbox-label"></label>
+          <label for="checkbox-setting-notify-app" class="checkbox-label"></label>
+        </div>
+
+        <button class="button-setting">계정 비밀번호 변경</button>
+
       </div>
-
-      <button class="button-setting">계정 비밀번호 변경</button>
-
     </div>
+
 
   </div>
 </body>
