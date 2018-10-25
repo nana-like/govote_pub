@@ -22,7 +22,9 @@
 </head>
 
 <body class="body-takeVote">
-  <!-- 투표 현황 화면 -->
+
+  <!-- 투표 현황 화면 (항목에 이미지가 있는 경우) -->
+
   <div id="wrapper" class="takeVote">
 
     <div class="page-top">
@@ -44,71 +46,81 @@
 
         <ul class="create-item">
           <li>
-            <p class="create-title">이벤트 장소 투표</p>
+            <p class="create-title">투표항목에 이미지가 있는 경우</p>
           </li>
           <li class="ly-padding-sm">
             <div class="create-description-image">
               <img src="../images/goVote/thumbnail-test.png" alt="image" />
             </div>
             <div class="create-description">
-              <div>홍진영과 함께하는 ‘베리베리 상큼하군’ 이벤트 장소를 선택해주세요!</div>
+              <div>
+                기존 &lt;div class="number">&lt;/div>를
+                &lt;div class="takeVote-item-right">&lt;/div> 안에 넣어주세요!<br />
+                이미지가 있는 항목이라면 .number 바로 다음에 .image가 오면 됩니다 :)
+                <br />
+                ``` <br />
+                &lt;div class="takeVote-item-right"> <br />
+                &nbsp;&nbsp;&lt;div class="number">{숫자}&lt;/div> <br />
+                &nbsp;&nbsp;&lt;button class="image">&lt;img src="{경로}">&lt;/button> <br />
+                &lt;/div> <br />
+                ```
+              </div>
             </div>
 
             <div class="takeVote-title">
               <i class="icon icon-checkmark-multiple"></i>복수 선택 가능
-              <p class="pollDetails-participants">110명 참여</p>
-              <!--
-                  [전달사항]
-                  투표 현황 페이지의 경우 .pollDetails-participants를 추가해주세요.
-                -->
+              <p class="pollDetails-participants">100명 참여</p>
             </div>
 
+
             <ul class="takeVote-item-container pollDetails">
-              <!--
-                [전달사항]
-                투표 현황 페이지의 경우 .pollDetails 클래스를 추가해주세요.
-              -->
               <li class="takeVote-item">
                 <div class="checkbox-block">
-                  <input id="voters-item-1" type="checkbox" class="checkbox-style01" disabled />
+                  <input id="voters-item-1" type="checkbox" class="checkbox-style01" disabled checked />
+                  <label for="voters-item-1">체크된 항목</label>
                   <!--
-                    [전달사항]
-                    - 투표 현황 페이지의 경우 input을 disabled 처리해주세요.
-                    - 선택한 항목인 경우 checekd 속성도 추가해주세요.
+                    [전달사항] (18-10-24)
+                    기존 <div class="number"></div>를
+                    <dic class="takeVote-item-right"></div> 안에 넣어주세요!
                   -->
-                  <label for="voters-item-1">김포항</label>
                   <div class="takeVote-item-right">
-                    <div class="number">100</div>
+                    <div class="number">50</div>
+                    <button class="image"><img src="../images/goVote/thumbnail-test.png" alt="image"></button>
                   </div>
                 </div>
-                <div class="percentage" style="width: 84%"></div>
-                <!--
-                  [전달사항]
-                  투표 현황 페이지의 경우 .percentage 요소를 추가해주세요.
-                  inline style로 너비 조절이 가능합니다.
-                -->
+                <div class="percentage" style="width: 50%"></div>
               </li>
               <li class="takeVote-item">
                 <div class="checkbox-block">
                   <input id="voters-item-2" type="checkbox" class="checkbox-style01" disabled />
-                  <label for="voters-item-2">김공대</label>
+                  <label for="voters-item-2">이미지가 없는 항목</label>
                   <div class="takeVote-item-right">
                     <div class="number">10</div>
-                    <button class="image"><img src="../images/goVote/thumbnail-test.png" alt="image"></button>
                   </div>
                 </div>
-                <div class="percentage" style="width: 12%"></div>
+                <div class="percentage" style="width: 10%"></div>
               </li>
               <li class="takeVote-item">
                 <div class="checkbox-block">
                   <input id="voters-item-3" type="checkbox" class="checkbox-style01" disabled />
-                  <label for="voters-item-3">김수한무거북이와두루미</label>
+                  <label for="voters-item-3">이미지 항목</label>
                   <div class="takeVote-item-right">
                     <div class="number">0</div>
                     <button class="image"><img src="../images/goVote/thumbnail-test.png" alt="image"></button>
                   </div>
                 </div>
-                <div class="percentage" style="width: 4%"></div>
+                <div class="percentage" style="width: 0%"></div>
+              </li>
+              <li class="takeVote-item">
+                <div class="checkbox-block">
+                  <input id="voters-item-3" type="checkbox" class="checkbox-style01" disabled />
+                  <label for="voters-item-3">이미지 항목2</label>
+                  <div class="takeVote-item-right">
+                    <div class="number">40</div>
+                    <button class="image"><img src="../images/goVote/thumbnail-test.png" alt="image"></button>
+                  </div>
+                </div>
+                <div class="percentage" style="width: 40%"></div>
               </li>
             </ul>
 
@@ -122,14 +134,19 @@
               2018년 12월 30일 오후 3시 마감
             </div>
             <div class="pollDetails-progress">
-              <div class="text">93% 진행률</div>
-              <div class="bar" style="width: 93%"></div>
+              <div class="text">72% 진행률</div>
+              <div class="bar" style="width: 72%"></div>
             </div>
           </li>
         </ul>
 
         <div class="create-buttons-container">
-          <button class="button-next">닫기</button>
+          <button class="button-prev">투표 강제 종료</button>
+          <!--
+            [전달사항]
+            강제 종료 가능한 경우 해당 버튼 추가
+          -->
+          <button class="button-next">투표하기</button>
         </div>
       </div>
     </div>

@@ -101,6 +101,8 @@
     }
 
     .checkbox-block {
+      @include flexbox;
+      @include align-items(center);
       position: relative;
       width: 100%;
       height: 100%;
@@ -109,7 +111,7 @@
       label {
         width: 100%;
         height: 100%;
-        padding-right: 5rem;
+        padding-right: 0.5rem;
         line-height: 4.8rem;
         padding-left: 4.2rem;
         border: 1px solid $color-noPolls-bg;
@@ -120,18 +122,25 @@
         }
       }
 
-      [type="checkbox"]:checked + label {
+      [type="checkbox"]:checked + label,
+      [type="radio"]:checked + label {
         z-index: 1;
         position: relative;
         background-color: #93d5f1;
         border-color: #29ace4;
+        border-right: none;
 
-        & + .number {
-          color: #0c0c0c;
+        & + .takeVote-item-right {
+          background-color: #93d5f1;
+          border: 1px solid #29ace4;
+          border-left: none;
+          .number {
+            color: #0c0c0c;
 
-          &:before {
-            background-image: icon(person, #0c0c0c);
-            background-size: 100%;
+            &:before {
+              background-image: icon(person, #0c0c0c);
+              background-size: 100%;
+            }
           }
         }
       }
@@ -145,6 +154,7 @@
       font-size: 1.2rem;
       color: #bcbcbc;
       @include transform(translateY(-50%));
+      @include pointer-none;
 
       &:before {
         width: 1.2rem;
@@ -155,6 +165,49 @@
         vertical-align: sub;
         background-image: icon(person, #bcbcbc);
         background-size: 100%;
+      }
+    }
+  }
+
+  .takeVote-item-right {
+    z-index: 1;
+    height: 100%;
+    // position: absolute;
+    // top: 0rem;
+    // right: 1.2rem;
+    padding-right: 1.2rem;
+    border: 1px solid transparent;
+    @include flexbox;
+    @include justify-content(center);
+    @include align-items(center);
+
+    .number {
+      @include flexbox;
+      @include align-items(center);
+      position: relative;
+      top: initial !important;
+      right: initial !important;
+      transform: none;
+      @include pointer-none;
+      // color: #6e6e6e;
+
+      // &:before {
+      //   background-image: icon(person, #6e6e6e);
+      //   background-size: 100%;
+      // }
+    }
+
+    .image {
+      display: block;
+      width: 3.6rem;
+      height: 3.6rem;
+      background-color: #ededed;
+      margin-left: 0.8rem;
+
+      img {
+        display: block;
+        width: 100%;
+        height: 100%;
       }
     }
   }
@@ -179,6 +232,7 @@
       vertical-align: sub;
       background-image: icon(person, #6e6e6e);
       background-size: 100%;
+      display: none;
     }
   }
 
@@ -204,24 +258,28 @@
       background-color: transparent;
     }
 
-    .checkbox-block input[type="checkbox"] + label {
+    .checkbox-block input + label {
       padding-left: 1.4rem;
 
       &:before {
         display: none;
       }
 
-      & + .number {
-        color: #6e6e6e;
+      & + .takeVote-item-right {
+        background-color: transparent;
+        .number {
+          color: #6e6e6e;
 
-        &:before {
-          background-image: icon(person, #6e6e6e);
-          background-size: 100%;
+          &:before {
+            background-image: icon(person, #6e6e6e);
+            background-size: 100%;
+          }
         }
       }
     }
 
-    .checkbox-block input[type="checkbox"]:checked + label {
+    .checkbox-block input[type="checkbox"]:checked + label,
+    .checkbox-block input[type="radio"]:checked + label {
       padding-left: 4.2rem;
       background-color: transparent;
       border-color: transparent;
@@ -230,12 +288,17 @@
         display: block;
       }
 
-      & + .number {
-        color: #6e6e6e;
+      & + .takeVote-item-right {
+        background-color: transparent;
+        border-color: transparent;
 
-        &:before {
-          background-image: icon(person, #6e6e6e);
-          background-size: 100%;
+        .number {
+          color: #6e6e6e;
+
+          &:before {
+            background-image: icon(person, #6e6e6e);
+            background-size: 100%;
+          }
         }
       }
     }
