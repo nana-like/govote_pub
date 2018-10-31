@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <title>go vote</title>
+
+  <link type="text/css" rel="stylesheet" href="../css/style_postech.css" />
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+  <meta name="format-detection" content="telephone=no, address=no, email=no" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <script type="text/javascript" src="../js/library/jquery-2.1.4.js"></script>
+  <script type="text/javascript" src="../js/goVote.js"></script>
+  <!--
+    [전달사항]
+    이벤트 확인용 js입니다.
+  -->
+</head>
+
+<body class="body-pollSearch">
+  <!-- 투표 검색 (검색 결과가 있을 때) -->
+
+  <div id="wrapper" class="pollSearch search-result">
+    <!--
+        [전달사항]
+        .pollSearch에 경우에 따라 다음의 클래스를 추가/제거해 주세요.
+        - (추가 클래스 없음): 기본
+        - search-null: 검색 결과가 없을 때
+        - search-result: 검색 결과가 있을 때(*현재)
+      -->
+
+
+    <div class="page-top">
+
+      <div class="page-header">
+        <div class="page-header-left">
+          <button class="icon-container"><i class="icon icon-back"></i></button>
+        </div>
+        <h1 class="page-title">
+          투표 검색
+        </h1>
+      </div>
+
+      <div class="search-container">
+        <div class="icon-container deco-search">
+          <i class="icon icon-search"></i>
+        </div>
+        <input type="text" placeholder="투표를 검색해보세요!" value="학생회장 선거" class="search-box-style02 able-delete" />
+        <button class="button-search-delete"><i class="icon icon-delete"></i></button>
+        <!--
+          [전달사항]
+          사용자가 검색을 시작하면 .button-search-delete에 active 클래스를 추가해 주세요.
+          폼에 값이 없으면 active 클래스를 제거해주세요.
+        -->
+      </div>
+
+    </div>
+    <div class="page-body">
+      <div class="poll-list-container">
+
+        <p class="search-description">‘학생회장 선거’ 에 대한 검색 결과입니다.</p>
+        <div class="background-search">
+        </div>
+
+        <div class="poll-list">
+
+          <!--
+            [전달사항]
+            .poll-list-item은 투표 종류에 따라 다음의 추가적인 클래스를 갖습니다.
+              * poll-active: 참여 가능한 투표
+              * poll-inactive: 참여 불가능한 투표
+              * poll-upcoming: 참여 가능하지만 아직 시작하지 않은 투표
+              * poll-complete: 참여 완료한 투표
+              * poll-finished: 종료한 투표
+          -->
+
+          <div class="poll-list-item poll-active">
+            <a href="#">
+              <div class="poll-info-top">
+                <p class="poll-title">
+                  신입생 환영회 장소를 선택해주세요.
+                </p>
+                <p class="poll-process">
+                  <span class="text">진행률</span>
+                  <span class="percent">89</span>
+                  <em class="symbol">%</em>
+                </p>
+              </div>
+              <div class="poll-info-bottom">
+                <i class="poll-icon"></i>
+                <div class="container">
+                  <div class="poll-owner">
+                    <i class="icon icon-person"></i>
+                    <span>ekbae</span>
+                  </div>
+                  <p class="poll-description">
+                    참여 가능한 투표입니다.
+                  </p>
+                </div>
+                <p class="poll-duedate">
+                  2018.08.22 10:30 마감
+                </p>
+              </div>
+            </a>
+          </div>
+
+          <div class="poll-list-item poll-inactive">
+            <a href="#">
+              <div class="poll-info-top">
+                <p class="poll-title">
+                  신입생 환영회 장소를 선택해주세요. 신입생 환영회 장소를 선택해주세요. 신입생 환영회 장소를 선택해주세요.
+                </p>
+                <p class="poll-process">
+                  <span class="text">진행률</span>
+                  <span class="percent">0</span>
+                  <em class="symbol">%</em>
+                </p>
+              </div>
+              <div class="poll-info-bottom">
+                <i class="poll-icon"></i>
+                <div class="container">
+                  <div class="poll-owner">
+                    <i class="icon icon-person"></i>
+                    <span>ekbae</span>
+                  </div>
+                  <p class="poll-description">
+                    참여 불가능한 투표입니다.
+                  </p>
+                </div>
+                <p class="poll-duedate">
+                  2018.08.22 10:30 마감
+                </p>
+              </div>
+            </a>
+          </div>
+
+          <div class="poll-list-item poll-upcoming">
+            <a href="#">
+              <div class="poll-info-top">
+                <p class="poll-title">
+                  투표 부탁드립니다.
+                </p>
+                <p class="poll-process">
+                  <span class="text">진행률</span>
+                  <span class="percent">0</span>
+                  <em class="symbol">%</em>
+                </p>
+              </div>
+              <div class="poll-info-bottom">
+                <i class="poll-icon"></i>
+                <div class="container">
+                  <div class="poll-owner">
+                    <i class="icon icon-person"></i>
+                    <span>ekbae</span>
+                  </div>
+                  <p class="poll-description">
+                    곧 참여 가능한 투표입니다.
+                  </p>
+                </div>
+                <p class="poll-duedate">
+                  2018.08.22 10:30 시작
+                </p>
+              </div>
+            </a>
+          </div>
+
+          <div class="poll-list-item poll-complete">
+            <a href="#">
+              <div class="poll-info-top">
+                <p class="poll-title">
+                  신입생 환영회 장소를 선택해주세요.
+                </p>
+                <p class="poll-process">
+                  <span class="text">진행률</span>
+                  <span class="percent">10</span>
+                  <em class="symbol">%</em>
+                </p>
+              </div>
+              <div class="poll-info-bottom">
+                <i class="poll-icon"></i>
+                <div class="container">
+                  <div class="poll-owner">
+                    <i class="icon icon-person"></i>
+                    <span>ekbae</span>
+                  </div>
+                  <p class="poll-description">
+                    투표가 완료되었습니다.
+                  </p>
+                </div>
+                <p class="poll-duedate">
+                  2018.08.22 10:30 마감
+                </p>
+              </div>
+            </a>
+          </div>
+
+          <div class="poll-list-item poll-finished">
+            <a href="#">
+              <div class="poll-info-top">
+                <p class="poll-title">
+                  투표해주세요!
+                </p>
+                <p class="poll-process">
+                  <span class="text">진행률</span>
+                  <span class="percent">89</span>
+                  <em class="symbol">%</em>
+                </p>
+              </div>
+              <div class="poll-info-bottom">
+                <i class="poll-icon"></i>
+                <div class="container">
+                  <div class="poll-owner">
+                    <i class="icon icon-person"></i>
+                    <span>ekbae</span>
+                  </div>
+                  <p class="poll-description">
+                    투표가 완료되었습니다.
+                  </p>
+                </div>
+                <p class="poll-duedate">
+                  89/100명
+                </p>
+              </div>
+            </a>
+          </div>
+
+          <div class="poll-list-item poll-inactive">
+            <a href="#">
+              <div class="poll-info-top">
+                <p class="poll-title">
+                  신입생 환영회 장소를 선택해주세요. 신입생 환영회 장소를 선택해주세요. 신입생 환영회 장소를 선택해주세요.
+                </p>
+                <p class="poll-process">
+                  <span class="text">진행률</span>
+                  <span class="percent">0</span>
+                  <em class="symbol">%</em>
+                </p>
+              </div>
+              <div class="poll-info-bottom">
+                <i class="poll-icon"></i>
+                <div class="container">
+                  <div class="poll-owner">
+                    <i class="icon icon-person"></i>
+                    <span>ekbae</span>
+                  </div>
+                  <p class="poll-description">
+                    참여 불가능한 투표입니다.
+                  </p>
+                </div>
+                <p class="poll-duedate">
+                  2018.08.22 10:30 마감
+                </p>
+              </div>
+            </a>
+          </div>
+
+          <div class="poll-list-item poll-inactive">
+            <a href="#">
+              <div class="poll-info-top">
+                <p class="poll-title">
+                  신입생 환영회 장소를 선택해주세요. 신입생 환영회 장소를 선택해주세요. 신입생 환영회 장소를 선택해주세요.
+                </p>
+                <p class="poll-process">
+                  <span class="text">진행률</span>
+                  <span class="percent">0</span>
+                  <em class="symbol">%</em>
+                </p>
+              </div>
+              <div class="poll-info-bottom">
+                <i class="poll-icon"></i>
+                <div class="container">
+                  <div class="poll-owner">
+                    <i class="icon icon-person"></i>
+                    <span>ekbae</span>
+                  </div>
+                  <p class="poll-description">
+                    참여 불가능한 투표입니다.
+                  </p>
+                </div>
+                <p class="poll-duedate">
+                  2018.08.22 10:30 마감
+                </p>
+              </div>
+            </a>
+          </div>
+
+          <div class="poll-list-item poll-upcoming">
+            <a href="#">
+              <div class="poll-info-top">
+                <p class="poll-title">
+                  투표 부탁드립니다.
+                </p>
+                <p class="poll-process">
+                  <span class="text">진행률</span>
+                  <span class="percent">0</span>
+                  <em class="symbol">%</em>
+                </p>
+              </div>
+              <div class="poll-info-bottom">
+                <i class="poll-icon"></i>
+                <div class="container">
+                  <div class="poll-owner">
+                    <i class="icon icon-person"></i>
+                    <span>ekbae</span>
+                  </div>
+                  <p class="poll-description">
+                    곧 참여 가능한 투표입니다.
+                  </p>
+                </div>
+                <p class="poll-duedate">
+                  2018.08.22 10:30 시작
+                </p>
+              </div>
+            </a>
+          </div>
+
+          <div class="poll-list-item poll-upcoming">
+            <a href="#">
+              <div class="poll-info-top">
+                <p class="poll-title">
+                  투표 부탁드립니다.
+                </p>
+                <p class="poll-process">
+                  <span class="text">진행률</span>
+                  <span class="percent">0</span>
+                  <em class="symbol">%</em>
+                </p>
+              </div>
+              <div class="poll-info-bottom">
+                <i class="poll-icon"></i>
+                <div class="container">
+                  <div class="poll-owner">
+                    <i class="icon icon-person"></i>
+                    <span>ekbae</span>
+                  </div>
+                  <p class="poll-description">
+                    곧 참여 가능한 투표입니다.
+                  </p>
+                </div>
+                <p class="poll-duedate">
+                  2018.08.22 10:30 시작
+                </p>
+              </div>
+            </a>
+          </div>
+
+          <div class="poll-list-item poll-complete">
+            <a href="#">
+              <div class="poll-info-top">
+                <p class="poll-title">
+                  신입생 환영회 장소를 선택해주세요.
+                </p>
+                <p class="poll-process">
+                  <span class="text">진행률</span>
+                  <span class="percent">10</span>
+                  <em class="symbol">%</em>
+                </p>
+              </div>
+              <div class="poll-info-bottom">
+                <i class="poll-icon"></i>
+                <div class="container">
+                  <div class="poll-owner">
+                    <i class="icon icon-person"></i>
+                    <span>ekbae</span>
+                  </div>
+                  <p class="poll-description">
+                    투표가 완료되었습니다.
+                  </p>
+                </div>
+                <p class="poll-duedate">
+                  2018.08.22 10:30 마감
+                </p>
+              </div>
+            </a>
+          </div>
+
+          <div class="poll-list-item poll-finished">
+            <a href="#">
+              <div class="poll-info-top">
+                <p class="poll-title">
+                  투표해주세요!
+                </p>
+                <p class="poll-process">
+                  <span class="text">진행률</span>
+                  <span class="percent">89</span>
+                  <em class="symbol">%</em>
+                </p>
+              </div>
+              <div class="poll-info-bottom">
+                <i class="poll-icon"></i>
+                <div class="container">
+                  <div class="poll-owner">
+                    <i class="icon icon-person"></i>
+                    <span>ekbae</span>
+                  </div>
+                  <p class="poll-description">
+                    투표가 완료되었습니다.
+                  </p>
+                </div>
+                <p class="poll-duedate">
+                  89/100명
+                </p>
+              </div>
+            </a>
+          </div>
+
+          <div class="poll-list-item poll-complete">
+            <a href="#">
+              <div class="poll-info-top">
+                <p class="poll-title">
+                  신입생 환영회 장소를 선택해주세요.
+                </p>
+                <p class="poll-process">
+                  <span class="text">진행률</span>
+                  <span class="percent">10</span>
+                  <em class="symbol">%</em>
+                </p>
+              </div>
+              <div class="poll-info-bottom">
+                <i class="poll-icon"></i>
+                <div class="container">
+                  <div class="poll-owner">
+                    <i class="icon icon-person"></i>
+                    <span>ekbae</span>
+                  </div>
+                  <p class="poll-description">
+                    투표가 완료되었습니다.
+                  </p>
+                </div>
+                <p class="poll-duedate">
+                  2018.08.22 10:30 마감
+                </p>
+              </div>
+            </a>
+          </div>
+
+          <div class="poll-list-item poll-finished">
+            <a href="#">
+              <div class="poll-info-top">
+                <p class="poll-title">
+                  투표해주세요!
+                </p>
+                <p class="poll-process">
+                  <span class="text">진행률</span>
+                  <span class="percent">89</span>
+                  <em class="symbol">%</em>
+                </p>
+              </div>
+              <div class="poll-info-bottom">
+                <i class="poll-icon"></i>
+                <div class="container">
+                  <div class="poll-owner">
+                    <i class="icon icon-person"></i>
+                    <span>ekbae</span>
+                  </div>
+                  <p class="poll-description">
+                    투표가 완료되었습니다.
+                  </p>
+                </div>
+                <p class="poll-duedate">
+                  89/100명
+                </p>
+              </div>
+            </a>
+          </div>
+
+
+        </div>
+
+
+
+      </div>
+
+    </div>
+
+  </div>
+</body>

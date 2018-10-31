@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <title>BLOCKCHAIN CAMPUS</title>
+
+  <link type="text/css" rel="stylesheet" href="../css/style_bc.css" />
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+  <meta name="format-detection" content="telephone=no, address=no, email=no" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <script type="text/javascript" src="../js/library/jquery-2.1.4.js"></script>
+  <script type="text/javascript" src="../js/bc.js"></script>
+  <!--
+    [전달사항]
+    이벤트 확인용 js입니다.
+  -->
+
+</head>
+
+<body class="bc body-dappSearch">
+  <!-- DApp 검색 화면 -->
+  <div id="wrapper" class="dappSearch">
+    <!--
+        [전달사항]
+        .dappSearch 경우에 따라 다음의 클래스를 추가/제거해 주세요.
+        - (추가 클래스 없음): 기본 (*현재)
+        - search-null: 검색 결과가 없을 때
+        - search-result: 검색 결과가 있을 때
+      -->
+
+    <!-- 
+        >> ver.5 
+        상단바 추가
+      -->
+
+    <header class="page-header">
+      <div class="page-header-left">
+        <button class="button-back"></button>
+      </div>
+      <div class="page-title">DApp 검색</div>
+    </header>
+
+    <!-- //상단바 끝 -->
+
+
+    <!-- 
+      >> ver.5 
+      .page-header 바로 다음에는 .page-body가 와야합니다~!
+    -->
+
+
+    <div class="page-body">
+
+      <div class="search-container">
+        <i class="icon-search"></i>
+        <input type="text" placeholder="DApp을 검색해보세요!" value="" class="search-box able-delete" />
+        <button class="button-search-delete"><i class="icon-delete"></i></button>
+        <!--
+        [전달사항] <bc.js>
+        사용자가 검색을 시작하면 .button-search-delete에 active 클래스를 추가해 주세요.
+        폼에 값이 없으면 active 클래스를 제거해주세요.
+      -->
+      </div>
+
+      <p class="search-description"></p>
+
+      <div class="app-list-container">
+
+        <div class="app-list">
+          <!--
+          [전달사항] 
+          여기에 app-list-item이 추가됩니다.
+          ````
+          <div class="app-list-item">
+            <button class="button-app-list">
+              <div class="app-list-icon"><img src="../images/bc/thumbnail-icon-1.png" alt="app icon" /></div>
+              <div class="app-list-content">
+                <div class="name">앱 이름</div>
+                <div class="text">앱 설명</div>
+              </div>
+            </button>
+          </div>
+          ````
+        -->
+        </div>
+
+        <div class="no-DApp">
+          <p class="no-DApp-text">
+            등록된 DApp이 없습니다.
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</body>

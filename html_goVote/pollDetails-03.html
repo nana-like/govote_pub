@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <title>go vote</title>
+
+  <link type="text/css" rel="stylesheet" href="../css/style.css" />
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+  <meta name="format-detection" content="telephone=no, address=no, email=no" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <script type="text/javascript" src="../js/library/jquery-2.1.4.js"></script>
+  <script type="text/javascript" src="../js/goVote.js"></script>
+  <!--
+    [전달사항]
+    이벤트 확인용 js입니다.
+  -->
+</head>
+
+<body class="body-takeVote">
+
+  <!-- 투표 현황 화면 (항목에 이미지가 있는 경우) -->
+
+  <div id="wrapper" class="takeVote">
+
+    <div class="page-top">
+
+      <div class="page-header">
+        <div class="page-header-left">
+          <button class="icon-container"><i class="icon icon-back"></i></button>
+        </div>
+        <h1 class="page-title">
+          투표현황
+        </h1>
+      </div>
+
+    </div>
+
+    <div class="page-body">
+
+      <div class="takeVote-container">
+
+        <ul class="create-item">
+          <li>
+            <p class="create-title">투표항목에 이미지가 있는 경우</p>
+          </li>
+          <li class="ly-padding-sm">
+            <div class="create-description-image">
+              <img src="../images/goVote/thumbnail-test.png" alt="image" />
+            </div>
+            <div class="create-description">
+              <div>
+                기존 &lt;div class="number">&lt;/div>를
+                &lt;div class="takeVote-item-right">&lt;/div> 안에 넣어주세요!<br />
+                이미지가 있는 항목이라면 .number 바로 다음에 .image가 오면 됩니다 :)
+                <br />
+                ``` <br />
+                &lt;div class="takeVote-item-right"> <br />
+                &nbsp;&nbsp;&lt;div class="number">{숫자}&lt;/div> <br />
+                &nbsp;&nbsp;&lt;button class="image">&lt;img src="{경로}">&lt;/button> <br />
+                &lt;/div> <br />
+                ```
+              </div>
+            </div>
+
+            <div class="takeVote-title">
+              <i class="icon icon-checkmark-multiple"></i>복수 선택 가능
+              <p class="pollDetails-participants">100명 참여</p>
+            </div>
+
+
+            <ul class="takeVote-item-container pollDetails">
+              <li class="takeVote-item">
+                <div class="checkbox-block">
+                  <input id="voters-item-1" type="checkbox" class="checkbox-style01" disabled checked />
+                  <label for="voters-item-1">체크된 항목</label>
+                  <!--
+                    [전달사항] (18-10-24)
+                    기존 <div class="number"></div>를
+                    <dic class="takeVote-item-right"></div> 안에 넣어주세요!
+                  -->
+                  <div class="takeVote-item-right">
+                    <div class="number">50</div>
+                    <button class="image"><img src="../images/goVote/thumbnail-test.png" alt="image"></button>
+                  </div>
+                </div>
+                <div class="percentage" style="width: 50%"></div>
+              </li>
+              <li class="takeVote-item">
+                <div class="checkbox-block">
+                  <input id="voters-item-2" type="checkbox" class="checkbox-style01" disabled />
+                  <label for="voters-item-2">이미지가 없는 항목</label>
+                  <div class="takeVote-item-right">
+                    <div class="number">10</div>
+                  </div>
+                </div>
+                <div class="percentage" style="width: 10%"></div>
+              </li>
+              <li class="takeVote-item">
+                <div class="checkbox-block">
+                  <input id="voters-item-3" type="checkbox" class="checkbox-style01" disabled />
+                  <label for="voters-item-3">이미지 항목</label>
+                  <div class="takeVote-item-right">
+                    <div class="number">0</div>
+                    <button class="image"><img src="../images/goVote/thumbnail-test.png" alt="image"></button>
+                  </div>
+                </div>
+                <div class="percentage" style="width: 0%"></div>
+              </li>
+              <li class="takeVote-item">
+                <div class="checkbox-block">
+                  <input id="voters-item-3" type="checkbox" class="checkbox-style01" disabled />
+                  <label for="voters-item-3">이미지 항목2</label>
+                  <div class="takeVote-item-right">
+                    <div class="number">40</div>
+                    <button class="image"><img src="../images/goVote/thumbnail-test.png" alt="image"></button>
+                  </div>
+                </div>
+                <div class="percentage" style="width: 40%"></div>
+              </li>
+            </ul>
+
+
+          </li>
+        </ul>
+
+        <ul class="create-item">
+          <li class="pollDetails-info">
+            <div class="pollDetails-duedate">
+              2018년 12월 30일 오후 3시 마감
+            </div>
+            <div class="pollDetails-progress">
+              <div class="text">72% 진행률</div>
+              <div class="bar" style="width: 72%"></div>
+            </div>
+          </li>
+        </ul>
+
+        <div class="create-buttons-container">
+          <button class="button-prev">투표 강제 종료</button>
+          <!--
+            [전달사항]
+            강제 종료 가능한 경우 해당 버튼 추가
+          -->
+          <button class="button-next">투표하기</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</body>

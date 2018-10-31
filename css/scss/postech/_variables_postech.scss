@@ -1,0 +1,58 @@
+@charset "utf-8";
+
+// **** variables
+
+// -------------------------
+// [ 1. color pallete ]
+// -------------------------
+$color-yellow: #ffd33f; //메인 노란색
+$color-error: red;
+$color-disable: gray;
+$color-black: #000;
+$color-placeholder: #9c9c9c;
+$color-lightgray: #ededed;
+$color-lightgray2: #e7e7e7;
+$color-noPolls-bg: #f4f4f4;
+$color-filter-border: #d2d2d2;
+$color-gray: #6e6e6e;
+$color-gray2: #c4c4c4;
+$color-create-placeholder: #a8a8a8;
+$color-brown: #7f5800;
+$color-brown2: #7d5600;
+$color-orange: #f1a600;
+$color-darkorange: #e79f00;
+$color-lightorange: #feb004;
+$color-blue: #29ace4;
+
+// -------------------------
+// [ 2. z-index ]
+// -------------------------
+$z-page-header: 100; //상단 헤더
+$z-fab: 200; //fab 버튼
+
+// -------------------------
+// [ 3. path ]
+// -------------------------
+$path-image-goVote: "../images/goVote_postech/";
+$path-font: "../fonts/";
+
+// -------------------------
+// [ 4. font-weight ]
+// -------------------------
+$fw-b: 900;
+$fw-bl: 700;
+$fw-m: 500;
+$fw-r: 400;
+
+// -------------------------
+// [ 5. style ]
+// -------------------------
+
+// -------------------------
+// [ 6. common layout ]
+// -------------------------
+$ly-mypolls-header-height: 16.8rem;
+$ly-pollSearch-header-height: 11rem;
+$ly-create-header-height: 12.1rem;
+$ly-takeVote-header-height: 4.4rem;
+// $ly-mypolls-header-height: 21rem;

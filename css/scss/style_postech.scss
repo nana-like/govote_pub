@@ -1,0 +1,38 @@
+@charset "utf-8";
+
+////// nykim@nykim.net //////
+/*! style_postech.css */
+
+//[1] 변수, 믹스인
+@import "postech/variables_postech"; //포스텍 전용 변수
+@import "helpers/goVote/mixins_goVote";
+
+//[2-1] 기본 스타일 (공통)
+@import "base/font";
+@import "base/reset";
+@import "base/common_all";
+
+//[2-2] 기본 스타일
+@import "base/goVote/svg_goVote";
+@import "base/goVote/icon_goVote";
+@import "base/goVote/common_goVote";
+
+//[4] 모듈 (분리하여 사용 가능한 요소)
+@import "modules/goVote/button";
+@import "modules/goVote/tabmenu";
+@import "modules/goVote/searchbox";
+@import "modules/goVote/filter";
+@import "modules/goVote/pollList";
+@import "modules/goVote/createProcess";
+@import "modules/goVote/dropdown";
+@import "modules/goVote/createItems";
+
+//[5] 레이아웃
+@import "layout/goVote/myPolls";
+@import "layout/goVote/pollSearch";
+@import "layout/goVote/create";
+@import "layout/goVote/takeVote";
+@import "layout/goVote/completion";
+
+//[6] 포스텍 전용 이미지 덮어쓰기!!!
+@import "postech/image_postech";
