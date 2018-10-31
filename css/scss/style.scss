@@ -12,9 +12,10 @@
 @import "base/reset";
 
 //[2-2] 기본 스타일 (고보트용)
-@import "base/goVote/common_goVote";
 @import "base/goVote/svg_goVote";
 @import "base/goVote/icon_goVote";
+@import "base/goVote/common_goVote";
+@import "base/common_all";
 
 //[4] 모듈 (분리하여 사용 가능한 요소)
 @import "modules/goVote/button";

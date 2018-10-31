@@ -25,6 +25,7 @@
       position: absolute;
       height: 100%;
     }
+
     .page-header-right {
       position: absolute;
       height: 100%;
@@ -36,13 +37,14 @@
       font-weight: $fw-m;
     }
 
-    & + .page-body {
+    &+.page-body {
       position: absolute;
       top: $ly-header-height;
       left: 0;
       width: 100%;
       height: auto;
     }
+
     .button-close {
       position: absolute;
       top: 50%;
@@ -54,6 +56,7 @@
       background-repeat: no-repeat;
       @include transform(translateY(-50%));
     }
+
     .button-back {
       position: absolute;
       top: 50%;
@@ -65,7 +68,8 @@
       background-repeat: no-repeat;
       @include transform(translateY(-50%));
     }
-    .page-header + .page-body {
+
+    .page-header+.page-body {
       top: 4.4rem;
     }
   }
@@ -139,6 +143,7 @@
 .display-none {
   display: none;
 }
+
 .ui-loader {
   display: none !important;
 }
@@ -160,6 +165,7 @@
   padding: 0.4rem 3rem 0.4rem 1.1rem;
   border: 1px solid #b1c0cf;
   border-radius: 1.4rem;
+
   &:first-child {
     margin-left: 0;
   }
@@ -174,6 +180,7 @@
   }
 
   &.active {
+
     //액티브 시 위 방향으로
     .icon-filter {
       @include transform(rotate(180deg));

@@ -92,6 +92,8 @@ $(function() {
       if ($(".poll-list").children().length > 0) {
         //[*] poll-list 안에 poll-list-item이 하나라도 추가되면 init 클래스 제거
         $(".poll-list-container").removeClass("init");
+        $(".fab").removeClass("fab-style02");
+        $(".fab").addClass("fab-style01");
       }
     });
   };

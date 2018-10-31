@@ -1,0 +1,50 @@
+@charset "utf-8";
+
+// **** image for postech
+
+// 검색 페이지
+.pollSearch .background-search {
+  width: 10rem;
+  height: 10rem;
+}
+
+// 메인 화면 검색 영역 오른편
+.search-box-style01:before {
+  top: -4rem;
+  width: 6.9rem;
+  height: 6.2rem;
+}
+
+// 완료 페이지
+.completion .completion-container .title:before {
+  top: 4.5rem;
+  width: 6rem;
+  height: 6rem;
+}
+
+// 투표 생성 페이지 상단 오른편
+.create-process:before {
+  top: -4.1rem;
+}
+
+// 투표 뱃지 색상
+// 1) upcoming (green)
+.poll-list .poll-upcoming .poll-icon {
+  @include bgi("icon-postech-green");
+}
+// 3) inactive (dark)
+.poll-list .poll-inactive .poll-icon {
+  @include bgi("icon-postech-dark");
+}
+// 3) active (blue)
+.poll-list .poll-active .poll-icon {
+  @include bgi("icon-postech-blue");
+}
+// 4) finished (gray)
+.poll-list .poll-finished .poll-icon {
+  @include bgi("icon-postech-gray");
+}
+// 5) complete (yellow)
+.poll-list .poll-complete .poll-icon {
+  @include bgi("icon-postech-yellow");
+}

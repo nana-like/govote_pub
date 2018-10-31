@@ -1,0 +1,9 @@
+/**
+ * -----------------------------------------------
+ * Last Modified: 2018-10-29 12:28:10
+ * Author: nykim (nykim@nykim.net)
+ * Description: BlockChain Campus & Go Vote WebApp CSS
+ * -----------------------------------------------
+ */
+
+{"version":3,"file":"common_all.css","sources":["base/common_all.scss"],"sourcesContent":["@charset \"utf-8\";\n\n// common all (블캠, 고보트 공용)\n\n.body-guide {\n  background-color: #f2f4f7;\n\n  #wrapper>[class$=-container] {\n    // width: 36rem;\n    // height: 64rem;\n    width: 360px;\n    height: 640px;\n    border-radius: 8px;\n    background-color: #fff;\n  }\n}\n\n\n\n.error-container {\n  .code {\n    font-size: 140px;\n    color: #30b9d3;\n  }\n}"],"names":[],"mappings":"AAIA,AAAA,WAAW,AAAC,CACV,gBAAgB,CAAE,OAAO,CAU1B,AAXD,AAGE,WAHS,CAGT,QAAQ,EAAC,AAAA,KAAC,EAAD,UAAC,AAAA,CAAmB,CAG3B,KAAK,CAAE,KAAK,CACZ,MAAM,CAAE,KAAK,CACb,aAAa,CAAE,GAAG,CAClB,gBAAgB,CAAE,IAAI,CACvB,AAKH,AACE,gBADc,CACd,KAAK,AAAC,CACJ,SAAS,CAAE,KAAK,CAChB,KAAK,CAAE,OAAO,CACf"}

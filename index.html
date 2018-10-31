@@ -226,14 +226,13 @@
 <body>
     <div id="wrap">
         <h1>nykim@nykim.net</h1>
-        <p class="update"> Go vote WebApp 1차 시안 [ver.4]<br><small>Last Update: 18-09-28</small></p>
+        <p class="update"> Go vote WebApp<br><small>Last Update: 18-10-29</small></p>
 
         <table>
             <colgroup>
                 <col width="130px" />
                 <col width="190px" />
                 <col width="260px" />
-                <col />
                 <col />
             </colgroup>
             <thead>
@@ -242,7 +241,6 @@
                     <th>그룹</th>
                     <th>파일명(LINK)</th>
                     <th>화면 내용</th>
-                    <th>재플린 화면 이름</th>
                     <th>비고</th>
                 </tr>
 
@@ -257,8 +255,8 @@
                         <a class="link" href="html_goVote/myPolls.html" target="_blank">myPolls</a>
                     </td>
                     <td>내 투표함</td>
-                    <td class="desc">01_Go vote_main</td>
-                    <td class="rmks">플로팅버튼 클릭 시 아이템이 추가됩니다.</td>
+                    <td class="rmks">(*추가) 플로팅버튼이 상황에 따라 클래스를 다르게 가져야합니다.</td>
+
                 </tr>
 
 
@@ -270,7 +268,6 @@
                         <a class="link" href="html_goVote/pollSearch-01.html" target="_blank">pollSearch-01</a>
                     </td>
                     <td class="borderTop2">투표 검색 - 기본</td>
-                    <td class="borderTop2 desc">04_Go vote_search</td>
                     <td class="borderTop2 rmks"></td>
                 </tr>
 
@@ -279,7 +276,6 @@
                         <a class="link" href="html_goVote/pollSearch-02.html" target="_blank">pollSearch-02</a>
                     </td>
                     <td>투표 검색 - 검색 결과 있음</td>
-                    <td class="desc">06_Go vote_search</td>
                     <td class="rmks">.pollSearch.search-result</td>
                 </tr>
 
@@ -288,7 +284,6 @@
                         <a class="link" href="html_goVote/pollSearch-03.html" target="_blank">pollSearch-03</a>
                     </td>
                     <td>투표 검색 - 검색 결과 없음</td>
-                    <td class="desc">07_Go vote_search</td>
                     <td class="rmks">.pollSearch.search-null</td>
                 </tr>
 
@@ -301,7 +296,6 @@
                         <a class="link" href="html_goVote/create-01.html" target="_blank">create-01</a>
                     </td>
                     <td class="borderTop2">투표 생성 - 1단계 (정보 입력)</td>
-                    <td class="borderTop2 desc">08_Create a new poll_step_01_layout</td>
                     <td class="borderTop2 rmks"></td>
                 </tr>
 
@@ -310,7 +304,6 @@
                         <a class="link" href="html_goVote/create-02.html" target="_blank">create-02</a>
                     </td>
                     <td class="">투표 생성 - 2단계 (항목 입력)</td>
-                    <td class="desc">14_Create a new poll_step_02_layout_date_enter the form</td>
                     <td class="rmks"></td>
                 </tr>
 
@@ -319,7 +312,6 @@
                         <a class="link" href="html_goVote/create-03.html" target="_blank">create-03</a>
                     </td>
                     <td class="">투표 생성 - 3단계 (그룹 대상)</td>
-                    <td class="desc ">15_Create a new poll_step_03_layout_group</td>
                     <td class="rmks "></td>
                 </tr>
 
@@ -328,7 +320,6 @@
                         <a class="link" href="html_goVote/create-04.html" target="_blank">create-04</a>
                     </td>
                     <td>투표 생성 - 3단계 (개별 대상)</td>
-                    <td class="desc">16_Create a new poll_step_03_individual</td>
                     <td class="rmks"></td>
                 </tr>
 
@@ -337,19 +328,17 @@
                         <a class="link" href="html_goVote/create-05.html" target="_blank">create-05</a>
                     </td>
                     <td>투표 생성 - 4단계 (작성정보 확인)</td>
-                    <td class="desc">26_Create a new poll_step_04_layout_image</td>
                     <td class="rmks"></td>
                 </tr>
 
                 <tr class="">
-                    <td rowspan="2" class="borderTop2">
+                    <td rowspan="3" class="borderTop2">
                         <strong>Take a Vote</strong>
                     </td>
                     <td class="borderTop2">
                         <a class="link" href="html_goVote/takeVote-01.html" target="_blank">takeVote-01</a>
                     </td>
                     <td class="borderTop2">투표하기</td>
-                    <td class="borderTop2 desc">28_Take a vote</td>
                     <td class="borderTop2 rmks"></td>
                 </tr>
 
@@ -358,8 +347,16 @@
                         <a class="link" href="html_goVote/takeVote-02.html" target="_blank">takeVote-02</a>
                     </td>
                     <td class="">투표하기</td>
-                    <td class=" desc">30_Take a vote_input text</td>
                     <td class=" rmks">투표항목 직접 입력이 가능할 때</td>
+                </tr>
+
+                <tr class="">
+                    <td class="">
+                        <a class="link" href="html_goVote/takeVote-05.html" target="_blank">takeVote-05</a>
+                    </td>
+                    <td class="">투표항목 내 이미지 모달</td>
+                    <td class=" rmks">투표 항목 내 이미지를 크게 보여주는 모달입니다.</td>
+
                 </tr>
 
 
@@ -371,7 +368,6 @@
                         <a class="link" href="html_goVote/pollDetails-01.html" target="_blank">pollDetails-01</a>
                     </td>
                     <td class="borderTop2">투표현황</td>
-                    <td class="borderTop2 desc">34_Poll Details_lookup</td>
                     <td class="borderTop2 rmks">사용자가 투표한 항목이 있을 때</td>
                 </tr>
 
@@ -382,7 +378,6 @@
                         <a class="link" href="html_goVote/pollDetails-02.html" target="_blank">pollDetails-02</a>
                     </td>
                     <td class="">투표현황</td>
-                    <td class=" desc">35_Poll Details_lookup</td>
                     <td class=" rmks"></td>
                 </tr>
 
@@ -394,9 +389,20 @@
                         <a class="link" href="html_goVote/Completion.html" target="_blank">Completion</a>
                     </td>
                     <td class="borderTop2">투표(생성) 완료 화면</td>
-                    <td class="borderTop2 desc">29_vote_completion</td>
                     <td class="borderTop2 rmks">투표 생성 및 투표 완료</td>
                 </tr>
+
+                <tr>
+                    <td rowspan="1">
+                        <strong>Splash</strong>
+                    </td>
+                    <td>
+                        <a class="link" href="html_goVote/splash_govote.html" target="_blank">splash_govote</a>
+                    </td>
+                    <td>스플래시(Go vote용)</td>
+                    <td class="rmks">포스텍용 splash와 동일한 마크업이며, 연결된 CSS와 이미지만 다릅니다.</td>
+                </tr>
+
 
             </tbody>
         </table>
@@ -404,16 +410,15 @@
 
         <hr>
 
-        <p class="update"> Go vote WebApp 1차 시안 [ver.5]<br><small><span class="version1"></span> : ver.5에서 추가/수정된 파일
-                (Last
-                Update:18-10-12)</small></p>
+        <p class="update">BlockChain Campus WebApp<br><small>
+                Last
+                Update:18-10-31</small></p>
 
 
         <table>
             <colgroup>
                 <col width="130px" />
                 <col width="190px" />
-                <col />
                 <col />
                 <col />
             </colgroup>
@@ -423,7 +428,6 @@
                     <th style="background-color:#30b9d3;">그룹</th>
                     <th style="background-color:#30b9d3;">파일명(LINK)</th>
                     <th style="background-color:#30b9d3;">화면 내용</th>
-                    <th style="background-color:#30b9d3;">재플린 화면 이름</th>
                     <th style="background-color:#30b9d3;">비고</th>
                 </tr>
 
@@ -437,10 +441,9 @@
                         <a class="link" href="html_bc/login.html" target="_blank">Login</a>
                     </td>
                     <td>로그인</td>
-                    <td class=" desc">login_001, 002, 003</td>
                     <td class=" rmks"></td>
                 </tr>
-                <tr class="new">
+                <tr class="">
                     <td rowspan="3" class="borderTop2">
                         <strong>User Info</strong>
                     </td>
@@ -448,23 +451,20 @@
                         <a class="link" href="html_bc/userInfo-01.html" target="_blank">userInfo-01</a>
                     </td>
                     <td class="borderTop2">사용자 정보 입력(학생)</td>
-                    <td class="desc borderTop2">User info_001</td>
                     <td class="rmks borderTop2"></td>
                 </tr>
-                <tr class="new">
+                <tr class="">
                     <td>
                         <a class="link" href="html_bc/userInfo-02.html" target="_blank">userInfo-02</a>
                     </td>
                     <td>사용자 정보 입력(교직원)</td>
-                    <td class=" desc">User info_002, 004</td>
                     <td class=" rmks"></td>
                 </tr>
-                <tr class="new">
+                <tr class="">
                     <td>
                         <a class="link" href="html_bc/userInfo-03.html" target="_blank">userInfo-03</a>
                     </td>
                     <td>사용자 정보 입력(기타)</td>
-                    <td class=" desc"></td>
                     <td class=" rmks"></td>
                 </tr>
                 <tr class="">
@@ -475,7 +475,6 @@
                         <a class="link" href="html_bc/signup-01.html" target="_blank">signup-01</a>
                     </td>
                     <td class="borderTop2">회원가입</td>
-                    <td class="desc borderTop2">signup_001</td>
                     <td class="rmks borderTop2">셀렉트박스가 아코디언 형태</td>
                 </tr>
                 <tr class="">
@@ -483,7 +482,6 @@
                         <a class="link" href="html_bc/signup-02.html" target="_blank">signup-02</a>
                     </td>
                     <td>회원가입</td>
-                    <td class=" desc">signup_001</td>
                     <td class=" rmks">셀렉트박스가 플로팅 형태</td>
                 </tr>
                 <tr class="">
@@ -494,7 +492,6 @@
                         <a class="link" href="html_bc/fingerprint.html" target="_blank">fingerprint</a>
                     </td>
                     <td class="borderTop2">지문 등록 안내</td>
-                    <td class="desc borderTop2">login_007</td>
                     <td class="rmks borderTop2"></td>
                 </tr>
                 <tr class="">
@@ -502,7 +499,6 @@
                         <a class="link" href="html_bc/fingerprint-02.html" target="_blank">fingerprint-02</a>
                     </td>
                     <td>지문 등록 완료</td>
-                    <td class="desc">login_010</td>
                     <td class="rmks"></td>
                 </tr>
                 <tr class="">
@@ -513,7 +509,6 @@
                         <a class="link" href="html_bc/faceID-01.html" target="_blank">faceID-01</a>
                     </td>
                     <td class="borderTop2">Face ID 등록 안내</td>
-                    <td class="borderTop2 desc">login_011</td>
                     <td class="borderTop2 rmks"></td>
                 </tr>
                 <tr class="">
@@ -521,7 +516,6 @@
                         <a class="link" href="html_bc/faceID-02.html" target="_blank">faceID-02</a>
                     </td>
                     <td>Face ID 등록 완료</td>
-                    <td class="desc">login_012</td>
                     <td class="rmks"></td>
                 </tr>
                 <tr class="">
@@ -532,23 +526,20 @@
                         <a class="link" href="html_bc/wallet.html" target="_blank">wallet</a>
                     </td>
                     <td class="borderTop2">지갑 메인 화면</td>
-                    <td class="borderTop2 desc">Wallet_001</td>
-                    <td class="borderTop2 rmks">*마크업 수정됨</td>
+                    <td class="borderTop2 rmks"></td>
                 </tr>
                 <tr class="">
                     <td>
                         <a class="link" href="html_bc/wallet-02.html" target="_blank">wallet-02</a>
                     </td>
                     <td>지갑 메인 화면 - 내역 없음</td>
-                    <td class="desc">Wallet_002</td>
-                    <td class=" rmks">*마크업 수정됨</td>
+                    <td class=" rmks"></td>
                 </tr>
                 <tr class="">
                     <td>
                         <a class="link" href="html_bc/wallet-03.html" target="_blank">wallet-03</a>
                     </td>
                     <td>지갑 설정</td>
-                    <td class="desc">Wallet_003</td>
                     <td class=" rmks"></td>
                 </tr>
                 <tr class="">
@@ -559,7 +550,6 @@
                         <a class="link" href="html_bc/homeScreen-01.html" target="_blank">homeScreen-01</a>
                     </td>
                     <td class="borderTop2">Home Screen (DApp List)</td>
-                    <td class="borderTop2 desc">Home screen_001</td>
                     <td class="borderTop2 rmks"></td>
                 </tr>
                 <tr class="">
@@ -567,10 +557,9 @@
                         <a class="link" href="html_bc/homeScreen-02.html" target="_blank">homeScreen-02</a>
                     </td>
                     <td class="">Home Screen (DApp List) - 목록 없음</td>
-                    <td class=" desc">Home screen_003</td>
                     <td class=" rmks"></td>
                 </tr>
-                <tr class="new">
+                <tr class="">
                     <td class="borderTop2" rowspan="2">
                         <strong>App Details</strong>
                     </td>
@@ -578,43 +567,38 @@
                         <a class="link" href="html_bc/dappDetails-01.html" target="_blank">dappDetails-01</a>
                     </td>
                     <td class="borderTop2">DApp 상세 정보 - 이미지 있음</td>
-                    <td class="borderTop2 desc">Home screen_004, 005</td>
                     <td class="borderTop2 rmks"></td>
                 </tr>
-                <tr class="new">
+                <tr class="">
                     <td class="">
                         <a class="link" href="html_bc/dappDetails-02.html" target="_blank">dappDetails-02</a>
                     </td>
                     <td class="">DApp 상세 정보</td>
-                    <td class=" desc">Home screen_006</td>
                     <td class=" rmks"></td>
                 </tr>
 
-                <tr class="new">
+                <tr class="">
                     <td class="borderTop2" rowspan="3">
                         <strong>Dapp Search</strong>
                     </td>
                     <td class="borderTop2">
                         <a class="link" href="html_bc/dappSearch-01.html" target="_blank">dappSearch-01</a>
                     </td>
-                    <td class="borderTop2">DApp 검색</td>
                     <td class="borderTop2 desc">Home screen_007</td>
                     <td class="borderTop2 rmks"></td>
                 </tr>
-                <tr class="new">
+                <tr class="">
                     <td class="">
                         <a class="link" href="html_bc/dappSearch-02.html" target="_blank">dappSearch-02</a>
                     </td>
                     <td class="">DApp 검색 - 결과 있음</td>
-                    <td class=" desc">Home screen_008</td>
                     <td class=" rmks"></td>
                 </tr>
-                <tr class="new">
+                <tr class="">
                     <td class="">
                         <a class="link" href="html_bc/dappSearch-03.html" target="_blank">dappSearch-03</a>
                     </td>
                     <td class="">DApp 검색 - 결과 없음</td>
-                    <td class=" desc">Home screen_009</td>
                     <td class=" rmks"></td>
                 </tr>
                 <tr class="">
@@ -625,7 +609,6 @@
                         <a class="link" href="html_bc/myDApp-01.html" target="_blank">myDApp-01</a>
                     </td>
                     <td class="borderTop2">My DApp</td>
-                    <td class="borderTop2 desc">My DApp_001</td>
                     <td class="borderTop2 rmks"></td>
                 </tr>
                 <tr class="">
@@ -633,10 +616,9 @@
                         <a class="link" href="html_bc/myDApp-02.html" target="_blank">myDApp-02</a>
                     </td>
                     <td class="">My DApp - 목록 없음</td>
-                    <td class=" desc">My DApp_002</td>
                     <td class=" rmks"></td>
                 </tr>
-                <tr class="new">
+                <tr class="">
                     <td class="borderTop2" rowspan="7">
                         <strong>Navigation Drawers</strong>
                     </td>
@@ -644,15 +626,13 @@
                         <a class="link" href="html_bc/drawers-userinfo.html" target="_blank">drawers-userinfo</a>
                     </td>
                     <td class="borderTop2">사용자 정보</td>
-                    <td class="borderTop2 desc">Navigation Drawers_001 ~ 002</td>
                     <td class="borderTop2 rmks"></td>
                 </tr>
-                <tr class="new">
+                <tr class="">
                     <td>
                         <a class="link" href="html_bc/drawers-lockSetting.html" target="_blank">drawers-lockSetting</a>
                     </td>
                     <td>잠금 설정</td>
-                    <td class="desc">Navigation Drawers_004</td>
                     <td class="rmks"></td>
                 </tr>
                 <tr class="">
@@ -660,7 +640,6 @@
                         <a class="link" href="html_bc/drawers-notifySetting.html" target="_blank">drawers-notifySetting</a>
                     </td>
                     <td>알림 설정</td>
-                    <td class="desc">Navigation Drawers_003</td>
                     <td class="rmks"></td>
                 </tr>
                 <tr class="">
@@ -668,7 +647,6 @@
                         <a class="link" href="html_bc/drawers-passwordSetting.html" target="_blank">drawers-passwordSetting</a>
                     </td>
                     <td>비밀번호 변경</td>
-                    <td class="desc">Navigation Drawers_005 ~ 007</td>
                     <td class="rmks"></td>
                 </tr>
                 <tr class="">
@@ -676,7 +654,6 @@
                         <a class="link" href="html_bc/drawers-backup.html" target="_blank">drawers-backup</a>
                     </td>
                     <td>백업</td>
-                    <td class="desc">Navigation Drawers_008</td>
                     <td class="rmks"></td>
                 </tr>
                 <tr class="">
@@ -684,7 +661,6 @@
                         <a class="link" href="html_bc/drawers-appInfo.html" target="_blank">drawers-appInfo</a>
                     </td>
                     <td>앱 정보</td>
-                    <td class="desc">Navigation Drawers_009 ~ 010</td>
                     <td class="rmks"></td>
                 </tr>
                 <tr class="">
@@ -692,15 +668,146 @@
                         <a class="link" href="html_bc/notification.html" target="_blank">notification</a>
                     </td>
                     <td class="borderTop">알림사항 목록</td>
-                    <td class="borderTop desc">Notification Center</td>
                     <td class="borderTop rmks"></td>
                 </tr>
+
+
+                <tr>
+                    <td rowspan="1" class="borderTop2">
+                        <strong>Email Auth.</strong>
+                    </td>
+                    <td class="borderTop2">
+                        <a class="link" href="html_bc/email_iphone.html" target="_blank">email_iphone</a>
+                    </td>
+                    <td class="borderTop2">메일 인증안내 페이지 + 뒤로가기 버튼</td>
+                    <td class="borderTop2 rmks">좌측 상단에 뒤로가기 버튼이 추가됐습니다. 성공/실패 시나리오에 따라 텍스트만 변경해주세요.</td>
+                </tr>
+
+
+                <tr>
+                    <td rowspan="1" class="borderTop2">
+                        <strong>Error Page</strong>
+                    </td>
+                    <td class="borderTop2">
+                        <a class="link" href="html_bc/error_iphone.html" target="_blank">error_iphone</a>
+                    </td>
+                    <td class="borderTop2">에러 페이지 + 뒤로가기 버튼</td>
+                    <td class="borderTop2 rmks">좌측 상단에 뒤로가기 버튼이 추가됐습니다. 에러 코드가 다르면 텍스트만 변경해주세요.</td>
+                </tr>
+
 
 
 
             </tbody>
         </table>
 
+
+
+
+        <hr>
+
+        <p class="update">Go Vote for Postech<br><small>Last
+                Update:18-10-25</small></p>
+
+
+        <table>
+            <colgroup>
+                <col width="130px" />
+                <col width="190px" />
+                <col />
+                <col />
+                <col />
+            </colgroup>
+            <thead>
+
+                <tr>
+                    <th style="background-color:#c41064;">그룹</th>
+                    <th style="background-color:#c41064;">파일명(LINK)</th>
+                    <th style="background-color:#c41064;">화면 내용</th>
+                    <th style="background-color:#c41064;">비고</th>
+                </tr>
+
+            </thead>
+            <tbody>
+
+                <tr>
+                    <td rowspan="1">
+                        <strong>My Polls</strong>
+                    </td>
+                    <td>
+                        <a class="link" href="html_postech/myPolls.html" target="_blank">myPolls</a>
+                    </td>
+                    <td>내 투표함</td>
+                    <td class="rmks"></td>
+                </tr>
+
+
+                <tr>
+                    <td rowspan="3" class="borderTop2">
+                        <strong>Search</strong>
+                    </td>
+                    <td class="borderTop2">
+                        <a class="link" href="html_postech/pollSearch-01.html" target="_blank">pollSearch-01</a>
+                    </td>
+                    <td class="borderTop2">투표 검색 - 기본</td>
+                    <td class="borderTop2 rmks"></td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <a class="link" href="html_postech/pollSearch-02.html" target="_blank">pollSearch-02</a>
+                    </td>
+                    <td>투표 검색 - 검색 결과 있음</td>
+                    <td class="rmks">.pollSearch.search-result</td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <a class="link" href="html_postech/pollSearch-03.html" target="_blank">pollSearch-03</a>
+                    </td>
+                    <td>투표 검색 - 검색 결과 없음</td>
+                    <td class="rmks">.pollSearch.search-null</td>
+                </tr>
+
+
+                <tr class="">
+                    <td rowspan="1" class="borderTop2">
+                        <strong>Create</strong>
+                    </td>
+                    <td class="borderTop2">
+                        <a class="link" href="html_postech/create-01.html" target="_blank">create-01</a>
+                    </td>
+                    <td class="borderTop2">투표 생성 - 1단계 (정보 입력)</td>
+                    <td class="borderTop2 rmks"></td>
+                </tr>
+
+
+                <tr class="">
+                    <td rowspan="1" class="borderTop2">
+                        <strong>Completion</strong>
+                    </td>
+                    <td class="borderTop2">
+                        <a class="link" href="html_postech/completion.html" target="_blank">Completion</a>
+                    </td>
+                    <td class="borderTop2">투표(생성) 완료 화면</td>
+                    <td class="borderTop2 rmks">투표 생성 및 투표 완료</td>
+                </tr>
+                </tr>
+
+
+                <tr class="">
+                    <td rowspan="1" class="borderTop2">
+                        <strong>Splash</strong>
+                    </td>
+                    <td class="borderTop2">
+                        <a class="link" href="html_postech/splash.html" target="_blank">Splash</a>
+                    </td>
+                    <td class="borderTop2">스플래시 화면</td>
+                    <td class="borderTop2 rmks">18-10-25 추가</td>
+                </tr>
+
+            </tbody>
+        </table>
 
 
     </div>
