@@ -77,6 +77,7 @@
   .create-description-image {
     margin: 2rem 0 0;
   }
+
   .create-description {
     color: #0c0c0c;
     padding-bottom: 0.6rem;
@@ -122,18 +123,19 @@
         }
       }
 
-      [type="checkbox"]:checked + label,
-      [type="radio"]:checked + label {
+      [type="checkbox"]:checked+label,
+      [type="radio"]:checked+label {
         z-index: 1;
         position: relative;
         background-color: #93d5f1;
         border-color: #29ace4;
         border-right: none;
 
-        & + .takeVote-item-right {
+        &+.takeVote-item-right {
           background-color: #93d5f1;
           border: 1px solid #29ace4;
           border-left: none;
+
           .number {
             color: #0c0c0c;
 
@@ -144,7 +146,9 @@
           }
         }
       }
-    } //end of .checkbox-block
+    }
+
+    //end of .checkbox-block
 
     .number {
       z-index: 1;
@@ -258,15 +262,16 @@
       background-color: transparent;
     }
 
-    .checkbox-block input + label {
+    .checkbox-block input+label {
       padding-left: 1.4rem;
 
       &:before {
         display: none;
       }
 
-      & + .takeVote-item-right {
+      &+.takeVote-item-right {
         background-color: transparent;
+
         .number {
           color: #6e6e6e;
 
@@ -278,8 +283,8 @@
       }
     }
 
-    .checkbox-block input[type="checkbox"]:checked + label,
-    .checkbox-block input[type="radio"]:checked + label {
+    .checkbox-block input[type="checkbox"]:checked+label,
+    .checkbox-block input[type="radio"]:checked+label {
       padding-left: 4.2rem;
       background-color: transparent;
       border-color: transparent;
@@ -288,7 +293,7 @@
         display: block;
       }
 
-      & + .takeVote-item-right {
+      &+.takeVote-item-right {
         background-color: transparent;
         border-color: transparent;
 
@@ -332,6 +337,7 @@
           background-color: #f4f4f4;
         }
       }
+
       .bar {
         position: absolute;
         bottom: 2rem;
@@ -342,4 +348,10 @@
       }
     }
   }
-} //end of .takeVote
+}
+
+//end of .takeVote
+
+.create-buttons-container .button-prev:not(:first-child) {
+  border-left: 1px solid #cecece;
+}

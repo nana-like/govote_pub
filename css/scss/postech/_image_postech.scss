@@ -32,19 +32,38 @@
 .poll-list .poll-upcoming .poll-icon {
   @include bgi("icon-postech-green");
 }
+
 // 3) inactive (dark)
 .poll-list .poll-inactive .poll-icon {
   @include bgi("icon-postech-dark");
 }
+
 // 3) active (blue)
 .poll-list .poll-active .poll-icon {
   @include bgi("icon-postech-blue");
 }
+
 // 4) finished (gray)
 .poll-list .poll-finished .poll-icon {
   @include bgi("icon-postech-gray");
 }
+
 // 5) complete (yellow)
 .poll-list .poll-complete .poll-icon {
   @include bgi("icon-postech-yellow");
+}
+
+.background-search {
+  z-index: -1;
+  top: initial !important;
+  bottom: 0;
+}
+
+.search-description .keyword {
+  display: inline-block;
+  max-width: 50%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  vertical-align: text-top;
 }
